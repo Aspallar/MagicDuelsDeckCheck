@@ -12,7 +12,7 @@ to your Magic Duels steam profile (there is some help text in the options dialog
 
 ## Use
 
-To use MagicDuelsDeckHelper just drag a deck link from the [Magic Duels Helper ](https://github.com/Aspallar/MagicDuelsDeckCheck/releases/download/v1.0.0.0/MagicDuelsDeckCheck.zip) web site and drop it in the applications window. A page will be displayed in your browser listing the cards that you are missing, if any, and what set they can be found in.
+To use MagicDuelsDeckHelper just drag a deck link from the [Magic Duels Helper ](https://www.magicduelshelper.com) web site and drop it in the applications window. A page will be displayed in your browser listing the cards that you are missing, if any, and what set they can be found in.
 
 ### Deck links
 
