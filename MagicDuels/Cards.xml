@@ -1,0 +1,1331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cards>
+<card magicDuelsId="0" name="Accursed Spirit" set="Starter"/>
+<card magicDuelsId="1" name="Aeronaut Tinkerer" set="Starter"/>
+<card magicDuelsId="2" name="Suppression Bonds" set="Starter"/>
+<card magicDuelsId="3" name="Yavimaya Wurm" set="Starter"/>
+<card magicDuelsId="4" name="Meandering River" set="Starter"/>
+<card magicDuelsId="5" name="Barrage Ogre" set="Starter"/>
+<card magicDuelsId="6" name="Battlefront Krushok" set="Starter"/>
+<card magicDuelsId="7" name="Bitter Revelation" set="Starter"/>
+<card magicDuelsId="8" name="Bloodflow Connoisseur" set="Starter"/>
+<card magicDuelsId="9" name="Bloodpyre Elemental" set="Starter"/>
+<card magicDuelsId="10" name="Bone Splinters" set="Starter"/>
+<card magicDuelsId="11" name="Boonweaver Giant" set="Starter"/>
+<card magicDuelsId="12" name="Stone Quarry" set="Starter"/>
+<card magicDuelsId="13" name="Bottle Gnomes" set="Starter"/>
+<card magicDuelsId="14" name="Child of Night" set="Starter"/>
+<card magicDuelsId="15" name="Chorus of Might" set="Starter"/>
+<card magicDuelsId="16" name="Clifftop Retreat" set="Starter"/>
+<card magicDuelsId="17" name="Coral Merfolk" set="Starter"/>
+<card magicDuelsId="18" name="Corpse Hauler" set="Starter"/>
+<card magicDuelsId="19" name="Countermand" set="Starter"/>
+<card magicDuelsId="20" name="Darkslick Drake" set="Starter"/>
+<card magicDuelsId="21" name="Dauntless River Marshal" set="Starter"/>
+<card magicDuelsId="22" name="Dehydration" set="Starter"/>
+<card magicDuelsId="23" name="Submerged Boneyard" set="Starter"/>
+<card magicDuelsId="24" name="Siegecraft" set="Starter"/>
+<card magicDuelsId="25" name="Dragonskull Summit" set="Starter"/>
+<card magicDuelsId="26" name="Minotaur Abomination" set="Starter"/>
+<card magicDuelsId="27" name="Drowned Catacomb" set="Starter"/>
+<card magicDuelsId="28" name="Expedition Envoy" set="Starter"/>
+<card magicDuelsId="29" name="Ember Hauler" set="Starter"/>
+<card magicDuelsId="30" name="Esperzoa" set="Starter"/>
+<card magicDuelsId="31" name="Flaring Flame-Kin" set="Starter"/>
+<card magicDuelsId="32" name="Flesh to Dust" set="Origins"/>
+<card magicDuelsId="33" name="Fog" set="Starter"/>
+<card magicDuelsId="34" name="Goblin Balloon Brigade" set="Starter"/>
+<card magicDuelsId="35" name="Frost Lynx" set="Starter"/>
+<card magicDuelsId="36" name="Ainok Guide" set="Starter"/>
+<card magicDuelsId="37" name="Glacial Fortress" set="Starter"/>
+<card magicDuelsId="38" name="Goblin Arsonist" set="Starter"/>
+<card magicDuelsId="39" name="Goblin Piker" set="Starter"/>
+<card magicDuelsId="40" name="Foul Orchard" set="Starter"/>
+<card magicDuelsId="41" name="Gravedigger" set="Starter"/>
+<card magicDuelsId="42" name="Timber Gorge" set="Starter"/>
+<card magicDuelsId="43" name="Gurmag Swiftwing" set="Starter"/>
+<card magicDuelsId="44" name="Heliod's Pilgrim" set="Starter"/>
+<card magicDuelsId="45" name="Hinterland Harbor" set="Starter"/>
+<card magicDuelsId="46" name="Inferno Fist" set="Starter"/>
+<card magicDuelsId="47" name="Inspiration" set="Starter"/>
+<card magicDuelsId="48" name="Into the Maw of Hell" set="Starter"/>
+<card magicDuelsId="49" name="Isolated Chapel" set="Starter"/>
+<card magicDuelsId="50" name="Highland Lake" set="Starter"/>
+<card magicDuelsId="51" name="Lifespring Druid" set="Starter"/>
+<card magicDuelsId="52" name="Jorubai Murk Lurker" set="Starter"/>
+<card magicDuelsId="53" name="Juggernaut" set="Starter"/>
+<card magicDuelsId="54" name="Kapsho Kitefins" set="Starter"/>
+<card magicDuelsId="55" name="Kinsbaile Skirmisher" set="Starter"/>
+<card magicDuelsId="56" name="Kird Chieftain" set="Starter"/>
+<card magicDuelsId="57" name="Lys Alana Huntmaster" set="Starter"/>
+<card magicDuelsId="58" name="Lys Alana Scarblade" set="Starter"/>
+<card magicDuelsId="59" name="Explosive Vegetation" set="Starter"/>
+<card magicDuelsId="60" name="Necromantic Thirst" set="Starter"/>
+<card magicDuelsId="61" name="Nightfire Giant" set="Starter"/>
+<card magicDuelsId="62" name="Nimbus Wings" set="Starter"/>
+<card magicDuelsId="63" name="Forsaken Sanctuary" set="Starter"/>
+<card magicDuelsId="64" name="Bronze Sable" set="Starter"/>
+<card magicDuelsId="65" name="Primal Bellow" set="Starter"/>
+<card magicDuelsId="66" name="Primal Huntbeast" set="Starter"/>
+<card magicDuelsId="67" name="Cinder Barrens" set="Starter"/>
+<card magicDuelsId="68" name="Razorfoot Griffin" set="Starter"/>
+<card magicDuelsId="69" name="Reclamation Sage" set="Starter"/>
+<card magicDuelsId="70" name="Reprisal" set="Starter"/>
+<card magicDuelsId="71" name="Rise from the Grave" set="Starter"/>
+<card magicDuelsId="72" name="Rootbound Crag" set="Starter"/>
+<card magicDuelsId="73" name="Scarred Vinebreeder" set="Starter"/>
+<card magicDuelsId="74" name="Scrapyard Mongrel" set="Starter"/>
+<card magicDuelsId="75" name="Tranquil Expanse" set="Starter"/>
+<card magicDuelsId="76" name="Siege Mastodon" set="Starter"/>
+<card magicDuelsId="77" name="Woodland Stream" set="Starter"/>
+<card magicDuelsId="78" name="Sky-Eel School" set="Starter"/>
+<card magicDuelsId="79" name="Skyhunter Skirmisher" set="Starter"/>
+<card magicDuelsId="80" name="Solemn Offering" set="Starter"/>
+<card magicDuelsId="81" name="Strider Harness" set="Starter"/>
+<card magicDuelsId="82" name="Sulfur Falls" set="Starter"/>
+<card magicDuelsId="83" name="Sunblade Elf" set="Starter"/>
+<card magicDuelsId="84" name="Sunpetal Grove" set="Starter"/>
+<card magicDuelsId="85" name="Suntail Hawk" set="Starter"/>
+<card magicDuelsId="86" name="Telling Time" set="Starter"/>
+<card magicDuelsId="87" name="Timberland Guide" set="Starter"/>
+<card magicDuelsId="88" name="Traitorous Instinct" set="Starter"/>
+<card magicDuelsId="89" name="Twin Bolt" set="Starter"/>
+<card magicDuelsId="90" name="Welkin Tern" set="Starter"/>
+<card magicDuelsId="91" name="Wildsize" set="Starter"/>
+<card magicDuelsId="92" name="Woodland Cemetery" set="Starter"/>
+<card magicDuelsId="93" name="Abbot of Keral Keep" set="Origins"/>
+<card magicDuelsId="94" name="Act of Treason" set="Origins"/>
+<card magicDuelsId="95" name="Akroan Jailer" set="Origins"/>
+<card magicDuelsId="96" name="Akroan Sergeant" set="Origins"/>
+<card magicDuelsId="97" name="Alchemist's Vial" set="Origins"/>
+<card magicDuelsId="98" name="Alhammarret, High Arbiter" set="Origins"/>
+<card magicDuelsId="99" name="Ampryn Tactician" set="Origins"/>
+<card magicDuelsId="100" name="Anchor to the Aether" set="Origins"/>
+<card magicDuelsId="101" name="Animist's Awakening" set="Origins"/>
+<card magicDuelsId="102" name="Anointer of Champions" set="Origins"/>
+<card magicDuelsId="103" name="Angelic Destiny" set="Origins"/>
+<card magicDuelsId="104" name="Artificer's Epiphany" set="Origins"/>
+<card magicDuelsId="105" name="Aspiring Aeronaut" set="Origins"/>
+<card magicDuelsId="106" name="Auramancer" set="Origins"/>
+<card magicDuelsId="107" name="Avaricious Dragon" set="Origins"/>
+<card magicDuelsId="108" name="Bellows Lizard" set="Origins"/>
+<card magicDuelsId="109" name="Blazing Hellhound" set="Origins"/>
+<card magicDuelsId="110" name="Blessed Spirits" set="Origins"/>
+<card magicDuelsId="111" name="Blightcaster" set="Origins"/>
+<card magicDuelsId="112" name="Blood-Cursed Knight" set="Origins"/>
+<card magicDuelsId="113" name="Bonded Construct" set="Origins"/>
+<card magicDuelsId="114" name="Bone to Ash" set="Origins"/>
+<card magicDuelsId="115" name="Bounding Krasis" set="Origins"/>
+<card magicDuelsId="116" name="Calculated Dismissal" set="Origins"/>
+<card magicDuelsId="117" name="Call of the Full Moon" set="Origins"/>
+<card magicDuelsId="118" name="Celestial Flare" set="Origins"/>
+<card magicDuelsId="119" name="Chandra, Fire of Kaladesh" set="Origins"/>
+<card magicDuelsId="120" name="Chandra's Ignition" set="Origins"/>
+<card magicDuelsId="121" name="Chief of the Foundry" set="Origins"/>
+<card magicDuelsId="122" name="Citadel Castellan" set="Origins"/>
+<card magicDuelsId="123" name="Claustrophobia" set="Origins"/>
+<card magicDuelsId="124" name="Cleric of the Forward Order" set="Origins"/>
+<card magicDuelsId="125" name="Conclave Naturalists" set="Origins"/>
+<card magicDuelsId="126" name="Consecrated by Blood" set="Origins"/>
+<card magicDuelsId="127" name="Consul's Lieutenant" set="Origins"/>
+<card magicDuelsId="128" name="Cruel Revival" set="Origins"/>
+<card magicDuelsId="129" name="Deadbridge Shaman" set="Origins"/>
+<card magicDuelsId="130" name="Despoiler of Souls" set="Origins"/>
+<card magicDuelsId="131" name="Disciple of the Ring" set="Origins"/>
+<card magicDuelsId="132" name="Disperse" set="Origins"/>
+<card magicDuelsId="133" name="Displacement Wave" set="Origins"/>
+<card magicDuelsId="134" name="Dragon Fodder" set="Origins"/>
+<card magicDuelsId="135" name="Dwynen, Gilt-Leaf Daen" set="Origins"/>
+<card magicDuelsId="136" name="Dwynen's Elite" set="Origins"/>
+<card magicDuelsId="137" name="Elemental Bond" set="Origins"/>
+<card magicDuelsId="138" name="Elvish Visionary" set="Origins"/>
+<card magicDuelsId="139" name="Embermaw Hellion" set="Origins"/>
+<card magicDuelsId="140" name="Enthralling Victor" set="Origins"/>
+<card magicDuelsId="141" name="Erebos's Titan" set="Origins"/>
+<card magicDuelsId="142" name="Evolutionary Leap" set="Origins"/>
+<card magicDuelsId="143" name="Evolving Wilds" set="Origins"/>
+<card magicDuelsId="144" name="Exquisite Firecraft" set="Origins"/>
+<card magicDuelsId="145" name="Eyeblight Assassin" set="Origins"/>
+<card magicDuelsId="146" name="Faerie Miscreant" set="Origins"/>
+<card magicDuelsId="147" name="Fiery Conclusion" set="Origins"/>
+<card magicDuelsId="148" name="Fiery Impulse" set="Origins"/>
+<card magicDuelsId="149" name="Firefiend Elemental" set="Origins"/>
+<card magicDuelsId="150" name="Flameshadow Conjuring" set="Origins"/>
+<card magicDuelsId="151" name="Fleshbag Marauder" set="Origins"/>
+<card magicDuelsId="152" name="Foundry of the Consuls" set="Origins"/>
+<card magicDuelsId="153" name="Gaea's Revenge" set="Origins"/>
+<card magicDuelsId="154" name="Gather the Pack" set="Origins"/>
+<card magicDuelsId="155" name="Ghirapur Aether Grid" set="Origins"/>
+<card magicDuelsId="156" name="Ghirapur Gearcrafter" set="Origins"/>
+<card magicDuelsId="157" name="Gilt-Leaf Winnower" set="Origins"/>
+<card magicDuelsId="158" name="Goblin Glory Chaser" set="Origins"/>
+<card magicDuelsId="159" name="Grasp of the Hieromancer" set="Origins"/>
+<card magicDuelsId="160" name="Graveblade Marauder" set="Origins"/>
+<card magicDuelsId="161" name="Guardian Automaton" set="Origins"/>
+<card magicDuelsId="162" name="Guardians of Meletis" set="Origins"/>
+<card magicDuelsId="163" name="Harbinger of the Tides" set="Origins"/>
+<card magicDuelsId="164" name="Herald of the Pantheon" set="Starter"/>
+<card magicDuelsId="165" name="Hixus, Prison Warden" set="Origins"/>
+<card magicDuelsId="166" name="Hydrolash" set="Origins"/>
+<card magicDuelsId="167" name="Infectious Bloodlust" set="Origins"/>
+<card magicDuelsId="168" name="Infernal Scarring" set="Origins"/>
+<card magicDuelsId="169" name="Iroas's Champion" set="Origins"/>
+<card magicDuelsId="170" name="Jace, Vryn's Prodigy" set="Origins"/>
+<card magicDuelsId="171" name="Jhessian Thief" set="Origins"/>
+<card magicDuelsId="172" name="Knight of the Pilgrim's Road" set="Origins"/>
+<card magicDuelsId="173" name="Knight of the White Orchid" set="Origins"/>
+<card magicDuelsId="174" name="Knightly Valor" set="Origins"/>
+<card magicDuelsId="175" name="Kothophed, Soul Hoarder" set="Origins"/>
+<card magicDuelsId="176" name="Kytheon, Hero of Akros" set="Origins"/>
+<card magicDuelsId="177" name="Kytheon's Irregulars" set="Origins"/>
+<card magicDuelsId="178" name="Kytheon's Tactics" set="Origins"/>
+<card magicDuelsId="179" name="Languish" set="Origins"/>
+<card magicDuelsId="180" name="Liliana, Heretical Healer" set="Origins"/>
+<card magicDuelsId="181" name="Llanowar Empath" set="Origins"/>
+<card magicDuelsId="182" name="Mage-Ring Bully" set="Origins"/>
+<card magicDuelsId="183" name="Malakir Cullblade" set="Origins"/>
+<card magicDuelsId="184" name="Meteorite" set="Unknown"/>
+<card magicDuelsId="185" name="Might of the Masses" set="Origins"/>
+<card magicDuelsId="186" name="Molten Vortex" set="Origins"/>
+<card magicDuelsId="187" name="Nantuko Husk" set="Origins"/>
+<card magicDuelsId="188" name="Necromantic Summons" set="Origins"/>
+<card magicDuelsId="189" name="Nissa, Vastwood Seer" set="Origins"/>
+<card magicDuelsId="190" name="Nissa's Pilgrimage" set="Origins"/>
+<card magicDuelsId="191" name="Nissa's Revelation" set="Origins"/>
+<card magicDuelsId="192" name="Orchard Spirit" set="Origins"/>
+<card magicDuelsId="193" name="Outland Colossus" set="Origins"/>
+<card magicDuelsId="194" name="Patron of the Valiant" set="Origins"/>
+<card magicDuelsId="195" name="Pharika's Disciple" set="Origins"/>
+<card magicDuelsId="196" name="Pia and Kiran Nalaar" set="Origins"/>
+<card magicDuelsId="197" name="Possessed Skaab" set="Origins"/>
+<card magicDuelsId="198" name="Priest of the Blood Rite" set="Origins"/>
+<card magicDuelsId="199" name="Rabid Bloodsucker" set="Origins"/>
+<card magicDuelsId="200" name="Ravaging Blaze" set="Origins"/>
+<card magicDuelsId="201" name="Read the Bones" set="Origins"/>
+<card magicDuelsId="202" name="Reave Soul" set="Origins"/>
+<card magicDuelsId="203" name="Reclusive Artificer" set="Origins"/>
+<card magicDuelsId="204" name="Relic Seeker" set="Origins"/>
+<card magicDuelsId="205" name="Rhox Maulers" set="Origins"/>
+<card magicDuelsId="206" name="Ringwarden Owl" set="Origins"/>
+<card magicDuelsId="207" name="Rogue's Passage" set="Origins"/>
+<card magicDuelsId="208" name="Runed Servitor" set="Origins"/>
+<card magicDuelsId="209" name="Scrapskin Drake" set="Origins"/>
+<card magicDuelsId="210" name="Screeching Skaab" set="Origins"/>
+<card magicDuelsId="211" name="Separatist Voidmage" set="Origins"/>
+<card magicDuelsId="212" name="Shadows of the Past" set="Origins"/>
+<card magicDuelsId="213" name="Shaman of the Pack" set="Origins"/>
+<card magicDuelsId="214" name="Shambling Ghoul" set="Origins"/>
+<card magicDuelsId="215" name="Sigil of the Empty Throne" set="Origins"/>
+<card magicDuelsId="216" name="Sigil of Valor" set="Origins"/>
+<card magicDuelsId="217" name="Sigiled Starfish" set="Origins"/>
+<card magicDuelsId="218" name="Soulblade Djinn" set="Origins"/>
+<card magicDuelsId="219" name="Sphinx's Tutelage" set="Origins"/>
+<card magicDuelsId="220" name="Stalwart Aven" set="Origins"/>
+<card magicDuelsId="221" name="Subterranean Scout" set="Origins"/>
+<card magicDuelsId="222" name="Enshrouding Mist" set="Origins"/>
+<card magicDuelsId="223" name="Tainted Remedy" set="Origins"/>
+<card magicDuelsId="224" name="Talent of the Telepath" set="Origins"/>
+<card magicDuelsId="225" name="Thopter Engineer" set="Origins"/>
+<card magicDuelsId="226" name="Thopter Spy Network" set="Origins"/>
+<card magicDuelsId="227" name="Thornbow Archer" set="Origins"/>
+<card magicDuelsId="228" name="Throwing Knife" set="Origins"/>
+<card magicDuelsId="229" name="Thunderclap Wyvern" set="Origins"/>
+<card magicDuelsId="230" name="Timberpack Wolf" set="Origins"/>
+<card magicDuelsId="231" name="Titanic Growth" set="Origins"/>
+<card magicDuelsId="232" name="Titan's Strength" set="Origins"/>
+<card magicDuelsId="233" name="Topan Freeblade" set="Origins"/>
+<card magicDuelsId="234" name="Totem-Guide Hartebeest" set="Origins"/>
+<card magicDuelsId="235" name="Tower Geist" set="Origins"/>
+<card magicDuelsId="236" name="Tragic Arrogance" set="Origins"/>
+<card magicDuelsId="237" name="Undead Servant" set="Origins"/>
+<card magicDuelsId="238" name="Undercity Troll" set="Origins"/>
+<card magicDuelsId="239" name="Unholy Hunger" set="Origins"/>
+<card magicDuelsId="240" name="Valeron Wardens" set="Origins"/>
+<card magicDuelsId="241" name="Valor in Akros" set="Origins"/>
+<card magicDuelsId="242" name="Veteran's Sidearm" set="Origins"/>
+<card magicDuelsId="243" name="Vryn Wingmare" set="Origins"/>
+<card magicDuelsId="244" name="Whirler Rogue" set="Origins"/>
+<card magicDuelsId="245" name="Wild Instincts" set="Origins"/>
+<card magicDuelsId="246" name="Willbreaker" set="Origins"/>
+<card magicDuelsId="247" name="Woodland Bellower" set="Origins"/>
+<card magicDuelsId="248" name="Yeva's Forcemage" set="Origins"/>
+<card magicDuelsId="249" name="Zendikar Incarnate" set="Origins"/>
+<card magicDuelsId="250" name="Zendikar's Roil" set="Origins"/>
+<card magicDuelsId="251" name="Adverse Conditions" set="Battle for Zendikar"/>
+<card magicDuelsId="252" name="Akoum Firebird" set="Battle for Zendikar"/>
+<card magicDuelsId="253" name="Akoum Hellkite" set="Battle for Zendikar"/>
+<card magicDuelsId="254" name="Akoum Stonewaker" set="Battle for Zendikar"/>
+<card magicDuelsId="255" name="Aligned Hedron Network" set="Battle for Zendikar"/>
+<card magicDuelsId="256" name="Altar's Reap" set="Battle for Zendikar"/>
+<card magicDuelsId="257" name="Angel of Renewal" set="Battle for Zendikar"/>
+<card magicDuelsId="258" name="Barrage Tyrant" set="Battle for Zendikar"/>
+<card magicDuelsId="259" name="Blight Herder" set="Battle for Zendikar"/>
+<card magicDuelsId="260" name="Blighted Gorge" set="Battle for Zendikar"/>
+<card magicDuelsId="261" name="Blighted Steppe" set="Battle for Zendikar"/>
+<card magicDuelsId="262" name="Blisterpod" set="Battle for Zendikar"/>
+<card magicDuelsId="263" name="Bloodbond Vampire" set="Battle for Zendikar"/>
+<card magicDuelsId="264" name="Boiling Earth" set="Battle for Zendikar"/>
+<card magicDuelsId="265" name="Breaker of Armies" set="Battle for Zendikar"/>
+<card magicDuelsId="266" name="Brilliant Spectrum" set="Battle for Zendikar"/>
+<card magicDuelsId="267" name="Brood Butcher" set="Battle for Zendikar"/>
+<card magicDuelsId="268" name="Broodhunter Wurm" set="Battle for Zendikar"/>
+<card magicDuelsId="269" name="Brutal Expulsion" set="Battle for Zendikar"/>
+<card magicDuelsId="270" name="Canopy Vista" set="Battle for Zendikar"/>
+<card magicDuelsId="271" name="Carrier Thrall" set="Battle for Zendikar"/>
+<card magicDuelsId="272" name="Chasm Guide" set="Battle for Zendikar"/>
+<card magicDuelsId="273" name="Cinder Glade" set="Battle for Zendikar"/>
+<card magicDuelsId="274" name="Clutch of Currents" set="Battle for Zendikar"/>
+<card magicDuelsId="275" name="Coastal Discovery" set="Battle for Zendikar"/>
+<card magicDuelsId="276" name="Complete Disregard" set="Battle for Zendikar"/>
+<card magicDuelsId="277" name="Coralhelm Guide" set="Battle for Zendikar"/>
+<card magicDuelsId="278" name="Courier Griffin" set="Battle for Zendikar"/>
+<card magicDuelsId="279" name="Cryptic Cruiser" set="Battle for Zendikar"/>
+<card magicDuelsId="280" name="Culling Drone" set="Battle for Zendikar"/>
+<card magicDuelsId="281" name="Deathless Behemoth" set="Battle for Zendikar"/>
+<card magicDuelsId="282" name="Defiant Bloodlord" set="Battle for Zendikar"/>
+<card magicDuelsId="283" name="Demon's Grasp" set="Battle for Zendikar"/>
+<card magicDuelsId="284" name="Desolation Twin" set="Battle for Zendikar"/>
+<card magicDuelsId="285" name="Dispel" set="Battle for Zendikar"/>
+<card magicDuelsId="286" name="Dominator Drone" set="Battle for Zendikar"/>
+<card magicDuelsId="287" name="Drana's Emissary" set="Battle for Zendikar"/>
+<card magicDuelsId="288" name="Drowner of Hope" set="Battle for Zendikar"/>
+<card magicDuelsId="289" name="Dust Stalker" set="Battle for Zendikar"/>
+<card magicDuelsId="290" name="Eldrazi Devastator" set="Battle for Zendikar"/>
+<card magicDuelsId="291" name="Eldrazi Skyspawner" set="Battle for Zendikar"/>
+<card magicDuelsId="292" name="Emeria Shepherd" set="Battle for Zendikar"/>
+<card magicDuelsId="293" name="Eyeless Watcher" set="Battle for Zendikar"/>
+<card magicDuelsId="294" name="Felidar Cub" set="Battle for Zendikar"/>
+<card magicDuelsId="295" name="Fertile Thicket" set="Battle for Zendikar"/>
+<card magicDuelsId="296" name="Firemantle Mage" set="Battle for Zendikar"/>
+<card magicDuelsId="297" name="Forerunner of Slaughter" set="Battle for Zendikar"/>
+<card magicDuelsId="298" name="Fortified Rampart" set="Battle for Zendikar"/>
+<card magicDuelsId="299" name="From Beyond" set="Battle for Zendikar"/>
+<card magicDuelsId="300" name="Ghostly Sentinel" set="Battle for Zendikar"/>
+<card magicDuelsId="301" name="Giant Mantis" set="Battle for Zendikar"/>
+<card magicDuelsId="302" name="Gideon, Ally of Zendikar" set="Battle for Zendikar"/>
+<card magicDuelsId="303" name="Gideon's Reproach" set="Battle for Zendikar"/>
+<card magicDuelsId="304" name="Goblin War Paint" set="Battle for Zendikar"/>
+<card magicDuelsId="305" name="Greenwarden of Murasa" set="Battle for Zendikar"/>
+<card magicDuelsId="306" name="Grove Rumbler" set="Battle for Zendikar"/>
+<card magicDuelsId="307" name="Gruesome Slaughter" set="Battle for Zendikar"/>
+<card magicDuelsId="308" name="Guardian of Tazeem" set="Battle for Zendikar"/>
+<card magicDuelsId="309" name="Guul Draz Overseer" set="Battle for Zendikar"/>
+<card magicDuelsId="310" name="Hagra Sharpshooter" set="Battle for Zendikar"/>
+<card magicDuelsId="311" name="Hero of Goma Fada" set="Battle for Zendikar"/>
+<card magicDuelsId="312" name="Horribly Awry" set="Battle for Zendikar"/>
+<card magicDuelsId="313" name="Incubator Drone" set="Battle for Zendikar"/>
+<card magicDuelsId="314" name="Infuse with the Elements" set="Battle for Zendikar"/>
+<card magicDuelsId="315" name="Jaddi Offshoot" set="Battle for Zendikar"/>
+<card magicDuelsId="316" name="Kalastria Healer" set="Battle for Zendikar"/>
+<card magicDuelsId="317" name="Kalastria Nightwatch" set="Battle for Zendikar"/>
+<card magicDuelsId="318" name="Kiora, Master of the Depths" set="Battle for Zendikar"/>
+<card magicDuelsId="319" name="Kor Castigator" set="Battle for Zendikar"/>
+<card magicDuelsId="320" name="Kor Entanglers" set="Battle for Zendikar"/>
+<card magicDuelsId="321" name="Lantern Scout" set="Battle for Zendikar"/>
+<card magicDuelsId="322" name="Lavastep Raider" set="Battle for Zendikar"/>
+<card magicDuelsId="323" name="Looming Spires" set="Battle for Zendikar"/>
+<card magicDuelsId="324" name="Lumbering Falls" set="Battle for Zendikar"/>
+<card magicDuelsId="325" name="Makindi Sliderunner" set="Battle for Zendikar"/>
+<card magicDuelsId="326" name="Malakir Familiar" set="Battle for Zendikar"/>
+<card magicDuelsId="327" name="Mire's Malice" set="Battle for Zendikar"/>
+<card magicDuelsId="328" name="Mortuary Mire" set="Battle for Zendikar"/>
+<card magicDuelsId="329" name="Munda, Ambush Leader" set="Battle for Zendikar"/>
+<card magicDuelsId="330" name="Murasa Ranger" set="Battle for Zendikar"/>
+<card magicDuelsId="331" name="Natural Connection" set="Battle for Zendikar"/>
+<card magicDuelsId="332" name="Nettle Drone" set="Battle for Zendikar"/>
+<card magicDuelsId="333" name="Nirkana Assassin" set="Battle for Zendikar"/>
+<card magicDuelsId="334" name="Nissa's Renewal" set="Battle for Zendikar"/>
+<card magicDuelsId="335" name="Ob Nixilis Reignited" set="Battle for Zendikar"/>
+<card magicDuelsId="336" name="Oblivion Sower" set="Battle for Zendikar"/>
+<card magicDuelsId="337" name="Omnath, Locus of Rage" set="Battle for Zendikar"/>
+<card magicDuelsId="338" name="Ondu Greathorn" set="Battle for Zendikar"/>
+<card magicDuelsId="339" name="Ondu Rising" set="Battle for Zendikar"/>
+<card magicDuelsId="340" name="Oracle of Dust" set="Battle for Zendikar"/>
+<card magicDuelsId="341" name="Oran-Rief Hydra" set="Battle for Zendikar"/>
+<card magicDuelsId="342" name="Part the Waterveil" set="Battle for Zendikar"/>
+<card magicDuelsId="343" name="Pilgrim's Eye" set="Battle for Zendikar"/>
+<card magicDuelsId="344" name="Planar Outburst" set="Battle for Zendikar"/>
+<card magicDuelsId="345" name="Plated Crusher" set="Battle for Zendikar"/>
+<card magicDuelsId="346" name="Plummet" set="Battle for Zendikar"/>
+<card magicDuelsId="347" name="Prairie Stream" set="Battle for Zendikar"/>
+<card magicDuelsId="348" name="Prism Array" set="Battle for Zendikar"/>
+<card magicDuelsId="349" name="Processor Assault" set="Battle for Zendikar"/>
+<card magicDuelsId="350" name="Radiant Flames" set="Battle for Zendikar"/>
+<card magicDuelsId="351" name="Reckless Cohort" set="Battle for Zendikar"/>
+<card magicDuelsId="352" name="Retreat to Coralhelm" set="Battle for Zendikar"/>
+<card magicDuelsId="353" name="Retreat to Emeria" set="Battle for Zendikar"/>
+<card magicDuelsId="354" name="Retreat to Hagra" set="Battle for Zendikar"/>
+<card magicDuelsId="355" name="Retreat to Kazandu" set="Battle for Zendikar"/>
+<card magicDuelsId="356" name="Retreat to Valakut" set="Battle for Zendikar"/>
+<card magicDuelsId="357" name="Rising Miasma" set="Battle for Zendikar"/>
+<card magicDuelsId="358" name="Roil Spout" set="Battle for Zendikar"/>
+<card magicDuelsId="359" name="Roil's Retribution" set="Battle for Zendikar"/>
+<card magicDuelsId="360" name="Rolling Thunder" set="Battle for Zendikar"/>
+<card magicDuelsId="361" name="Rot Shambler" set="Battle for Zendikar"/>
+<card magicDuelsId="362" name="Salvage Drone" set="Battle for Zendikar"/>
+<card magicDuelsId="363" name="Sandstone Bridge" set="Battle for Zendikar"/>
+<card magicDuelsId="364" name="Scatter to the Winds" set="Battle for Zendikar"/>
+<card magicDuelsId="365" name="Scythe Leopard" set="Battle for Zendikar"/>
+<card magicDuelsId="366" name="Serene Steward" set="Battle for Zendikar"/>
+<card magicDuelsId="367" name="Shadow Glider" set="Battle for Zendikar"/>
+<card magicDuelsId="368" name="Shambling Vent" set="Battle for Zendikar"/>
+<card magicDuelsId="369" name="Shatterskull Recruit" set="Battle for Zendikar"/>
+<card magicDuelsId="370" name="Sheer Drop" set="Battle for Zendikar"/>
+<card magicDuelsId="371" name="Sire of Stagnation" set="Battle for Zendikar"/>
+<card magicDuelsId="372" name="Skitterskin" set="Battle for Zendikar"/>
+<card magicDuelsId="373" name="Skyline Cascade" set="Battle for Zendikar"/>
+<card magicDuelsId="374" name="Skyrider Elf" set="Battle for Zendikar"/>
+<card magicDuelsId="375" name="Slab Hammer" set="Battle for Zendikar"/>
+<card magicDuelsId="376" name="Sludge Crawler" set="Battle for Zendikar"/>
+<card magicDuelsId="377" name="Smoldering Marsh" set="Battle for Zendikar"/>
+<card magicDuelsId="378" name="Smothering Abomination" set="Battle for Zendikar"/>
+<card magicDuelsId="379" name="Snapping Gnarlid" set="Battle for Zendikar"/>
+<card magicDuelsId="380" name="Spell Shrivel" set="Battle for Zendikar"/>
+<card magicDuelsId="381" name="Stone Haven Medic" set="Battle for Zendikar"/>
+<card magicDuelsId="382" name="Stonefury" set="Battle for Zendikar"/>
+<card magicDuelsId="383" name="Sunken Hollow" set="Battle for Zendikar"/>
+<card magicDuelsId="384" name="Swell of Growth" set="Battle for Zendikar"/>
+<card magicDuelsId="385" name="Tajuru Stalwart" set="Battle for Zendikar"/>
+<card magicDuelsId="386" name="Tandem Tactics" set="Battle for Zendikar"/>
+<card magicDuelsId="387" name="Territorial Baloth" set="Battle for Zendikar"/>
+<card magicDuelsId="388" name="Tide Drifter" set="Battle for Zendikar"/>
+<card magicDuelsId="389" name="Tightening Coils" set="Battle for Zendikar"/>
+<card magicDuelsId="390" name="Titan's Presence" set="Battle for Zendikar"/>
+<card magicDuelsId="391" name="Touch of the Void" set="Battle for Zendikar"/>
+<card magicDuelsId="392" name="Ulamog, the Ceaseless Hunger" set="Battle for Zendikar"/>
+<card magicDuelsId="393" name="Ulamog's Despoiler" set="Battle for Zendikar"/>
+<card magicDuelsId="394" name="Ulamog's Nullifier" set="Battle for Zendikar"/>
+<card magicDuelsId="395" name="Ulamog's Reclaimer" set="Battle for Zendikar"/>
+<card magicDuelsId="396" name="Unified Front" set="Battle for Zendikar"/>
+<card magicDuelsId="397" name="Unnatural Aggression" set="Battle for Zendikar"/>
+<card magicDuelsId="398" name="Valakut Invoker" set="Battle for Zendikar"/>
+<card magicDuelsId="399" name="Vampiric Rites" set="Battle for Zendikar"/>
+<card magicDuelsId="400" name="Vestige of Emrakul" set="Battle for Zendikar"/>
+<card magicDuelsId="401" name="Veteran Warleader" set="Battle for Zendikar"/>
+<card magicDuelsId="402" name="Vile Aggregate" set="Battle for Zendikar"/>
+<card magicDuelsId="403" name="Void Attendant" set="Battle for Zendikar"/>
+<card magicDuelsId="404" name="Voracious Null" set="Battle for Zendikar"/>
+<card magicDuelsId="405" name="Wasteland Strangler" set="Battle for Zendikar"/>
+<card magicDuelsId="406" name="Wave-Wing Elemental" set="Battle for Zendikar"/>
+<card magicDuelsId="407" name="Windrider Patrol" set="Battle for Zendikar"/>
+<card magicDuelsId="408" name="Woodland Wanderer" set="Battle for Zendikar"/>
+<card magicDuelsId="409" name="Benthic Infiltrator" set="Starter"/>
+<card magicDuelsId="410" name="Cliffside Lookout" set="Starter"/>
+<card magicDuelsId="411" name="Kor Bladewhirl" set="Starter"/>
+<card magicDuelsId="412" name="Makindi Patrol" set="Starter"/>
+<card magicDuelsId="413" name="Mind Raker" set="Starter"/>
+<card magicDuelsId="414" name="Mist Intruder" set="Starter"/>
+<card magicDuelsId="415" name="Murk Strider" set="Starter"/>
+<card magicDuelsId="416" name="Ondu Champion" set="Starter"/>
+<card magicDuelsId="417" name="Ruin Processor" set="Starter"/>
+<card magicDuelsId="418" name="Stonework Puma" set="Starter"/>
+<card magicDuelsId="419" name="Birthing Hulk" set="Starter"/>
+<card magicDuelsId="420" name="Boulder Salvo" set="Starter"/>
+<card magicDuelsId="421" name="Grip of the Roil" set="Starter"/>
+<card magicDuelsId="422" name="Havoc Sower" set="Starter"/>
+<card magicDuelsId="423" name="Jwar Isle Avenger" set="Starter"/>
+<card magicDuelsId="424" name="Pyromancer's Assault" set="Starter"/>
+<card magicDuelsId="425" name="Sky Scourer" set="Starter"/>
+<card magicDuelsId="426" name="Stalking Drone" set="Starter"/>
+<card magicDuelsId="427" name="Abstruse Interference" set="Oath of the Gatewatch"/>
+<card magicDuelsId="428" name="Akoum Flameseeker" set="Oath of the Gatewatch"/>
+<card magicDuelsId="429" name="Allied Reinforcements" set="Oath of the Gatewatch"/>
+<card magicDuelsId="430" name="Ancient Crab" set="Oath of the Gatewatch"/>
+<card magicDuelsId="431" name="Ayli, Eternal Pilgrim" set="Oath of the Gatewatch"/>
+<card magicDuelsId="432" name="Baloth Null" set="Oath of the Gatewatch"/>
+<card magicDuelsId="433" name="Baloth Pup" set="Oath of the Gatewatch"/>
+<card magicDuelsId="434" name="Bearer of Silence" set="Oath of the Gatewatch"/>
+<card magicDuelsId="435" name="Blinding Drone" set="Oath of the Gatewatch"/>
+<card magicDuelsId="436" name="Bonds of Mortality" set="Oath of the Gatewatch"/>
+<card magicDuelsId="437" name="Bone Saw" set="Oath of the Gatewatch"/>
+<card magicDuelsId="438" name="Brute Strength" set="Oath of the Gatewatch"/>
+<card magicDuelsId="439" name="Call the Gatewatch" set="Oath of the Gatewatch"/>
+<card magicDuelsId="440" name="Canopy Gorger" set="Oath of the Gatewatch"/>
+<card magicDuelsId="441" name="Chandra, Flamecaller" set="Oath of the Gatewatch"/>
+<card magicDuelsId="442" name="Chitinous Cloak" set="Oath of the Gatewatch"/>
+<card magicDuelsId="443" name="Cinder Hellion" set="Oath of the Gatewatch"/>
+<card magicDuelsId="444" name="Cliffhaven Vampire" set="Oath of the Gatewatch"/>
+<card magicDuelsId="445" name="Comparative Analysis" set="Oath of the Gatewatch"/>
+<card magicDuelsId="446" name="Containment Membrane" set="Oath of the Gatewatch"/>
+<card magicDuelsId="447" name="Crumbling Vestige" set="Oath of the Gatewatch"/>
+<card magicDuelsId="448" name="Crush of Tentacles" set="Oath of the Gatewatch"/>
+<card magicDuelsId="449" name="Cyclone Sire" set="Oath of the Gatewatch"/>
+<card magicDuelsId="450" name="Dazzling Reflection" set="Oath of the Gatewatch"/>
+<card magicDuelsId="451" name="Deepfathom Skulker" set="Oath of the Gatewatch"/>
+<card magicDuelsId="452" name="Devour in Flames" set="Oath of the Gatewatch"/>
+<card magicDuelsId="453" name="Dimensional Infiltrator" set="Oath of the Gatewatch"/>
+<card magicDuelsId="454" name="Drana's Chosen" set="Oath of the Gatewatch"/>
+<card magicDuelsId="455" name="Eldrazi Aggressor" set="Oath of the Gatewatch"/>
+<card magicDuelsId="456" name="Eldrazi Displacer" set="Oath of the Gatewatch"/>
+<card magicDuelsId="457" name="Eldrazi Mimic" set="Oath of the Gatewatch"/>
+<card magicDuelsId="458" name="Eldrazi Obligator" set="Oath of the Gatewatch"/>
+<card magicDuelsId="459" name="Elemental Uprising" set="Oath of the Gatewatch"/>
+<card magicDuelsId="460" name="Embodiment of Fury" set="Oath of the Gatewatch"/>
+<card magicDuelsId="461" name="Embodiment of Insight" set="Oath of the Gatewatch"/>
+<card magicDuelsId="462" name="Endbringer" set="Oath of the Gatewatch"/>
+<card magicDuelsId="463" name="Essence Depleter" set="Oath of the Gatewatch"/>
+<card magicDuelsId="464" name="Expedite" set="Oath of the Gatewatch"/>
+<card magicDuelsId="465" name="Expedition Raptor" set="Oath of the Gatewatch"/>
+<card magicDuelsId="466" name="Fall of the Titans" set="Oath of the Gatewatch"/>
+<card magicDuelsId="467" name="Flayer Drone" set="Oath of the Gatewatch"/>
+<card magicDuelsId="468" name="General Tazri" set="Oath of the Gatewatch"/>
+<card magicDuelsId="469" name="Grasp of Darkness" set="Oath of the Gatewatch"/>
+<card magicDuelsId="470" name="Gravity Negator" set="Oath of the Gatewatch"/>
+<card magicDuelsId="471" name="Hissing Quagmire" set="Oath of the Gatewatch"/>
+<card magicDuelsId="472" name="Immobilizer Eldrazi" set="Oath of the Gatewatch"/>
+<card magicDuelsId="473" name="Isolation Zone" set="Oath of the Gatewatch"/>
+<card magicDuelsId="474" name="Joraga Auxiliary" set="Oath of the Gatewatch"/>
+<card magicDuelsId="475" name="Jori En, Ruin Diver" set="Oath of the Gatewatch"/>
+<card magicDuelsId="476" name="Kalitas, Traitor of Ghet" set="Oath of the Gatewatch"/>
+<card magicDuelsId="477" name="Kazuul's Toll Collector" set="Oath of the Gatewatch"/>
+<card magicDuelsId="478" name="Kor Scythemaster" set="Oath of the Gatewatch"/>
+<card magicDuelsId="479" name="Kor Sky Climber" set="Oath of the Gatewatch"/>
+<card magicDuelsId="480" name="Kozilek, the Great Distortion" set="Oath of the Gatewatch"/>
+<card magicDuelsId="481" name="Kozilek's Pathfinder" set="Oath of the Gatewatch"/>
+<card magicDuelsId="482" name="Kozilek's Return" set="Oath of the Gatewatch"/>
+<card magicDuelsId="483" name="Kozilek's Shrieker" set="Oath of the Gatewatch"/>
+<card magicDuelsId="484" name="Kozilek's Translator" set="Oath of the Gatewatch"/>
+<card magicDuelsId="485" name="Lead by Example" set="Oath of the Gatewatch"/>
+<card magicDuelsId="486" name="Linvala, the Preserver" set="Oath of the Gatewatch"/>
+<card magicDuelsId="487" name="Loam Larva" set="Oath of the Gatewatch"/>
+<card magicDuelsId="488" name="Make a Stand" set="Oath of the Gatewatch"/>
+<card magicDuelsId="489" name="Makindi Aeronaut" set="Oath of the Gatewatch"/>
+<card magicDuelsId="490" name="Malakir Soothsayer" set="Oath of the Gatewatch"/>
+<card magicDuelsId="491" name="Matter Reshaper" set="Oath of the Gatewatch"/>
+<card magicDuelsId="492" name="Maw of Kozilek" set="Oath of the Gatewatch"/>
+<card magicDuelsId="493" name="Mina and Denn, Wildborn" set="Oath of the Gatewatch"/>
+<card magicDuelsId="494" name="Mindmelter" set="Oath of the Gatewatch"/>
+<card magicDuelsId="495" name="Needle Spires" set="Oath of the Gatewatch"/>
+<card magicDuelsId="496" name="Nissa, Voice of Zendikar" set="Oath of the Gatewatch"/>
+<card magicDuelsId="497" name="Nissa's Judgment" set="Oath of the Gatewatch"/>
+<card magicDuelsId="498" name="Oath of Chandra" set="Oath of the Gatewatch"/>
+<card magicDuelsId="499" name="Oath of Gideon" set="Oath of the Gatewatch"/>
+<card magicDuelsId="500" name="Oath of Jace" set="Oath of the Gatewatch"/>
+<card magicDuelsId="501" name="Oath of Nissa" set="Oath of the Gatewatch"/>
+<card magicDuelsId="502" name="Oblivion Strike" set="Oath of the Gatewatch"/>
+<card magicDuelsId="503" name="Ondu War Cleric" set="Oath of the Gatewatch"/>
+<card magicDuelsId="504" name="Press into Service" set="Oath of the Gatewatch"/>
+<card magicDuelsId="505" name="Prophet of Distortion" set="Oath of the Gatewatch"/>
+<card magicDuelsId="506" name="Pulse of Murasa" set="Oath of the Gatewatch"/>
+<card magicDuelsId="507" name="Reality Hemorrhage" set="Oath of the Gatewatch"/>
+<card magicDuelsId="508" name="Reality Smasher" set="Oath of the Gatewatch"/>
+<card magicDuelsId="509" name="Reaver Drone" set="Oath of the Gatewatch"/>
+<card magicDuelsId="510" name="Reflector Mage" set="Oath of the Gatewatch"/>
+<card magicDuelsId="511" name="Relentless Hunter" set="Oath of the Gatewatch"/>
+<card magicDuelsId="512" name="Roiling Waters" set="Oath of the Gatewatch"/>
+<card magicDuelsId="513" name="Ruin in Their Wake" set="Oath of the Gatewatch"/>
+<card magicDuelsId="514" name="Ruins of Oran-Rief" set="Oath of the Gatewatch"/>
+<card magicDuelsId="515" name="Saddleback Lagac" set="Oath of the Gatewatch"/>
+<card magicDuelsId="516" name="Scion Summoner" set="Oath of the Gatewatch"/>
+<card magicDuelsId="517" name="Seed Guardian" set="Oath of the Gatewatch"/>
+<card magicDuelsId="518" name="Seer's Lantern" set="Oath of the Gatewatch"/>
+<card magicDuelsId="519" name="Shoulder to Shoulder" set="Oath of the Gatewatch"/>
+<card magicDuelsId="520" name="Sifter of Skulls" set="Oath of the Gatewatch"/>
+<card magicDuelsId="521" name="Slaughter Drone" set="Oath of the Gatewatch"/>
+<card magicDuelsId="522" name="Slip Through Space" set="Oath of the Gatewatch"/>
+<card magicDuelsId="523" name="Sparkmage's Gambit" set="Oath of the Gatewatch"/>
+<card magicDuelsId="524" name="Spatial Contortion" set="Oath of the Gatewatch"/>
+<card magicDuelsId="525" name="Spawnbinder Mage" set="Oath of the Gatewatch"/>
+<card magicDuelsId="526" name="Steppe Glider" set="Oath of the Gatewatch"/>
+<card magicDuelsId="527" name="Stoneforge Acolyte" set="Oath of the Gatewatch"/>
+<card magicDuelsId="528" name="Stoneforge Masterwork" set="Oath of the Gatewatch"/>
+<card magicDuelsId="529" name="Stormchaser Mage" set="Oath of the Gatewatch"/>
+<card magicDuelsId="530" name="Sweep Away" set="Oath of the Gatewatch"/>
+<card magicDuelsId="531" name="Sylvan Advocate" set="Oath of the Gatewatch"/>
+<card magicDuelsId="532" name="Tajuru Pathwarden" set="Oath of the Gatewatch"/>
+<card magicDuelsId="533" name="Tar Snare" set="Oath of the Gatewatch"/>
+<card magicDuelsId="534" name="Thought Harvester" set="Oath of the Gatewatch"/>
+<card magicDuelsId="535" name="Thought-Knot Seer" set="Oath of the Gatewatch"/>
+<card magicDuelsId="536" name="Umara Entangler" set="Oath of the Gatewatch"/>
+<card magicDuelsId="537" name="Unity of Purpose" set="Oath of the Gatewatch"/>
+<card magicDuelsId="538" name="Untamed Hunger" set="Oath of the Gatewatch"/>
+<card magicDuelsId="539" name="Vampire Envoy" set="Oath of the Gatewatch"/>
+<card magicDuelsId="540" name="Vile Redeemer" set="Oath of the Gatewatch"/>
+<card magicDuelsId="541" name="Vines of the Recluse" set="Oath of the Gatewatch"/>
+<card magicDuelsId="542" name="Visions of Brutality" set="Oath of the Gatewatch"/>
+<card magicDuelsId="543" name="Void Grafter" set="Oath of the Gatewatch"/>
+<card magicDuelsId="544" name="Walker of the Wastes" set="Oath of the Gatewatch"/>
+<card magicDuelsId="545" name="Wall of Resurgence" set="Oath of the Gatewatch"/>
+<card magicDuelsId="546" name="Wandering Fumarole" set="Oath of the Gatewatch"/>
+<card magicDuelsId="547" name="Warden of Geometries" set="Oath of the Gatewatch"/>
+<card magicDuelsId="548" name="Warping Wail" set="Oath of the Gatewatch"/>
+<card magicDuelsId="549" name="Weapons Trainer" set="Oath of the Gatewatch"/>
+<card magicDuelsId="550" name="Witness the End" set="Oath of the Gatewatch"/>
+<card magicDuelsId="551" name="Zada's Commando" set="Oath of the Gatewatch"/>
+<card magicDuelsId="552" name="Zulaport Chainmage" set="Oath of the Gatewatch"/>
+<card magicDuelsId="553" name="Aberrant Researcher" set="Shadows Over Innistrad"/>
+<card magicDuelsId="554" name="Alms of the Vein" set="Shadows Over Innistrad"/>
+<card magicDuelsId="555" name="Altered Ego" set="Shadows Over Innistrad"/>
+<card magicDuelsId="556" name="Always Watching" set="Shadows Over Innistrad"/>
+<card magicDuelsId="557" name="Angelic Purge" set="Shadows Over Innistrad"/>
+<card magicDuelsId="558" name="Anguished Unmaking" set="Shadows Over Innistrad"/>
+<card magicDuelsId="559" name="Apothecary Geist" set="Shadows Over Innistrad"/>
+<card magicDuelsId="560" name="Archangel Avacyn" set="Shadows Over Innistrad"/>
+<card magicDuelsId="561" name="Arlinn Kord" set="Shadows Over Innistrad"/>
+<card magicDuelsId="562" name="Asylum Visitor" set="Shadows Over Innistrad"/>
+<card magicDuelsId="563" name="Avacynian Missionaries" set="Shadows Over Innistrad"/>
+<card magicDuelsId="564" name="Avacyn's Judgment" set="Shadows Over Innistrad"/>
+<card magicDuelsId="565" name="Biting Rain" set="Shadows Over Innistrad"/>
+<card magicDuelsId="566" name="Bloodmad Vampire" set="Shadows Over Innistrad"/>
+<card magicDuelsId="567" name="Brain in a Jar" set="Shadows Over Innistrad"/>
+<card magicDuelsId="568" name="Breakneck Rider" set="Shadows Over Innistrad"/>
+<card magicDuelsId="569" name="Broken Concentration" set="Shadows Over Innistrad"/>
+<card magicDuelsId="570" name="Bygone Bishop" set="Shadows Over Innistrad"/>
+<card magicDuelsId="571" name="Byway Courier" set="Shadows Over Innistrad"/>
+<card magicDuelsId="572" name="Call the Bloodline" set="Shadows Over Innistrad"/>
+<card magicDuelsId="573" name="Catalog" set="Shadows Over Innistrad"/>
+<card magicDuelsId="574" name="Compelling Deterrence" set="Shadows Over Innistrad"/>
+<card magicDuelsId="575" name="Confirm Suspicions" set="Shadows Over Innistrad"/>
+<card magicDuelsId="576" name="Confront the Unknown" set="Shadows Over Innistrad"/>
+<card magicDuelsId="577" name="Convicted Killer" set="Shadows Over Innistrad"/>
+<card magicDuelsId="578" name="Cult of the Waxing Moon" set="Shadows Over Innistrad"/>
+<card magicDuelsId="579" name="Dauntless Cathar" set="Shadows Over Innistrad"/>
+<card magicDuelsId="580" name="Dead Weight" set="Shadows Over Innistrad"/>
+<card magicDuelsId="581" name="Deathcap Cultivator" set="Shadows Over Innistrad"/>
+<card magicDuelsId="582" name="Declaration in Stone" set="Shadows Over Innistrad"/>
+<card magicDuelsId="583" name="Devils' Playground" set="Shadows Over Innistrad"/>
+<card magicDuelsId="584" name="Diregraf Colossus" set="Shadows Over Innistrad"/>
+<card magicDuelsId="585" name="Drownyard Explorers" set="Shadows Over Innistrad"/>
+<card magicDuelsId="586" name="Drownyard Temple" set="Shadows Over Innistrad"/>
+<card magicDuelsId="587" name="Drunau Corpse Trawler" set="Shadows Over Innistrad"/>
+<card magicDuelsId="588" name="Duskwatch Recruiter" set="Shadows Over Innistrad"/>
+<card magicDuelsId="589" name="Elusive Tormentor" set="Shadows Over Innistrad"/>
+<card magicDuelsId="590" name="Ember-Eye Wolf" set="Shadows Over Innistrad"/>
+<card magicDuelsId="591" name="Emissary of the Sleepless" set="Shadows Over Innistrad"/>
+<card magicDuelsId="592" name="Equestrian Skill" set="Shadows Over Innistrad"/>
+<card magicDuelsId="593" name="Erdwal Illuminator" set="Shadows Over Innistrad"/>
+<card magicDuelsId="594" name="Essence Flux" set="Shadows Over Innistrad"/>
+<card magicDuelsId="595" name="Ever After" set="Shadows Over Innistrad"/>
+<card magicDuelsId="596" name="Expose Evil" set="Shadows Over Innistrad"/>
+<card magicDuelsId="597" name="Farbog Revenant" set="Shadows Over Innistrad"/>
+<card magicDuelsId="598" name="Fevered Visions" set="Shadows Over Innistrad"/>
+<card magicDuelsId="599" name="Fiery Temper" set="Shadows Over Innistrad"/>
+<card magicDuelsId="600" name="Flameblade Angel" set="Shadows Over Innistrad"/>
+<card magicDuelsId="601" name="Forgotten Creation" set="Shadows Over Innistrad"/>
+<card magicDuelsId="602" name="Fork in the Road" set="Shadows Over Innistrad"/>
+<card magicDuelsId="603" name="From Under the Floorboards" set="Shadows Over Innistrad"/>
+<card magicDuelsId="604" name="Furtive Homunculus" set="Shadows Over Innistrad"/>
+<card magicDuelsId="605" name="Gatstaf Arsonists" set="Shadows Over Innistrad"/>
+<card magicDuelsId="606" name="Geier Reach Bandit" set="Shadows Over Innistrad"/>
+<card magicDuelsId="607" name="Geistblast" set="Shadows Over Innistrad"/>
+<card magicDuelsId="608" name="Ghoulcaller's Accomplice" set="Shadows Over Innistrad"/>
+<card magicDuelsId="609" name="Ghoulsteed" set="Shadows Over Innistrad"/>
+<card magicDuelsId="610" name="Gisa's Bidding" set="Shadows Over Innistrad"/>
+<card magicDuelsId="611" name="Hanweir Militia Captain" set="Shadows Over Innistrad"/>
+<card magicDuelsId="612" name="Harvest Hand" set="Shadows Over Innistrad"/>
+<card magicDuelsId="613" name="Haunted Cloak" set="Shadows Over Innistrad"/>
+<card magicDuelsId="614" name="Heir of Falkenrath" set="Shadows Over Innistrad"/>
+<card magicDuelsId="615" name="Hermit of the Natterknolls" set="Shadows Over Innistrad"/>
+<card magicDuelsId="616" name="Hinterland Logger" set="Shadows Over Innistrad"/>
+<card magicDuelsId="617" name="Hope Against Hope" set="Shadows Over Innistrad"/>
+<card magicDuelsId="618" name="Howlpack Resurgence" set="Shadows Over Innistrad"/>
+<card magicDuelsId="619" name="Incorrigible Youths" set="Shadows Over Innistrad"/>
+<card magicDuelsId="620" name="Inexorable Blob" set="Shadows Over Innistrad"/>
+<card magicDuelsId="621" name="Inner Struggle" set="Shadows Over Innistrad"/>
+<card magicDuelsId="622" name="Inquisitor's Ox" set="Shadows Over Innistrad"/>
+<card magicDuelsId="623" name="Insolent Neonate" set="Shadows Over Innistrad"/>
+<card magicDuelsId="624" name="Inspiring Captain" set="Shadows Over Innistrad"/>
+<card magicDuelsId="625" name="Intrepid Provisioner" set="Shadows Over Innistrad"/>
+<card magicDuelsId="626" name="Invocation of Saint Traft" set="Shadows Over Innistrad"/>
+<card magicDuelsId="627" name="Jace, Unraveler of Secrets" set="Shadows Over Innistrad"/>
+<card magicDuelsId="628" name="Just the Wind" set="Shadows Over Innistrad"/>
+<card magicDuelsId="629" name="Kessig Forgemaster" set="Shadows Over Innistrad"/>
+<card magicDuelsId="630" name="Lambholt Pacifist" set="Shadows Over Innistrad"/>
+<card magicDuelsId="631" name="Lamplighter of Selhoff" set="Shadows Over Innistrad"/>
+<card magicDuelsId="632" name="Lightning Axe" set="Shadows Over Innistrad"/>
+<card magicDuelsId="633" name="Macabre Waltz" set="Shadows Over Innistrad"/>
+<card magicDuelsId="634" name="Merciless Resolve" set="Shadows Over Innistrad"/>
+<card magicDuelsId="635" name="Might Beyond Reason" set="Shadows Over Innistrad"/>
+<card magicDuelsId="636" name="Militant Inquisitor" set="Shadows Over Innistrad"/>
+<card magicDuelsId="637" name="Mindwrack Demon" set="Shadows Over Innistrad"/>
+<card magicDuelsId="638" name="Moorland Drifter" set="Shadows Over Innistrad"/>
+<card magicDuelsId="639" name="Morkrut Necropod" set="Shadows Over Innistrad"/>
+<card magicDuelsId="640" name="Murderer's Axe" set="Shadows Over Innistrad"/>
+<card magicDuelsId="641" name="Murderous Compulsion" set="Shadows Over Innistrad"/>
+<card magicDuelsId="642" name="Nagging Thoughts" set="Shadows Over Innistrad"/>
+<card magicDuelsId="643" name="Nahiri, the Harbinger" set="Shadows Over Innistrad"/>
+<card magicDuelsId="644" name="Nahiri's Machinations" set="Shadows Over Innistrad"/>
+<card magicDuelsId="645" name="Neglected Heirloom" set="Shadows Over Innistrad"/>
+<card magicDuelsId="646" name="Obsessive Skinner" set="Shadows Over Innistrad"/>
+<card magicDuelsId="647" name="Olivia, Mobilized for War" set="Shadows Over Innistrad"/>
+<card magicDuelsId="648" name="Olivia's Bloodsworn" set="Shadows Over Innistrad"/>
+<card magicDuelsId="649" name="Pack Guardian" set="Shadows Over Innistrad"/>
+<card magicDuelsId="650" name="Paranoid Parish-Blade" set="Shadows Over Innistrad"/>
+<card magicDuelsId="651" name="Pieces of the Puzzle" set="Shadows Over Innistrad"/>
+<card magicDuelsId="652" name="Pious Evangel" set="Shadows Over Innistrad"/>
+<card magicDuelsId="653" name="Pore Over the Pages" set="Shadows Over Innistrad"/>
+<card magicDuelsId="654" name="Press for Answers" set="Shadows Over Innistrad"/>
+<card magicDuelsId="655" name="Prized Amalgam" set="Shadows Over Innistrad"/>
+<card magicDuelsId="656" name="Puncturing Light" set="Shadows Over Innistrad"/>
+<card magicDuelsId="657" name="Pyre Hound" set="Shadows Over Innistrad"/>
+<card magicDuelsId="658" name="Quilled Wolf" set="Shadows Over Innistrad"/>
+<card magicDuelsId="659" name="Rabid Bite" set="Shadows Over Innistrad"/>
+<card magicDuelsId="660" name="Rancid Rats" set="Shadows Over Innistrad"/>
+<card magicDuelsId="661" name="Rattlechains" set="Shadows Over Innistrad"/>
+<card magicDuelsId="662" name="Ravenous Bloodseeker" set="Shadows Over Innistrad"/>
+<card magicDuelsId="663" name="Reaper of Flight Moonsilver" set="Shadows Over Innistrad"/>
+<card magicDuelsId="664" name="Reckless Scholar" set="Shadows Over Innistrad"/>
+<card magicDuelsId="665" name="Reduce to Ashes" set="Shadows Over Innistrad"/>
+<card magicDuelsId="666" name="Rise from the Tides" set="Shadows Over Innistrad"/>
+<card magicDuelsId="667" name="Rush of Adrenaline" set="Shadows Over Innistrad"/>
+<card magicDuelsId="668" name="Sage of Ancient Lore" set="Shadows Over Innistrad"/>
+<card magicDuelsId="669" name="Sanitarium Skeleton" set="Shadows Over Innistrad"/>
+<card magicDuelsId="670" name="Scourge Wolf" set="Shadows Over Innistrad"/>
+<card magicDuelsId="671" name="Senseless Rage" set="Shadows Over Innistrad"/>
+<card magicDuelsId="672" name="Silverfur Partisan" set="Shadows Over Innistrad"/>
+<card magicDuelsId="673" name="Sinister Concoction" set="Shadows Over Innistrad"/>
+<card magicDuelsId="674" name="Skeleton Key" set="Shadows Over Innistrad"/>
+<card magicDuelsId="675" name="Slayer's Plate" set="Shadows Over Innistrad"/>
+<card magicDuelsId="676" name="Sleep Paralysis" set="Shadows Over Innistrad"/>
+<card magicDuelsId="677" name="Solitary Hunter" set="Shadows Over Innistrad"/>
+<card magicDuelsId="678" name="Sorin, Grim Nemesis" set="Shadows Over Innistrad"/>
+<card magicDuelsId="679" name="Spectral Shepherd" set="Shadows Over Innistrad"/>
+<card magicDuelsId="680" name="Stensia Masquerade" set="Shadows Over Innistrad"/>
+<card magicDuelsId="681" name="Stitched Mangler" set="Shadows Over Innistrad"/>
+<card magicDuelsId="682" name="Stoic Builder" set="Shadows Over Innistrad"/>
+<card magicDuelsId="683" name="Stormrider Spirit" set="Shadows Over Innistrad"/>
+<card magicDuelsId="684" name="Survive the Night" set="Shadows Over Innistrad"/>
+<card magicDuelsId="685" name="Tamiyo's Journal" set="Shadows Over Innistrad"/>
+<card magicDuelsId="686" name="Tenacity" set="Shadows Over Innistrad"/>
+<card magicDuelsId="687" name="Thalia's Lieutenant" set="Shadows Over Innistrad"/>
+<card magicDuelsId="688" name="The Gitrog Monster" set="Shadows Over Innistrad"/>
+<card magicDuelsId="689" name="Thing in the Ice" set="Shadows Over Innistrad"/>
+<card magicDuelsId="690" name="Thornhide Wolves" set="Shadows Over Innistrad"/>
+<card magicDuelsId="691" name="Thraben Gargoyle" set="Shadows Over Innistrad"/>
+<card magicDuelsId="692" name="Throttle" set="Shadows Over Innistrad"/>
+<card magicDuelsId="693" name="Tireless Tracker" set="Shadows Over Innistrad"/>
+<card magicDuelsId="694" name="Tooth Collector" set="Shadows Over Innistrad"/>
+<card magicDuelsId="695" name="Topplegeist" set="Shadows Over Innistrad"/>
+<card magicDuelsId="696" name="Twins of Maurer Estate" set="Shadows Over Innistrad"/>
+<card magicDuelsId="697" name="Ulrich's Kindred" set="Shadows Over Innistrad"/>
+<card magicDuelsId="698" name="Ulvenwald Hydra" set="Shadows Over Innistrad"/>
+<card magicDuelsId="699" name="Ulvenwald Mysteries" set="Shadows Over Innistrad"/>
+<card magicDuelsId="700" name="Vessel of Ephemera" set="Shadows Over Innistrad"/>
+<card magicDuelsId="701" name="Vessel of Malignity" set="Shadows Over Innistrad"/>
+<card magicDuelsId="702" name="Vessel of Paramnesia" set="Shadows Over Innistrad"/>
+<card magicDuelsId="703" name="Vessel of Volatility" set="Shadows Over Innistrad"/>
+<card magicDuelsId="704" name="Veteran Cathar" set="Shadows Over Innistrad"/>
+<card magicDuelsId="705" name="Voldaren Duelist" set="Shadows Over Innistrad"/>
+<card magicDuelsId="706" name="Warped Landscape" set="Shadows Over Innistrad"/>
+<card magicDuelsId="707" name="Welcome to the Fold" set="Shadows Over Innistrad"/>
+<card magicDuelsId="708" name="Westvale Abbey" set="Shadows Over Innistrad"/>
+<card magicDuelsId="709" name="Wild-Field Scarecrow" set="Shadows Over Innistrad"/>
+<card magicDuelsId="710" name="Wolf of Devil's Breach" set="Shadows Over Innistrad"/>
+<card magicDuelsId="711" name="Champion of Arashin" set="Starter"/>
+<card magicDuelsId="712" name="Crow of Dark Tidings" set="Starter"/>
+<card magicDuelsId="713" name="Ember Beast" set="Starter"/>
+<card magicDuelsId="714" name="Indulgent Aristocrat" set="Shadows Over Innistrad"/>
+<card magicDuelsId="715" name="Kindly Stranger" set="Starter"/>
+<card magicDuelsId="716" name="Metropolis Sprite" set="Starter"/>
+<card magicDuelsId="717" name="Moldgraf Scavenger" set="Starter"/>
+<card magicDuelsId="718" name="Rotted Hulk" set="Starter"/>
+<card magicDuelsId="719" name="Spined Wurm" set="Starter"/>
+<card magicDuelsId="720" name="Stallion of Ashmouth" set="Starter"/>
+<card magicDuelsId="721" name="Stromkirk Mentor" set="Starter"/>
+<card magicDuelsId="722" name="Vessel of Nascency" set="Starter"/>
+<card magicDuelsId="723" name="Abandon Reason" set="Eldritch Moon"/>
+<card magicDuelsId="724" name="Abundant Maw" set="Eldritch Moon"/>
+<card magicDuelsId="725" name="Advanced Stitchwing" set="Eldritch Moon"/>
+<card magicDuelsId="726" name="Backwoods Survivalists" set="Eldritch Moon"/>
+<card magicDuelsId="727" name="Bedlam Reveler" set="Eldritch Moon"/>
+<card magicDuelsId="728" name="Blessed Alliance" set="Eldritch Moon"/>
+<card magicDuelsId="729" name="Blood Mist" set="Eldritch Moon"/>
+<card magicDuelsId="730" name="Bloodbriar" set="Eldritch Moon"/>
+<card magicDuelsId="731" name="Bloodhall Priest" set="Eldritch Moon"/>
+<card magicDuelsId="732" name="Bold Impaler" set="Eldritch Moon"/>
+<card magicDuelsId="733" name="Boon of Emrakul" set="Eldritch Moon"/>
+<card magicDuelsId="734" name="Borrowed Grace" set="Eldritch Moon"/>
+<card magicDuelsId="735" name="Borrowed Hostility" set="Eldritch Moon"/>
+<card magicDuelsId="736" name="Borrowed Malevolence" set="Eldritch Moon"/>
+<card magicDuelsId="737" name="Bruna, the Fading Light" set="Eldritch Moon"/>
+<card magicDuelsId="738" name="Campaign of Vengeance" set="Eldritch Moon"/>
+<card magicDuelsId="739" name="Cemetery Recruitment" set="Eldritch Moon"/>
+<card magicDuelsId="740" name="Certain Death" set="Eldritch Moon"/>
+<card magicDuelsId="741" name="Collective Defiance" set="Eldritch Moon"/>
+<card magicDuelsId="742" name="Collective Effort" set="Eldritch Moon"/>
+<card magicDuelsId="743" name="Conduit of Storms" set="Eldritch Moon"/>
+<card magicDuelsId="744" name="Convolute" set="Eldritch Moon"/>
+<card magicDuelsId="745" name="Courageous Outrider" set="Eldritch Moon"/>
+<card magicDuelsId="746" name="Crop Sigil" set="Eldritch Moon"/>
+<card magicDuelsId="747" name="Crossroads Consecrator" set="Eldritch Moon"/>
+<card magicDuelsId="748" name="Cryptbreaker" set="Eldritch Moon"/>
+<card magicDuelsId="749" name="Cultist's Staff" set="Eldritch Moon"/>
+<card magicDuelsId="750" name="Dark Salvation" set="Eldritch Moon"/>
+<card magicDuelsId="751" name="Decimator of the Provinces" set="Eldritch Moon"/>
+<card magicDuelsId="752" name="Desperate Sentry" set="Eldritch Moon"/>
+<card magicDuelsId="753" name="Displace" set="Eldritch Moon"/>
+<card magicDuelsId="754" name="Distemper of the Blood" set="Eldritch Moon"/>
+<card magicDuelsId="755" name="Distended Mindbender" set="Eldritch Moon"/>
+<card magicDuelsId="756" name="Docent of Perfection" set="Eldritch Moon"/>
+<card magicDuelsId="757" name="Drag Under" set="Eldritch Moon"/>
+<card magicDuelsId="758" name="Elder Deep-Fiend" set="Eldritch Moon"/>
+<card magicDuelsId="759" name="Eldritch Evolution" set="Eldritch Moon"/>
+<card magicDuelsId="760" name="Emrakul's Evangel" set="Eldritch Moon"/>
+<card magicDuelsId="761" name="Emrakul's Influence" set="Eldritch Moon"/>
+<card magicDuelsId="762" name="Extricator of Sin" set="Eldritch Moon"/>
+<card magicDuelsId="763" name="Exultant Cultist" set="Eldritch Moon"/>
+<card magicDuelsId="764" name="Faith Unbroken" set="Eldritch Moon"/>
+<card magicDuelsId="765" name="Faithbearer Paladin" set="Eldritch Moon"/>
+<card magicDuelsId="766" name="Falkenrath Reaver" set="Eldritch Moon"/>
+<card magicDuelsId="767" name="Fogwalker" set="Eldritch Moon"/>
+<card magicDuelsId="768" name="Furyblade Vampire" set="Eldritch Moon"/>
+<card magicDuelsId="769" name="Galvanic Bombardment" set="Eldritch Moon"/>
+<card magicDuelsId="770" name="Gavony Unhallowed" set="Eldritch Moon"/>
+<card magicDuelsId="771" name="Geier Reach Sanitarium" set="Eldritch Moon"/>
+<card magicDuelsId="772" name="Gisa and Geralf" set="Eldritch Moon"/>
+<card magicDuelsId="773" name="Gisela, the Broken Blade" set="Eldritch Moon"/>
+<card magicDuelsId="774" name="Gnarlwood Dryad" set="Eldritch Moon"/>
+<card magicDuelsId="775" name="Graf Harvest" set="Eldritch Moon"/>
+<card magicDuelsId="776" name="Graf Rats" set="Eldritch Moon"/>
+<card magicDuelsId="777" name="Grapple with the Past" set="Eldritch Moon"/>
+<card magicDuelsId="778" name="Grizzled Angler" set="Eldritch Moon"/>
+<card magicDuelsId="779" name="Guardian of Pilgrims" set="Eldritch Moon"/>
+<card magicDuelsId="780" name="Hamlet Captain" set="Eldritch Moon"/>
+<card magicDuelsId="781" name="Hanweir Battlements" set="Eldritch Moon"/>
+<card magicDuelsId="782" name="Hanweir Garrison" set="Eldritch Moon"/>
+<card magicDuelsId="783" name="Haunted Dead" set="Eldritch Moon"/>
+<card magicDuelsId="784" name="Heron's Grace Champion" set="Eldritch Moon"/>
+<card magicDuelsId="785" name="Impetuous Devils" set="Eldritch Moon"/>
+<card magicDuelsId="786" name="Imprisoned in the Moon" set="Eldritch Moon"/>
+<card magicDuelsId="787" name="Ingenious Skaab" set="Eldritch Moon"/>
+<card magicDuelsId="788" name="Ironclad Slayer" set="Eldritch Moon"/>
+<card magicDuelsId="789" name="Ishkanah, Grafwidow" set="Eldritch Moon"/>
+<card magicDuelsId="790" name="Kessig Prowler" set="Eldritch Moon"/>
+<card magicDuelsId="791" name="Laboratory Brute" set="Eldritch Moon"/>
+<card magicDuelsId="792" name="Lashweed Lurker" set="Eldritch Moon"/>
+<card magicDuelsId="793" name="Liliana, the Last Hope" set="Eldritch Moon"/>
+<card magicDuelsId="794" name="Liliana's Elite" set="Eldritch Moon"/>
+<card magicDuelsId="795" name="Lone Rider" set="Eldritch Moon"/>
+<card magicDuelsId="796" name="Long Road Home" set="Eldritch Moon"/>
+<card magicDuelsId="797" name="Lunar Force" set="Eldritch Moon"/>
+<card magicDuelsId="798" name="Lunarch Mantle" set="Eldritch Moon"/>
+<card magicDuelsId="799" name="Lupine Prototype" set="Eldritch Moon"/>
+<card magicDuelsId="800" name="Make Mischief" set="Eldritch Moon"/>
+<card magicDuelsId="801" name="Markov Crusader" set="Eldritch Moon"/>
+<card magicDuelsId="802" name="Mercurial Geists" set="Eldritch Moon"/>
+<card magicDuelsId="803" name="Midnight Scavengers" set="Eldritch Moon"/>
+<card magicDuelsId="804" name="Mirrorwing Dragon" set="Eldritch Moon"/>
+<card magicDuelsId="805" name="Mockery of Nature" set="Eldritch Moon"/>
+<card magicDuelsId="806" name="Mournwillow" set="Eldritch Moon"/>
+<card magicDuelsId="807" name="Murder" set="Eldritch Moon"/>
+<card magicDuelsId="808" name="Nebelgast Herald" set="Eldritch Moon"/>
+<card magicDuelsId="809" name="Niblis of Frost" set="Eldritch Moon"/>
+<card magicDuelsId="810" name="Oath of Liliana" set="Eldritch Moon"/>
+<card magicDuelsId="811" name="Olivia's Dragoon" set="Eldritch Moon"/>
+<card magicDuelsId="812" name="Prey Upon" set="Eldritch Moon"/>
+<card magicDuelsId="813" name="Primal Druid" set="Eldritch Moon"/>
+<card magicDuelsId="814" name="Ride Down" set="Eldritch Moon"/>
+<card magicDuelsId="815" name="Savage Alliance" set="Eldritch Moon"/>
+<card magicDuelsId="816" name="Scour the Laboratory" set="Eldritch Moon"/>
+<card magicDuelsId="817" name="Vexing Scuttler" set="Eldritch Moon"/>
+<card magicDuelsId="818" name="Selfless Spirit" set="Eldritch Moon"/>
+<card magicDuelsId="819" name="Shrill Howler" set="Eldritch Moon"/>
+<card magicDuelsId="820" name="Sigardian Priest" set="Eldritch Moon"/>
+<card magicDuelsId="821" name="Smoldering Werewolf" set="Eldritch Moon"/>
+<card magicDuelsId="822" name="Spectral Reserves" set="Eldritch Moon"/>
+<card magicDuelsId="823" name="Spell Queller" set="Eldritch Moon"/>
+<card magicDuelsId="824" name="Spirit of the Hunt" set="Eldritch Moon"/>
+<card magicDuelsId="825" name="Spontaneous Mutation" set="Eldritch Moon"/>
+<card magicDuelsId="826" name="Steadfast Cathar" set="Eldritch Moon"/>
+<card magicDuelsId="827" name="Stensia Banquet" set="Eldritch Moon"/>
+<card magicDuelsId="828" name="Stensia Innkeeper" set="Eldritch Moon"/>
+<card magicDuelsId="829" name="Stromkirk Condemned" set="Eldritch Moon"/>
+<card magicDuelsId="830" name="Subjugator Angel" set="Eldritch Moon"/>
+<card magicDuelsId="831" name="Take Inventory" set="Eldritch Moon"/>
+<card magicDuelsId="832" name="Tamiyo, Field Researcher" set="Eldritch Moon"/>
+<card magicDuelsId="833" name="Tattered Haunter" set="Eldritch Moon"/>
+<card magicDuelsId="834" name="Thalia, Heretic Cathar" set="Eldritch Moon"/>
+<card magicDuelsId="835" name="Thermo-Alchemist" set="Eldritch Moon"/>
+<card magicDuelsId="836" name="Thraben Foulbloods" set="Eldritch Moon"/>
+<card magicDuelsId="837" name="Ulrich of the Krallenhorde" set="Eldritch Moon"/>
+<card magicDuelsId="838" name="Ulvenwald Observer" set="Eldritch Moon"/>
+<card magicDuelsId="839" name="Unsubstantiate" set="Eldritch Moon"/>
+<card magicDuelsId="840" name="Vildin-Pack Outcast" set="Eldritch Moon"/>
+<card magicDuelsId="841" name="Waxing Moon" set="Eldritch Moon"/>
+<card magicDuelsId="842" name="Weaver of Lightning" set="Eldritch Moon"/>
+<card magicDuelsId="843" name="Weirded Vampire" set="Eldritch Moon"/>
+<card magicDuelsId="844" name="Wharf Infiltrator" set="Eldritch Moon"/>
+<card magicDuelsId="845" name="Whispers of Emrakul" set="Eldritch Moon"/>
+<card magicDuelsId="846" name="Wolfkin Bond" set="Eldritch Moon"/>
+<card magicDuelsId="847" name="Woodcutter's Grit" set="Eldritch Moon"/>
+<card magicDuelsId="848" name="Woodland Patrol" set="Eldritch Moon"/>
+<card magicDuelsId="849" name="Drownyard Behemoth" set="Eldritch Moon"/>
+<card magicDuelsId="850" name="Enlightened Maniac" set="Eldritch Moon"/>
+<card magicDuelsId="851" name="Foul Emissary" set="Eldritch Moon"/>
+<card magicDuelsId="852" name="Wretched Gryff" set="Eldritch Moon"/>
+<card magicDuelsId="853" name="It of the Horrid Swarm" set="Eldritch Moon"/>
+<card magicDuelsId="854" name="Accomplished Automaton" set="Kaladesh"/>
+<card magicDuelsId="855" name="Acrobatic Maneuver" set="Kaladesh"/>
+<card magicDuelsId="856" name="Aether Hub" set="Kaladesh"/>
+<card magicDuelsId="857" name="Aether Meltdown" set="Kaladesh"/>
+<card magicDuelsId="858" name="Aether Tradewinds" set="Kaladesh"/>
+<card magicDuelsId="859" name="Aethersquall Ancient" set="Kaladesh"/>
+<card magicDuelsId="860" name="Aetherstorm Roc" set="Kaladesh"/>
+<card magicDuelsId="861" name="Aethertorch Renegade" set="Kaladesh"/>
+<card magicDuelsId="862" name="Ambitious Aetherborn" set="Kaladesh"/>
+<card magicDuelsId="863" name="Angel of Invention" set="Kaladesh"/>
+<card magicDuelsId="864" name="Appetite for the Unnatural" set="Kaladesh"/>
+<card magicDuelsId="865" name="Aradara Express" set="Kaladesh"/>
+<card magicDuelsId="866" name="Arborback Stomper" set="Kaladesh"/>
+<card magicDuelsId="867" name="Architect of the Untamed" set="Kaladesh"/>
+<card magicDuelsId="868" name="Armorcraft Judge" set="Kaladesh"/>
+<card magicDuelsId="869" name="Aviary Mechanic" set="Kaladesh"/>
+<card magicDuelsId="870" name="Bastion Mastodon" set="Kaladesh"/>
+<card magicDuelsId="871" name="Blossoming Defense" set="Kaladesh"/>
+<card magicDuelsId="872" name="Bomat Bazaar Barge" set="Kaladesh"/>
+<card magicDuelsId="873" name="Bomat Courier" set="Kaladesh"/>
+<card magicDuelsId="874" name="Brazen Scourge" set="Kaladesh"/>
+<card magicDuelsId="875" name="Bristling Hydra" set="Kaladesh"/>
+<card magicDuelsId="876" name="Built to Last" set="Kaladesh"/>
+<card magicDuelsId="877" name="Built to Smash" set="Kaladesh"/>
+<card magicDuelsId="878" name="Captured by the Consulate" set="Kaladesh"/>
+<card magicDuelsId="879" name="Cataclysmic Gearhulk" set="Kaladesh"/>
+<card magicDuelsId="880" name="Cathartic Reunion" set="Kaladesh"/>
+<card magicDuelsId="881" name="Chandra, Torch of Defiance" set="Kaladesh"/>
+<card magicDuelsId="882" name="Cloudblazer" set="Kaladesh"/>
+<card magicDuelsId="883" name="Combustible Gearhulk" set="Kaladesh"/>
+<card magicDuelsId="884" name="Commencement of Festivities" set="Kaladesh"/>
+<card magicDuelsId="885" name="Confiscation Coup" set="Kaladesh"/>
+<card magicDuelsId="886" name="Consul's Shieldguard" set="Kaladesh"/>
+<card magicDuelsId="887" name="Consulate Skygate" set="Kaladesh"/>
+<card magicDuelsId="888" name="Contraband Kingpin" set="Kaladesh"/>
+<card magicDuelsId="889" name="Cowl Prowler" set="Kaladesh"/>
+<card magicDuelsId="890" name="Creeping Mold" set="Kaladesh"/>
+<card magicDuelsId="891" name="Cultivator of Blades" set="Kaladesh"/>
+<card magicDuelsId="892" name="Cultivator's Caravan" set="Kaladesh"/>
+<card magicDuelsId="893" name="Curio Vendor" set="Kaladesh"/>
+<card magicDuelsId="894" name="Demolition Stomper" set="Kaladesh"/>
+<card magicDuelsId="895" name="Depala, Pilot Exemplar" set="Kaladesh"/>
+<card magicDuelsId="896" name="Diabolic Tutor" set="Kaladesh"/>
+<card magicDuelsId="897" name="Die Young" set="Kaladesh"/>
+<card magicDuelsId="898" name="Dramatic Reversal" set="Kaladesh"/>
+<card magicDuelsId="899" name="Dukhara Peafowl" set="Kaladesh"/>
+<card magicDuelsId="900" name="Durable Handicraft" set="Kaladesh"/>
+<card magicDuelsId="901" name="Dynavolt Tower" set="Kaladesh"/>
+<card magicDuelsId="902" name="Eager Construct" set="Kaladesh"/>
+<card magicDuelsId="903" name="Electrostatic Pummeler" set="Kaladesh"/>
+<card magicDuelsId="904" name="Eliminate the Competition" set="Kaladesh"/>
+<card magicDuelsId="905" name="Embraal Bruiser" set="Kaladesh"/>
+<card magicDuelsId="906" name="Engineered Might" set="Kaladesh"/>
+<card magicDuelsId="907" name="Era of Innovation" set="Kaladesh"/>
+<card magicDuelsId="908" name="Essence Extraction" set="Kaladesh"/>
+<card magicDuelsId="909" name="Fairgrounds Trumpeter" set="Kaladesh"/>
+<card magicDuelsId="910" name="Fateful Showdown" set="Kaladesh"/>
+<card magicDuelsId="911" name="Filigree Familiar" set="Kaladesh"/>
+<card magicDuelsId="912" name="Fleetwheel Cruiser" set="Kaladesh"/>
+<card magicDuelsId="913" name="Foundry Inspector" set="Kaladesh"/>
+<card magicDuelsId="914" name="Foundry Screecher" set="Kaladesh"/>
+<card magicDuelsId="915" name="Fragmentize" set="Kaladesh"/>
+<card magicDuelsId="916" name="Fretwork Colony" set="Kaladesh"/>
+<card magicDuelsId="917" name="Gearseeker Serpent" set="Kaladesh"/>
+<card magicDuelsId="918" name="Gearshift Ace" set="Kaladesh"/>
+<card magicDuelsId="919" name="Ghirapur Orrery" set="Kaladesh"/>
+<card magicDuelsId="920" name="Giant Spectacle" set="Kaladesh"/>
+<card magicDuelsId="921" name="Glimmer of Genius" set="Kaladesh"/>
+<card magicDuelsId="922" name="Glint-Nest Crane" set="Kaladesh"/>
+<card magicDuelsId="923" name="Glint-Sleeve Artisan" set="Kaladesh"/>
+<card magicDuelsId="924" name="Harnessed Lightning" set="Kaladesh"/>
+<card magicDuelsId="925" name="Hazardous Conditions" set="Kaladesh"/>
+<card magicDuelsId="926" name="Highspire Artisan" set="Kaladesh"/>
+<card magicDuelsId="927" name="Hightide Hermit" set="Kaladesh"/>
+<card magicDuelsId="928" name="Hijack" set="Kaladesh"/>
+<card magicDuelsId="929" name="Incendiary Sabotage" set="Kaladesh"/>
+<card magicDuelsId="930" name="Insidious Will" set="Kaladesh"/>
+<card magicDuelsId="931" name="Inventor's Apprentice" set="Kaladesh"/>
+<card magicDuelsId="932" name="Inventor's Goggles" set="Kaladesh"/>
+<card magicDuelsId="933" name="Inventors' Fair" set="Kaladesh"/>
+<card magicDuelsId="934" name="Kambal, Consul of Allocation" set="Kaladesh"/>
+<card magicDuelsId="935" name="Key to the City" set="Kaladesh"/>
+<card magicDuelsId="936" name="Kujar Seedsculptor" set="Kaladesh"/>
+<card magicDuelsId="937" name="Larger Than Life" set="Kaladesh"/>
+<card magicDuelsId="938" name="Lathnu Hellion" set="Kaladesh"/>
+<card magicDuelsId="939" name="Live Fast" set="Kaladesh"/>
+<card magicDuelsId="940" name="Long-Finned Skywhale" set="Kaladesh"/>
+<card magicDuelsId="941" name="Longtusk Cub" set="Kaladesh"/>
+<card magicDuelsId="942" name="Malfunction" set="Kaladesh"/>
+<card magicDuelsId="943" name="Marionette Master" set="Kaladesh"/>
+<card magicDuelsId="944" name="Master Trinketeer" set="Kaladesh"/>
+<card magicDuelsId="945" name="Metalwork Colossus" set="Kaladesh"/>
+<card magicDuelsId="946" name="Midnight Oil" set="Kaladesh"/>
+<card magicDuelsId="947" name="Minister of Inquiries" set="Kaladesh"/>
+<card magicDuelsId="948" name="Multiform Wonder" set="Kaladesh"/>
+<card magicDuelsId="949" name="Narnam Cobra" set="Kaladesh"/>
+<card magicDuelsId="950" name="Nature's Way" set="Kaladesh"/>
+<card magicDuelsId="951" name="Nimble Innovator" set="Kaladesh"/>
+<card magicDuelsId="952" name="Nissa, Vital Force" set="Kaladesh"/>
+<card magicDuelsId="953" name="Noxious Gearhulk" set="Kaladesh"/>
+<card magicDuelsId="954" name="Ornamental Courage" set="Kaladesh"/>
+<card magicDuelsId="955" name="Ovalchase Daredevil" set="Kaladesh"/>
+<card magicDuelsId="956" name="Ovalchase Dragster" set="Kaladesh"/>
+<card magicDuelsId="957" name="Oviya Pashiri, Sage Lifecrafter" set="Kaladesh"/>
+<card magicDuelsId="958" name="Padeem, Consul of Innovation" set="Kaladesh"/>
+<card magicDuelsId="959" name="Peema Outrider" set="Kaladesh"/>
+<card magicDuelsId="960" name="Pia Nalaar" set="Kaladesh"/>
+<card magicDuelsId="961" name="Prakhata Club Security" set="Kaladesh"/>
+<card magicDuelsId="962" name="Prakhata Pillar-Bug" set="Kaladesh"/>
+<card magicDuelsId="963" name="Propeller Pioneer" set="Kaladesh"/>
+<card magicDuelsId="964" name="Reckless Fireweaver" set="Kaladesh"/>
+<card magicDuelsId="965" name="Refurbish" set="Kaladesh"/>
+<card magicDuelsId="966" name="Renegade Freighter" set="Kaladesh"/>
+<card magicDuelsId="967" name="Restoration Gearsmith" set="Kaladesh"/>
+<card magicDuelsId="968" name="Revoke Privileges" set="Kaladesh"/>
+<card magicDuelsId="969" name="Ruinous Gremlin" set="Kaladesh"/>
+<card magicDuelsId="970" name="Rush of Vitality" set="Kaladesh"/>
+<card magicDuelsId="971" name="Saheeli Rai" set="Kaladesh"/>
+<card magicDuelsId="972" name="Saheeli's Artistry" set="Kaladesh"/>
+<card magicDuelsId="973" name="Scrapheap Scrounger" set="Kaladesh"/>
+<card magicDuelsId="974" name="Select for Inspection" set="Kaladesh"/>
+<card magicDuelsId="975" name="Self-Assembler" set="Kaladesh"/>
+<card magicDuelsId="976" name="Shrewd Negotiation" set="Kaladesh"/>
+<card magicDuelsId="977" name="Sky Skiff" set="Kaladesh"/>
+<card magicDuelsId="978" name="Skysovereign, Consul Flagship" set="Kaladesh"/>
+<card magicDuelsId="979" name="Skyswirl Harrier" set="Kaladesh"/>
+<card magicDuelsId="980" name="Skywhaler's Shot" set="Kaladesh"/>
+<card magicDuelsId="981" name="Smuggler's Copter" set="Kaladesh"/>
+<card magicDuelsId="982" name="Snare Thopter" set="Kaladesh"/>
+<card magicDuelsId="983" name="Speedway Fanatic" set="Kaladesh"/>
+<card magicDuelsId="984" name="Spontaneous Artist" set="Kaladesh"/>
+<card magicDuelsId="985" name="Start Your Engines" set="Kaladesh"/>
+<card magicDuelsId="986" name="Subtle Strike" set="Kaladesh"/>
+<card magicDuelsId="987" name="Syndicate Trafficker" set="Kaladesh"/>
+<card magicDuelsId="988" name="Terrain Elemental" set="Kaladesh"/>
+<card magicDuelsId="989" name="Territorial Gorger" set="Kaladesh"/>
+<card magicDuelsId="990" name="Thriving Grubs" set="Kaladesh"/>
+<card magicDuelsId="991" name="Thriving Ibex" set="Kaladesh"/>
+<card magicDuelsId="992" name="Thriving Rats" set="Kaladesh"/>
+<card magicDuelsId="993" name="Tidy Conclusion" set="Kaladesh"/>
+<card magicDuelsId="994" name="Toolcraft Exemplar" set="Kaladesh"/>
+<card magicDuelsId="995" name="Torch Gauntlet" set="Kaladesh"/>
+<card magicDuelsId="996" name="Torrential Gearhulk" set="Kaladesh"/>
+<card magicDuelsId="997" name="Trusty Companion" set="Kaladesh"/>
+<card magicDuelsId="998" name="Underhanded Designs" set="Kaladesh"/>
+<card magicDuelsId="999" name="Unlicensed Disintegration" set="Kaladesh"/>
+<card magicDuelsId="1000" name="Vedalken Blademaster" set="Kaladesh"/>
+<card magicDuelsId="1001" name="Verdurous Gearhulk" set="Kaladesh"/>
+<card magicDuelsId="1002" name="Veteran Motorist" set="Kaladesh"/>
+<card magicDuelsId="1003" name="Visionary Augmenter" set="Kaladesh"/>
+<card magicDuelsId="1004" name="Voltaic Brawler" set="Kaladesh"/>
+<card magicDuelsId="1005" name="Wayward Giant" set="Kaladesh"/>
+<card magicDuelsId="1006" name="Weaponcraft Enthusiast" set="Kaladesh"/>
+<card magicDuelsId="1007" name="Weldfast Monitor" set="Kaladesh"/>
+<card magicDuelsId="1008" name="Welding Sparks" set="Kaladesh"/>
+<card magicDuelsId="1009" name="Whirler Virtuoso" set="Kaladesh"/>
+<card magicDuelsId="1010" name="Wispweaver Angel" set="Kaladesh"/>
+<card magicDuelsId="1011" name="Workshop Assistant" set="Kaladesh"/>
+<card magicDuelsId="1012" name="Aether Theorist" set="Kaladesh"/>
+<card magicDuelsId="1013" name="Ballista Charger" set="Starter"/>
+<card magicDuelsId="1014" name="Empyreal Voyager" set="Starter"/>
+<card magicDuelsId="1015" name="Riparian Tiger" set="Starter"/>
+<card magicDuelsId="1016" name="Sage of Shaila's Claim" set="Starter"/>
+<card magicDuelsId="1017" name="Salivating Gremlins" set="Starter"/>
+<card magicDuelsId="1018" name="Thriving Rhino" set="Starter"/>
+<card magicDuelsId="1019" name="Thriving Turtle" set="Starter"/>
+<card magicDuelsId="1020" name="Weldfast Wingsmith" set="Starter"/>
+<card magicDuelsId="1021" name="Aerial Modification" set="Aether Revolt"/>
+<card magicDuelsId="1022" name="Aetherwind Basker" set="Aether Revolt"/>
+<card magicDuelsId="1023" name="Aether Chaser" set="Aether Revolt"/>
+<card magicDuelsId="1024" name="Aethersphere Harvester" set="Aether Revolt"/>
+<card magicDuelsId="1025" name="Aether Herder" set="Aether Revolt"/>
+<card magicDuelsId="1026" name="Aether Inspector" set="Aether Revolt"/>
+<card magicDuelsId="1027" name="Shipwreck Moray" set="Aether Revolt"/>
+<card magicDuelsId="1028" name="Aether Poisoner" set="Aether Revolt"/>
+<card magicDuelsId="1029" name="Aether Swooper" set="Aether Revolt"/>
+<card magicDuelsId="1030" name="Aetherstream Leopard" set="Aether Revolt"/>
+<card magicDuelsId="1031" name="Aethertide Whale" set="Aether Revolt"/>
+<card magicDuelsId="1032" name="Aid from the Cowl" set="Aether Revolt"/>
+<card magicDuelsId="1033" name="Airdrop Aeronauts" set="Aether Revolt"/>
+<card magicDuelsId="1034" name="Ajani Unyielding" set="Aether Revolt"/>
+<card magicDuelsId="1035" name="Alley Evasion" set="Aether Revolt"/>
+<card magicDuelsId="1036" name="Audacious Infiltrator" set="Aether Revolt"/>
+<card magicDuelsId="1037" name="Baral, Chief of Compliance" set="Aether Revolt"/>
+<card magicDuelsId="1038" name="Baral's Expertise" set="Aether Revolt"/>
+<card magicDuelsId="1039" name="Barricade Breaker" set="Aether Revolt"/>
+<card magicDuelsId="1040" name="Bastion Enforcer" set="Aether Revolt"/>
+<card magicDuelsId="1041" name="Bastion Inventor" set="Aether Revolt"/>
+<card magicDuelsId="1042" name="Battle at the Bridge" set="Aether Revolt"/>
+<card magicDuelsId="1043" name="Call for Unity" set="Aether Revolt"/>
+<card magicDuelsId="1044" name="Caught in the Brights" set="Aether Revolt"/>
+<card magicDuelsId="1045" name="Chandra's Revolution" set="Aether Revolt"/>
+<card magicDuelsId="1046" name="Cogwork Assembler" set="Aether Revolt"/>
+<card magicDuelsId="1047" name="Ravenous Intruder" set="Aether Revolt"/>
+<card magicDuelsId="1048" name="Consulate Dreadnought" set="Aether Revolt"/>
+<card magicDuelsId="1049" name="Consulate Turret" set="Aether Revolt"/>
+<card magicDuelsId="1050" name="Conviction" set="Aether Revolt"/>
+<card magicDuelsId="1051" name="Daredevil Dragster" set="Aether Revolt"/>
+<card magicDuelsId="1052" name="Daring Demolition" set="Aether Revolt"/>
+<card magicDuelsId="1053" name="Dark Intimations" set="Aether Revolt"/>
+<card magicDuelsId="1054" name="Dawnfeather Eagle" set="Aether Revolt"/>
+<card magicDuelsId="1055" name="Defiant Salvager" set="Aether Revolt"/>
+<card magicDuelsId="1056" name="Deft Dismissal" set="Aether Revolt"/>
+<card magicDuelsId="1057" name="Destructive Tampering" set="Aether Revolt"/>
+<card magicDuelsId="1058" name="Druid of the Cowl" set="Aether Revolt"/>
+<card magicDuelsId="1059" name="Efficient Construction" set="Aether Revolt"/>
+<card magicDuelsId="1060" name="Embraal Gear-Smasher" set="Unknown"/>
+<card magicDuelsId="1061" name="Enraged Giant" set="Aether Revolt"/>
+<card magicDuelsId="1062" name="Exquisite Archangel" set="Aether Revolt"/>
+<card magicDuelsId="1063" name="Fatal Push" set="Aether Revolt"/>
+<card magicDuelsId="1064" name="Fen Hauler" set="Aether Revolt"/>
+<card magicDuelsId="1065" name="Filigree Crawler" set="Aether Revolt"/>
+<card magicDuelsId="1066" name="Foundry Assembler" set="Aether Revolt"/>
+<card magicDuelsId="1067" name="Fourth Bridge Prowler" set="Aether Revolt"/>
+<card magicDuelsId="1068" name="Freejam Regent" set="Aether Revolt"/>
+<card magicDuelsId="1069" name="Frontline Rebel" set="Aether Revolt"/>
+<card magicDuelsId="1070" name="Ghirapur Osprey" set="Aether Revolt"/>
+<card magicDuelsId="1071" name="Gifted Aetherborn" set="Aether Revolt"/>
+<card magicDuelsId="1072" name="Glint-Sleeve Siphoner" set="Aether Revolt"/>
+<card magicDuelsId="1073" name="Gonti's Machinations" set="Aether Revolt"/>
+<card magicDuelsId="1074" name="Greenbelt Rampager" set="Aether Revolt"/>
+<card magicDuelsId="1075" name="Greenwheel Liberator" set="Aether Revolt"/>
+<card magicDuelsId="1076" name="Heart of Kiran" set="Aether Revolt"/>
+<card magicDuelsId="1077" name="Herald of Anguish" set="Aether Revolt"/>
+<card magicDuelsId="1078" name="Hidden Stockpile" set="Aether Revolt"/>
+<card magicDuelsId="1079" name="Highspire Infusion" set="Aether Revolt"/>
+<card magicDuelsId="1080" name="Hinterland Drake" set="Aether Revolt"/>
+<card magicDuelsId="1081" name="Hungry Flames" set="Aether Revolt"/>
+<card magicDuelsId="1082" name="Ice Over" set="Aether Revolt"/>
+<card magicDuelsId="1083" name="Implement of Combustion" set="Aether Revolt"/>
+<card magicDuelsId="1084" name="Implement of Improvement" set="Aether Revolt"/>
+<card magicDuelsId="1085" name="Implement of Examination" set="Aether Revolt"/>
+<card magicDuelsId="1086" name="Implement of Ferocity" set="Aether Revolt"/>
+<card magicDuelsId="1087" name="Implement of Malice" set="Aether Revolt"/>
+<card magicDuelsId="1088" name="Invigorated Rampage" set="Aether Revolt"/>
+<card magicDuelsId="1089" name="Kari Zev, Skyship Raider" set="Aether Revolt"/>
+<card magicDuelsId="1090" name="Kari Zev's Expertise" set="Aether Revolt"/>
+<card magicDuelsId="1091" name="Leave in the Dust" set="Aether Revolt"/>
+<card magicDuelsId="1092" name="Lifecrafter's Bestiary" set="Aether Revolt"/>
+<card magicDuelsId="1093" name="Lifecrafter's Gift" set="Aether Revolt"/>
+<card magicDuelsId="1094" name="Maverick Thopterist" set="Aether Revolt"/>
+<card magicDuelsId="1095" name="Mechanized Production" set="Aether Revolt"/>
+<card magicDuelsId="1096" name="Merchant's Dockhand" set="Aether Revolt"/>
+<card magicDuelsId="1097" name="Metallic Rebuke" set="Aether Revolt"/>
+<card magicDuelsId="1098" name="Monstrous Onslaught" set="Aether Revolt"/>
+<card magicDuelsId="1099" name="Narnam Renegade" set="Aether Revolt"/>
+<card magicDuelsId="1100" name="Night Market Aeronaut" set="Aether Revolt"/>
+<card magicDuelsId="1101" name="Night Market Guard" set="Aether Revolt"/>
+<card magicDuelsId="1102" name="Oath of Ajani" set="Aether Revolt"/>
+<card magicDuelsId="1103" name="Outland Boar" set="Aether Revolt"/>
+<card magicDuelsId="1104" name="Peacewalker Colossus" set="Unknown"/>
+<card magicDuelsId="1105" name="Peema Aether-Seer" set="Aether Revolt"/>
+<card magicDuelsId="1106" name="Pia's Revolution" set="Aether Revolt"/>
+<card magicDuelsId="1107" name="Planar Bridge" set="Aether Revolt"/>
+<card magicDuelsId="1108" name="Resourceful Return" set="Aether Revolt"/>
+<card magicDuelsId="1109" name="Renegade's Getaway" set="Aether Revolt"/>
+<card magicDuelsId="1110" name="Reservoir Walker" set="Aether Revolt"/>
+<card magicDuelsId="1111" name="Reverse Engineer" set="Aether Revolt"/>
+<card magicDuelsId="1112" name="Ridgescale Tusker" set="Aether Revolt"/>
+<card magicDuelsId="1113" name="Rishkar's Expertise" set="Aether Revolt"/>
+<card magicDuelsId="1114" name="Rogue Refiner" set="Aether Revolt"/>
+<card magicDuelsId="1115" name="Scrap Trawler" set="Aether Revolt"/>
+<card magicDuelsId="1116" name="Scrapper Champion" set="Aether Revolt"/>
+<card magicDuelsId="1117" name="Scrounging Bandar" set="Aether Revolt"/>
+<card magicDuelsId="1118" name="Servo Schematic" set="Aether Revolt"/>
+<card magicDuelsId="1119" name="Shielded Aether Thief" set="Aether Revolt"/>
+<card magicDuelsId="1120" name="Shock" set="Aether Revolt"/>
+<card magicDuelsId="1121" name="Silkweaver Elite" set="Aether Revolt"/>
+<card magicDuelsId="1122" name="Skyship Plunderer" set="Aether Revolt"/>
+<card magicDuelsId="1123" name="Sly Requisitioner" set="Aether Revolt"/>
+<card magicDuelsId="1124" name="Solemn Recruit" set="Aether Revolt"/>
+<card magicDuelsId="1125" name="Spire Patrol" set="Aether Revolt"/>
+<card magicDuelsId="1126" name="Sram, Senior Edificer" set="Aether Revolt"/>
+<card magicDuelsId="1127" name="Sram's Expertise" set="Aether Revolt"/>
+<card magicDuelsId="1128" name="Sweatworks Brawler" set="Aether Revolt"/>
+<card magicDuelsId="1129" name="Take into Custody" set="Aether Revolt"/>
+<card magicDuelsId="1130" name="Tezzeret the Schemer" set="Aether Revolt"/>
+<card magicDuelsId="1131" name="Tezzeret's Touch" set="Aether Revolt"/>
+<card magicDuelsId="1132" name="Thopter Arrest" set="Aether Revolt"/>
+<card magicDuelsId="1133" name="Treasure Keeper" set="Aether Revolt"/>
+<card magicDuelsId="1134" name="Trophy Mage" set="Aether Revolt"/>
+<card magicDuelsId="1135" name="Alley Strangler" set="Unknown"/>
+<card magicDuelsId="1136" name="Universal Solvent" set="Aether Revolt"/>
+<card magicDuelsId="1137" name="Untethered Express" set="Aether Revolt"/>
+<card magicDuelsId="1138" name="Vengeful Rebel" set="Aether Revolt"/>
+<card magicDuelsId="1139" name="Walking Ballista" set="Aether Revolt"/>
+<card magicDuelsId="1140" name="Weldfast Engineer" set="Aether Revolt"/>
+<card magicDuelsId="1141" name="Whir of Invention" set="Aether Revolt"/>
+<card magicDuelsId="1142" name="Winding Constrictor" set="Aether Revolt"/>
+<card magicDuelsId="1143" name="Wind-Kin Raiders" set="Aether Revolt"/>
+<card magicDuelsId="1144" name="Wrangle" set="Aether Revolt"/>
+<card magicDuelsId="1145" name="Yahenni, Undying Partisan" set="Aether Revolt"/>
+<card magicDuelsId="1146" name="Yahenni's Expertise" set="Aether Revolt"/>
+<card magicDuelsId="1147" name="Renegade Rallier" set="Starter"/>
+<card magicDuelsId="1148" name="Siege Modification" set="Starter"/>
+<card magicDuelsId="1149" name="Renegade Wheelsmith" set="Starter"/>
+<card magicDuelsId="1150" name="Mobile Garrison" set="Starter"/>
+<card magicDuelsId="1151" name="Irontread Crusher" set="Starter"/>
+<card magicDuelsId="1152" name="Lifecraft Cavalry" set="Starter"/>
+<card magicDuelsId="1153" name="Renegade Map" set="Starter"/>
+<card magicDuelsId="1154" name="Reckless Racer" set="Starter"/>
+<card magicDuelsId="1155" name="Deadeye Harpooner" set="Starter"/>
+<card magicDuelsId="1156" name="Aeronaut Admiral" set="Starter"/>
+<card magicDuelsId="1157" name="Countless Gears Renegade" set="Starter"/>
+<card magicDuelsId="1158" name="Unbridled Growth" set="Starter"/>
+<card magicDuelsId="1159" name="Cradle of the Accursed" set="Amonkhet"/>
+<card magicDuelsId="1160" name="Grasping Dunes" set="Amonkhet"/>
+<card magicDuelsId="1161" name="Sunscorched Desert" set="Amonkhet"/>
+<card magicDuelsId="1162" name="Oracle's Vault" set="Amonkhet"/>
+<card magicDuelsId="1163" name="Pyramid of the Pantheon" set="Amonkhet"/>
+<card magicDuelsId="1164" name="Throne of the God-Pharaoh" set="Amonkhet"/>
+<card magicDuelsId="1165" name="Watchers of the Dead" set="Amonkhet"/>
+<card magicDuelsId="1166" name="Rhonas's Monument" set="Amonkhet"/>
+<card magicDuelsId="1167" name="Hazoret's Monument" set="Amonkhet"/>
+<card magicDuelsId="1168" name="Bontu's Monument" set="Amonkhet"/>
+<card magicDuelsId="1169" name="Kefnet's Monument" set="Amonkhet"/>
+<card magicDuelsId="1170" name="Oketra's Monument" set="Amonkhet"/>
+<card magicDuelsId="1171" name="Luxa River Shrine" set="Amonkhet"/>
+<card magicDuelsId="1172" name="Nissa, Steward of Elements" set="Amonkhet"/>
+<card magicDuelsId="1173" name="Samut, Voice of Dissent" set="Amonkhet"/>
+<card magicDuelsId="1174" name="Heaven" set="Amonkhet"/>
+<card magicDuelsId="1175" name="Cut" set="Amonkhet"/>
+<card magicDuelsId="1176" name="Rags" set="Amonkhet"/>
+<card magicDuelsId="1177" name="Prepare" set="Amonkhet"/>
+<card magicDuelsId="1178" name="Bounty of the Luxa" set="Amonkhet"/>
+<card magicDuelsId="1179" name="Neheb, the Worthy" set="Amonkhet"/>
+<card magicDuelsId="1180" name="Hapatra, Vizier of Poisons" set="Amonkhet"/>
+<card magicDuelsId="1181" name="Temmet, Vizier of Naktamun" set="Amonkhet"/>
+<card magicDuelsId="1182" name="Spring" set="Amonkhet"/>
+<card magicDuelsId="1183" name="Onward" set="Amonkhet"/>
+<card magicDuelsId="1184" name="Destined" set="Amonkhet"/>
+<card magicDuelsId="1185" name="Reduce" set="Amonkhet"/>
+<card magicDuelsId="1186" name="Start" set="Amonkhet"/>
+<card magicDuelsId="1187" name="Weaver of Currents" set="Amonkhet"/>
+<card magicDuelsId="1188" name="Honored Crop-Captain" set="Unknown"/>
+<card magicDuelsId="1189" name="Decimator Beetle" set="Amonkhet"/>
+<card magicDuelsId="1190" name="Enigma Drake" set="Amonkhet"/>
+<card magicDuelsId="1191" name="Wayward Servant" set="Amonkhet"/>
+<card magicDuelsId="1192" name="Ahn-Crop Champion" set="Amonkhet"/>
+<card magicDuelsId="1193" name="Khenra Charioteer" set="Amonkhet"/>
+<card magicDuelsId="1194" name="Merciless Javelineer" set="Amonkhet"/>
+<card magicDuelsId="1195" name="Shadowstorm Vizier" set="Amonkhet"/>
+<card magicDuelsId="1196" name="Aven Wind Guide" set="Amonkhet"/>
+<card magicDuelsId="1197" name="Rhonas the Indomitable" set="Amonkhet"/>
+<card magicDuelsId="1198" name="Mouth" set="Amonkhet"/>
+<card magicDuelsId="1199" name="Sandwurm Convergence" set="Amonkhet"/>
+<card magicDuelsId="1200" name="Honored Hydra" set="Amonkhet"/>
+<card magicDuelsId="1201" name="Champion of Rhonas" set="Amonkhet"/>
+<card magicDuelsId="1202" name="Commit" set="Amonkhet"/>
+<card magicDuelsId="1203" name="Trial of Strength" set="Amonkhet"/>
+<card magicDuelsId="1204" name="Synchronized Strike" set="Amonkhet"/>
+<card magicDuelsId="1205" name="Crocodile of the Crossing" set="Amonkhet"/>
+<card magicDuelsId="1206" name="Defiant Greatmaw" set="Amonkhet"/>
+<card magicDuelsId="1207" name="Watchful Naga" set="Amonkhet"/>
+<card magicDuelsId="1208" name="Exemplar of Strength" set="Amonkhet"/>
+<card magicDuelsId="1209" name="Cartouche of Strength" set="Amonkhet"/>
+<card magicDuelsId="1210" name="Gift of Paradise" set="Amonkhet"/>
+<card magicDuelsId="1211" name="Benefaction of Rhonas" set="Amonkhet"/>
+<card magicDuelsId="1212" name="Shed Weakness" set="Amonkhet"/>
+<card magicDuelsId="1213" name="Greater Sandwurm" set="Amonkhet"/>
+<card magicDuelsId="1214" name="Quarry Hauler" set="Amonkhet"/>
+<card magicDuelsId="1215" name="Ornery Kudu" set="Amonkhet"/>
+<card magicDuelsId="1216" name="Hooded Brawler" set="Amonkhet"/>
+<card magicDuelsId="1217" name="Bitterblade Warrior" set="Amonkhet"/>
+<card magicDuelsId="1218" name="Initiate's Companion" set="Amonkhet"/>
+<card magicDuelsId="1219" name="Pouncing Cheetah" set="Amonkhet"/>
+<card magicDuelsId="1220" name="Oashra Cultivator" set="Amonkhet"/>
+<card magicDuelsId="1221" name="Hazoret the Fervent" set="Amonkhet"/>
+<card magicDuelsId="1222" name="Hazoret's Favor" set="Amonkhet"/>
+<card magicDuelsId="1223" name="Insult" set="Amonkhet"/>
+<card magicDuelsId="1224" name="Glorybringer" set="Amonkhet"/>
+<card magicDuelsId="1225" name="Heart-Piercer Manticore" set="Amonkhet"/>
+<card magicDuelsId="1226" name="Harsh Mentor" set="Amonkhet"/>
+<card magicDuelsId="1227" name="Trial of Zeal" set="Amonkhet"/>
+<card magicDuelsId="1228" name="Warfire Javelineer" set="Amonkhet"/>
+<card magicDuelsId="1229" name="Ahn-Crop Crasher" set="Amonkhet"/>
+<card magicDuelsId="1230" name="Battlefield Scavenger" set="Amonkhet"/>
+<card magicDuelsId="1231" name="Bloodrage Brawler" set="Amonkhet"/>
+<card magicDuelsId="1232" name="Electrify" set="Amonkhet"/>
+<card magicDuelsId="1233" name="Cartouche of Zeal" set="Amonkhet"/>
+<card magicDuelsId="1234" name="Magma Spray" set="Amonkhet"/>
+<card magicDuelsId="1235" name="Blazing Volley" set="Amonkhet"/>
+<card magicDuelsId="1236" name="Fling" set="Amonkhet"/>
+<card magicDuelsId="1237" name="Manticore of the Gauntlet" set="Amonkhet"/>
+<card magicDuelsId="1238" name="Emberhorn Minotaur" set="Amonkhet"/>
+<card magicDuelsId="1239" name="Thresher Lizard" set="Amonkhet"/>
+<card magicDuelsId="1240" name="Minotaur Sureshot" set="Amonkhet"/>
+<card magicDuelsId="1241" name="Pathmaker Initiate" set="Amonkhet"/>
+<card magicDuelsId="1242" name="Bloodlust Inciter" set="Amonkhet"/>
+<card magicDuelsId="1243" name="Liliana, Death's Majesty" set="Amonkhet"/>
+<card magicDuelsId="1244" name="Cruel Reality" set="Amonkhet"/>
+<card magicDuelsId="1245" name="Bontu the Glorified" set="Amonkhet"/>
+<card magicDuelsId="1246" name="Never" set="Amonkhet"/>
+<card magicDuelsId="1247" name="Archfiend of Ifnir" set="Amonkhet"/>
+<card magicDuelsId="1248" name="Liliana's Mastery" set="Amonkhet"/>
+<card magicDuelsId="1249" name="Plague Belcher" set="Amonkhet"/>
+<card magicDuelsId="1250" name="Dread Wanderer" set="Amonkhet"/>
+<card magicDuelsId="1251" name="Nest of Scarabs" set="Amonkhet"/>
+<card magicDuelsId="1252" name="Trial of Ambition" set="Amonkhet"/>
+<card magicDuelsId="1253" name="Bone Picker" set="Amonkhet"/>
+<card magicDuelsId="1254" name="Grim Strider" set="Amonkhet"/>
+<card magicDuelsId="1255" name="Baleful Ammit" set="Amonkhet"/>
+<card magicDuelsId="1256" name="Lord of the Accursed" set="Amonkhet"/>
+<card magicDuelsId="1257" name="Painful Lesson" set="Amonkhet"/>
+<card magicDuelsId="1258" name="Cartouche of Ambition" set="Amonkhet"/>
+<card magicDuelsId="1259" name="Unburden" set="Amonkhet"/>
+<card magicDuelsId="1260" name="Supernatural Stamina" set="Amonkhet"/>
+<card magicDuelsId="1261" name="Splendid Agony" set="Amonkhet"/>
+<card magicDuelsId="1262" name="Scarab Feast" set="Amonkhet"/>
+<card magicDuelsId="1263" name="Soulstinger" set="Amonkhet"/>
+<card magicDuelsId="1264" name="Cursed Minotaur" set="Amonkhet"/>
+<card magicDuelsId="1265" name="Miasmic Mummy" set="Amonkhet"/>
+<card magicDuelsId="1266" name="Dune Beetle" set="Amonkhet"/>
+<card magicDuelsId="1267" name="Doomed Dissenter" set="Amonkhet"/>
+<card magicDuelsId="1268" name="Festering Mummy" set="Amonkhet"/>
+<card magicDuelsId="1269" name="Kefnet the Mindful" set="Amonkhet"/>
+<card magicDuelsId="1270" name="Pull from Tomorrow" set="Amonkhet"/>
+<card magicDuelsId="1271" name="Drake Haven" set="Amonkhet"/>
+<card magicDuelsId="1272" name="Glyph Keeper" set="Amonkhet"/>
+<card magicDuelsId="1273" name="Curator of Mysteries" set="Amonkhet"/>
+<card magicDuelsId="1274" name="Trial of Knowledge" set="Amonkhet"/>
+<card magicDuelsId="1275" name="Open into Wonder" set="Amonkhet"/>
+<card magicDuelsId="1276" name="Censor" set="Amonkhet"/>
+<card magicDuelsId="1277" name="Cryptic Serpent" set="Amonkhet"/>
+<card magicDuelsId="1278" name="Vizier of Tumbling Sands" set="Amonkhet"/>
+<card magicDuelsId="1279" name="Labyrinth Guardian" set="Amonkhet"/>
+<card magicDuelsId="1280" name="Hieroglyphic Illumination" set="Amonkhet"/>
+<card magicDuelsId="1281" name="Compelling Argument" set="Amonkhet"/>
+<card magicDuelsId="1282" name="Cartouche of Knowledge" set="Amonkhet"/>
+<card magicDuelsId="1283" name="Essence Scatter" set="Amonkhet"/>
+<card magicDuelsId="1284" name="River Serpent" set="Amonkhet"/>
+<card magicDuelsId="1285" name="Shimmerscale Drake" set="Amonkhet"/>
+<card magicDuelsId="1286" name="Aven Initiate" set="Amonkhet"/>
+<card magicDuelsId="1287" name="Naga Oracle" set="Amonkhet"/>
+<card magicDuelsId="1288" name="Scribe of the Mindful" set="Amonkhet"/>
+<card magicDuelsId="1289" name="Hekma Sentinels" set="Amonkhet"/>
+<card magicDuelsId="1290" name="Tah-Crop Skirmisher" set="Amonkhet"/>
+<card magicDuelsId="1291" name="Angler Drake" set="Amonkhet"/>
+<card magicDuelsId="1292" name="Gideon of the Trials" set="Amonkhet"/>
+<card magicDuelsId="1293" name="Oketra the True" set="Amonkhet"/>
+<card magicDuelsId="1294" name="Dusk" set="Amonkhet"/>
+<card magicDuelsId="1295" name="Anointed Procession" set="Amonkhet"/>
+<card magicDuelsId="1296" name="Regal Caracal" set="Amonkhet"/>
+<card magicDuelsId="1297" name="Glory-Bound Initiate" set="Amonkhet"/>
+<card magicDuelsId="1298" name="Cast Out" set="Amonkhet"/>
+<card magicDuelsId="1299" name="Renewed Faith" set="Amonkhet"/>
+<card magicDuelsId="1300" name="Time to Reflect" set="Amonkhet"/>
+<card magicDuelsId="1301" name="Oketra's Attendant" set="Amonkhet"/>
+<card magicDuelsId="1302" name="Devoted Crop-Mate" set="Amonkhet"/>
+<card magicDuelsId="1303" name="Trueheart Duelist" set="Amonkhet"/>
+<card magicDuelsId="1304" name="Cartouche of Solidarity" set="Amonkhet"/>
+<card magicDuelsId="1305" name="In Oketra's Name" set="Amonkhet"/>
+<card magicDuelsId="1306" name="Compulsory Rest" set="Amonkhet"/>
+<card magicDuelsId="1307" name="Djeru's Resolve" set="Amonkhet"/>
+<card magicDuelsId="1308" name="Tah-Crop Elite" set="Amonkhet"/>
+<card magicDuelsId="1309" name="Sparring Mummy" set="Amonkhet"/>
+<card magicDuelsId="1310" name="Those Who Serve" set="Amonkhet"/>
+<card magicDuelsId="1311" name="Unwavering Initiate" set="Amonkhet"/>
+<card magicDuelsId="1312" name="Anointer Priest" set="Unknown"/>
+<card magicDuelsId="1313" name="Binding Mummy" set="Amonkhet"/>
+<card magicDuelsId="1314" name="Sacred Cat" set="Amonkhet"/>
+<card magicDuelsId="1315" name="Fan Bearer" set="Amonkhet"/>
+<card magicDuelsId="1316" name="Prowling Serpopard" set="Amonkhet"/>
+<card magicDuelsId="1317" name="Gust Walker" set="Starter"/>
+<card magicDuelsId="1318" name="Rhet-Crop Spearmaster" set="Amonkhet"/>
+<card magicDuelsId="1319" name="Trial of Solidarity" set="Starter"/>
+<card magicDuelsId="1320" name="Horror of the Broken Lands" set="Starter"/>
+<card magicDuelsId="1321" name="Ruthless Sniper" set="Starter"/>
+<card magicDuelsId="1322" name="Stir the Sands" set="Starter"/>
+<card magicDuelsId="1323" name="Nef-Crop Entangler" set="Starter"/>
+<card magicDuelsId="1324" name="Desert Cerodon" set="Starter"/>
+<card magicDuelsId="1325" name="Pursue Glory" set="Starter"/>
+<card magicDuelsId="1326" name="Flameblade Adept" set="Starter"/>
+<card magicDuelsId="1327" name="Trueheart Twins" set="Starter"/>
+</cards>

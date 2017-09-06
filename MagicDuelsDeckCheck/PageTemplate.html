@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Missing Cards</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .body-content {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .hover_img a {
+            position: relative;
+        }
+        .hover_img a span {
+            position: absolute;
+            display: none;
+            z-index: 99;
+        }
+        .hover_img a:hover span {
+            display: block;
+        }
+        .set {
+            font-size: small;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container body-content">
+        <h1>[deckname]</h1>
+        <p>You are missing the following cards for this deck.</p>
+        <div class="row">
+            [cardlist]
+        </div>
+        [cardtotal] cards in total.
+        [unknowncards]
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
