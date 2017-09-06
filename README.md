@@ -18,11 +18,11 @@ To use MagicDuelsDeckHelper just drag a deck link from the [Magic Duels Helper ]
 
 If you are on a page that lists decks, just drag the link for the deck you are interested in.
 
-![Drag Example Image](images\draglink.png)
+![Drag Example Image](https://github.com/Aspallar/MagicDuelsDeckCheck/blob/master/images/draglink.png)
 
 If you are on the actual deck page, drag the address bar in your browser.
 
-![Drag Example Image](images\dragaddress.png)
+![Drag Example Image](https://github.com/Aspallar/MagicDuelsDeckCheck/blob/master/images/dragaddress.png)
 
 ## Browsers
 
