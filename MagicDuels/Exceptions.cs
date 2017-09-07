@@ -14,12 +14,23 @@ namespace MagicDuels
     }
 
     [Serializable]
-    public class BadSteamProfileException : Exception
+    public class SteamProfileNotFoundException : Exception
     {
-        public BadSteamProfileException() { }
-        public BadSteamProfileException(string message) : base(message) { }
-        public BadSteamProfileException(string message, Exception inner) : base(message, inner) { }
-        protected BadSteamProfileException(
+        public SteamProfileNotFoundException() { }
+        public SteamProfileNotFoundException(string message) : base(message) { }
+        public SteamProfileNotFoundException(string message, Exception inner) : base(message, inner) { }
+        protected SteamProfileNotFoundException(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+
+    [Serializable]
+    public class BadSteamProfileDataException : Exception
+    {
+        public BadSteamProfileDataException() { }
+        public BadSteamProfileDataException(string message) : base(message) { }
+        public BadSteamProfileDataException(string message, Exception inner) : base(message, inner) { }
+        protected BadSteamProfileDataException(
           System.Runtime.Serialization.SerializationInfo info,
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }

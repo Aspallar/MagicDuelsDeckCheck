@@ -28,6 +28,7 @@ namespace MagicDuelsDeckCheck
                 dlg.DefaultExt = "profile";
                 dlg.Filter = "profile files (*.profile)|*.profile";
                 dlg.Multiselect = false;
+                dlg.DereferenceLinks = false;
                 dlg.Title = "Select Magic Duels steam profile";
                 if (dlg.ShowDialog(this) == DialogResult.OK)
                     textBoxProfilePath.Text = dlg.FileName;

@@ -6,6 +6,7 @@ using AngleSharp.Dom.Html;
 using System.Net;
 using System.Diagnostics;
 using System.ComponentModel;
+using System.IO;
 
 namespace MagicDuelsDeckCheck
 {
@@ -17,6 +18,7 @@ namespace MagicDuelsDeckCheck
         private bool _cardDataLoaded;
         private BackgroundWorker _worker;
         private bool _working;
+        private CorrectCardNames _correctCardNames;
 
         public FormMain(string profilePath)
         {
@@ -29,7 +31,13 @@ namespace MagicDuelsDeckCheck
             AllowDrop = true;
             LoadCardData();
             _pageGenerator = new PageGenerator();
-            _pageGenerator.Initialize();
+            _correctCardNames = new CorrectCardNames();
+            CreateWorker();
+            Initialize();
+        }
+
+        private void CreateWorker()
+        {
             _worker = new BackgroundWorker();
             _worker.WorkerReportsProgress = true;
             _worker.DoWork += worker_DoWork;
@@ -57,8 +65,7 @@ namespace MagicDuelsDeckCheck
                 // If you want to handle an exception during a DragDrop event you must handle it within your DragDrop event handler,
                 // it won't propagate beyond that event handler because there is a managed to unmanaged to managed code transition between the source and the target.
                 // </quote>
-                ShowError("Unexpected Error:\r\n" + ex.ToString());
-                Application.Exit();
+                FatalError("Unexpected Error:\r\n" + ex.ToString());
             }
         }
 
@@ -104,17 +111,29 @@ namespace MagicDuelsDeckCheck
                 _cardDataLoaded = true;
                 SetStatus();
             }
-            catch (BadCardDataException)
+            catch (BadCardDataException ex)
             {
-                ShowError("Unable to load Cards.xml\r\nCheck that it exists in the application folder.");
-                Application.Exit();
+                FatalError(ex.Message);
             }
-            catch (BadSteamProfileException)
+            catch (SteamProfileNotFoundException)
             {
-                ShowError("Unable to load steam profile. Use File->Options to set the correct profile path.\r\nDrag drop of decks is disabled until the correct profile path is set.");
-                _cardDataLoaded = false;
-                SetStatus();
+                SteamProfileError("Unable to find steam profile. Use File->Options to set the correct profile path.");
             }
+            catch (BadSteamProfileDataException)
+            {
+                SteamProfileError("Steam profile contained bad data. Use File->Options to check profile path is correct.");
+            }
+            catch (IOException)
+            {
+                FatalError("IO error while reading steam profile.");
+            }
+        }
+
+        private void SteamProfileError(string msg)
+        {
+            ShowError(msg + "\r\n\r\nDrag drop of decks is disabled until the correct profile path is set.");
+            _cardDataLoaded = false;
+            SetStatus();
         }
 
         private void SetStatus()
@@ -144,6 +163,16 @@ namespace MagicDuelsDeckCheck
             {
                 CardInfo card;
                 entry.Unknown = !_cards.TryGetValue(entry.CardName, out card);
+                if (entry.Unknown)
+                {
+                    string correctName = _correctCardNames.GetCorrectName(entry.CardName);
+                    if (!string.IsNullOrEmpty(correctName))
+                    {
+                        entry.CorrectName = correctName;
+                        entry.Unknown = false;
+                        card = _cards[correctName];
+                    }
+                }
                 if (!entry.Unknown)
                 {
                     entry.Owned = card.NumberOwned;
@@ -184,6 +213,30 @@ namespace MagicDuelsDeckCheck
             return deckInfo;
         }
 
+        private void Initialize()
+        {
+            try
+            {
+                _correctCardNames.Initialize();
+            }
+            catch (IOException)
+            {
+                FatalError($"IO Error reading {CorrectCardNames.FileName}");
+            }
+            catch (InvalidOperationException)
+            {
+                FatalError($"{CorrectCardNames.FileName} contains invalid entries.");
+            }
+            try
+            {
+                _pageGenerator.Initialize();
+            }
+            catch (IOException)
+            {
+                FatalError($"IO Error reading html templates");
+            }
+        }
+
         private static IHtmlDocument GetDeckDocument(string pageUrl)
         {
             string content;
@@ -221,5 +274,13 @@ namespace MagicDuelsDeckCheck
             Activate();
             MessageBox.Show(this, msg, "Magic Duels Deck Checker");
         }
+
+        private void FatalError(string msg)
+        {
+            ShowError(msg);
+            Application.Exit();
+        }
+
+
     }
 }

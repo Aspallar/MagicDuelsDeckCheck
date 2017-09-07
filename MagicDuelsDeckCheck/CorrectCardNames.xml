@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<cards>
+  <card webSiteName="Peacekeeper Colossus" correctName="Peacewalker Colossus" />
+  <card webSiteName="Embraal Gear Smasher" correctName="Embraal Gear-Smasher" />
+  <card webSiteName="Alley Stranger" correctName="Alley Strangler" />
+  <card webSiteName="Honored Crop-Champion" correctName="Honored Crop-Captain" />
+  <card webSiteName="Annointer Priest" correctName="Anointer Priest" />
+  <card webSiteName="Meterorite" correctName="Meteorite" />
+</cards>

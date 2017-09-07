@@ -32,6 +32,10 @@ namespace MagicDuelsDeckCheck
                         item.Replace("[cardname]", card.CardName);
                         item.Replace("[urlcardname]", card.CardName.Replace(" ", "%20"));
                         item.Replace("[set]", card.Set);
+                        if (!string.IsNullOrEmpty(card.CorrectName))
+                            item.Replace("[correctname]", "Correct name: " + card.CorrectName);
+                        else
+                            item.Replace("[correctname]", "");
                         items.Append(item);
                         total += card.Shortfall;
                     }
@@ -44,8 +48,8 @@ namespace MagicDuelsDeckCheck
 
             StringBuilder page = new StringBuilder(_pageTemplate);
             page.Replace("[deckname]", deck.DeckName);
-            page.Replace("[cardlist]", items.ToString());
             page.Replace("[cardtotal]", total.ToString());
+            page.Replace("[cardlist]", items.ToString());
 
             if (unkownCards.Count > 0)
                 page.Replace("[unknowncards]", MakeUnkownCards(unkownCards));

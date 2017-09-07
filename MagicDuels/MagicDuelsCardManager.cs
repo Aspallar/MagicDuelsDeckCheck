@@ -22,9 +22,13 @@ namespace MagicDuels
             {
                 throw new BadCardDataException($"Missing {cardDataFileName}.", ex);
             }
-            catch (Exception ex)
+            catch (IOException ex)
             {
-                throw new BadCardDataException($"Error loading {cardDataFileName}.", ex);
+                throw new BadCardDataException($"IO Error reading {cardDataFileName}.", ex);
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new BadCardDataException($"Error: {cardDataFileName} contains invalid data.", ex);
             }
 
             try
@@ -40,9 +44,25 @@ namespace MagicDuels
                 }
                 return cards;
             }
-            catch (Exception ex)
+            catch (FileNotFoundException)
             {
-                throw new BadSteamProfileException("Unable to read steam profile. Is the profile path set correctly.", ex);
+                throw new SteamProfileNotFoundException();
+            }
+            catch (DirectoryNotFoundException)
+            {
+                throw new SteamProfileNotFoundException();
+            }
+            catch (IndexOutOfRangeException)
+            {
+                throw new BadSteamProfileDataException();
+            }
+            catch (OverflowException)
+            {
+                throw new BadSteamProfileDataException();
+            }
+            catch (ArgumentException)
+            {
+                throw new BadSteamProfileDataException();
             }
         }
     }
