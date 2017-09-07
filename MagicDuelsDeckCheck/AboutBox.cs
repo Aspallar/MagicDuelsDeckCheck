@@ -41,7 +41,7 @@ namespace MagicDuelsDeckCheck
             get
             {
                 Version version = Assembly.GetExecutingAssembly().GetName().Version;
-                return $"{version.Major}.{version.MinorRevision}.{version.Build}";
+                return $"{version.Major}.{version.Minor}.{version.Build}";
             }
         }
 
