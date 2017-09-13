@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsForm));
             this.labelProfilePath = new System.Windows.Forms.Label();
             this.textBoxProfilePath = new System.Windows.Forms.TextBox();
             this.buttonBrowse = new System.Windows.Forms.Button();
@@ -103,6 +104,7 @@
             this.Controls.Add(this.textBoxProfilePath);
             this.Controls.Add(this.labelProfilePath);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "OptionsForm";

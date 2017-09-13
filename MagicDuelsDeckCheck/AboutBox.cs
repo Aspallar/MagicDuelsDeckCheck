@@ -9,93 +9,52 @@ namespace MagicDuelsDeckCheck
         public AboutBox()
         {
             InitializeComponent();
-            this.Text = String.Format("About {0}", AssemblyTitle);
-            this.labelProductName.Text = AssemblyProduct;
-            this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
-            this.labelCopyright.Text = AssemblyCopyright;
-            this.labelCompanyName.Text = AssemblyCompany;
-            this.textBoxDescription.Text = AssemblyDescription;
+            InitializeText();
         }
 
-        #region Assembly Attribute Accessors
-
-        public string AssemblyTitle
+        private void InitializeText()
         {
-            get
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            Text = "About " + GetTitle(assembly);
+            labelProductName.Text = GetProduct(assembly);
+            labelVersion.Text = "Version " + GetVersion(assembly);
+            labelCopyright.Text = GetCopyright(assembly);
+        }
+
+        private string GetCopyright(Assembly assembly)
+        {
+            object[] attributes = assembly.GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
+            if (attributes.Length == 0)
+                return "";
+            return ((AssemblyCopyrightAttribute)attributes[0]).Copyright;
+        }
+
+        private string GetVersion(Assembly assembly)
+        {
+            Version version = assembly.GetName().Version;
+            return $"{version.Major}.{version.Minor}.{version.Build}";
+        }
+
+        private string GetTitle(Assembly assembly)
+        {
+            object[] attributes = assembly.GetCustomAttributes(typeof(AssemblyTitleAttribute), false);
+            if (attributes.Length > 0)
             {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyTitleAttribute), false);
-                if (attributes.Length > 0)
+                AssemblyTitleAttribute titleAttribute = (AssemblyTitleAttribute)attributes[0];
+                if (!string.IsNullOrEmpty(titleAttribute.Title))
                 {
-                    AssemblyTitleAttribute titleAttribute = (AssemblyTitleAttribute)attributes[0];
-                    if (titleAttribute.Title != "")
-                    {
-                        return titleAttribute.Title;
-                    }
+                    return titleAttribute.Title;
                 }
-                return System.IO.Path.GetFileNameWithoutExtension(Assembly.GetExecutingAssembly().CodeBase);
             }
+            return System.IO.Path.GetFileNameWithoutExtension(assembly.CodeBase);
         }
 
-        public string AssemblyVersion
+        private string GetProduct(Assembly assembly)
         {
-            get
-            {
-                Version version = Assembly.GetExecutingAssembly().GetName().Version;
-                return $"{version.Major}.{version.Minor}.{version.Build}";
-            }
+            object[] attributes = assembly.GetCustomAttributes(typeof(AssemblyProductAttribute), false);
+            if (attributes.Length == 0)
+                return "";
+            return ((AssemblyProductAttribute)attributes[0]).Product;
         }
-
-        public string AssemblyDescription
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyDescriptionAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyDescriptionAttribute)attributes[0]).Description;
-            }
-        }
-
-        public string AssemblyProduct
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyProductAttribute)attributes[0]).Product;
-            }
-        }
-
-        public string AssemblyCopyright
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyCopyrightAttribute)attributes[0]).Copyright;
-            }
-        }
-
-        public string AssemblyCompany
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyCompanyAttribute)attributes[0]).Company;
-            }
-        }
-        #endregion
     }
 }

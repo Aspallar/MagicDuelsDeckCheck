@@ -104,6 +104,7 @@ namespace MagicDuelsDeckCheck
 
         private void LoadCardData()
         {
+            _cardDataLoaded = false;
             try
             {
                 MagicDuelsCardManager manager = new MagicDuelsCardManager();
@@ -247,6 +248,11 @@ namespace MagicDuelsDeckCheck
             return parser.Parse(content);
         }
 
+        private void linkLabelMagicDuelsHelper_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.magicduelshelper.com/decklist/alldecks");
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -268,11 +274,23 @@ namespace MagicDuelsDeckCheck
             }
         }
 
+        private void reloadCradsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadCardData();
+            if (_cardDataLoaded)
+                ShowMessage("Cards counts have beed reloaded from steam profile.");
+        }
+
+        private void ShowMessage(string msg)
+        {
+            MessageBox.Show(this, msg, "Magic Duels Deck Checker");
+        }
+
         private void ShowError(string msg)
         {
             System.Media.SystemSounds.Asterisk.Play();
             Activate();
-            MessageBox.Show(this, msg, "Magic Duels Deck Checker");
+            ShowMessage(msg);
         }
 
         private void FatalError(string msg)
@@ -280,7 +298,6 @@ namespace MagicDuelsDeckCheck
             ShowError(msg);
             Application.Exit();
         }
-
 
     }
 }
