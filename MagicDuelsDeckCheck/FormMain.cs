@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using MagicDuels;
-using AngleSharp.Parser.Html;
-using AngleSharp.Dom.Html;
 using System.Net;
 using System.Diagnostics;
 using System.ComponentModel;
@@ -216,6 +214,11 @@ namespace MagicDuelsDeckCheck
             Process.Start("https://www.magicduelshelper.com/decklist/alldecks");
         }
 
+        private void linkLabelWiki_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://magicduels.wikia.com/wiki/Decklists");
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -262,5 +265,6 @@ namespace MagicDuelsDeckCheck
             Application.Exit();
         }
 
+ 
     }
 }

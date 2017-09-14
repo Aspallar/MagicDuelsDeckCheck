@@ -38,6 +38,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.linkLabelMagicDuelsHelper = new System.Windows.Forms.LinkLabel();
+            this.linkLabelWiki = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,11 +122,23 @@
             this.linkLabelMagicDuelsHelper.Text = "Magic Duels Helper";
             this.linkLabelMagicDuelsHelper.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMagicDuelsHelper_LinkClicked);
             // 
+            // linkLabelWiki
+            // 
+            this.linkLabelWiki.AutoSize = true;
+            this.linkLabelWiki.Location = new System.Drawing.Point(152, 73);
+            this.linkLabelWiki.Name = "linkLabelWiki";
+            this.linkLabelWiki.Size = new System.Drawing.Size(90, 13);
+            this.linkLabelWiki.TabIndex = 3;
+            this.linkLabelWiki.TabStop = true;
+            this.linkLabelWiki.Text = "Magic Duels Wiki";
+            this.linkLabelWiki.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelWiki_LinkClicked);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(264, 112);
+            this.Controls.Add(this.linkLabelWiki);
             this.Controls.Add(this.linkLabelMagicDuelsHelper);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.menuStrip1);
@@ -157,6 +170,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reloadCradsToolStripMenuItem;
         private System.Windows.Forms.LinkLabel linkLabelMagicDuelsHelper;
+        private System.Windows.Forms.LinkLabel linkLabelWiki;
     }
 }
 
