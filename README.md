@@ -1,9 +1,13 @@
 # MagicDuelsDeckCheck
-Utility to determine what cards you are missing from decks posted on www.magicduelshelper.com
+Utility to determine what cards you are missing from decks posted on
+[Magic Duels Helper](https://www.magicduelshelper.com)
+or the
+[Magic Duels Wiki](http://magicduels.wikia.com/wiki/Decklists)
+web sites. The Magic Duels Wiki is supported from version 1.3.0 onward.
 
 ## Installation
 
-Download the zip file from [here](https://github.com/Aspallar/MagicDuelsDeckCheck/releases/download/v1.2.0/MagicDuelsDeckCheck.zip) unblock the zip (see below) and extract its contents to the folder where you want the application installed.
+Download the zip file from [here](https://github.com/Aspallar/MagicDuelsDeckCheck/releases/tag/v1.3.0/MagicDuelsDeckCheck.zip) unblock the zip (see below) and extract its contents to the folder where you want the application installed.
 
 Run MagicDuelsDeckCheck.exe
 
@@ -34,5 +38,5 @@ If you are using Internet Explorer you will probably get a "blocked content" war
 
 Before extracting the contents of the installation zip file you should unblock the zip file, otherwise the extracted files will be marked as blocked and you will get a warning message every time you run it.
 
-To unblock the zip right click on it and choose properties, check the 'Unblock' check box and click on ok.
+To unblock the zip right click on it and choose properties, check the 'Unblock' check box and click on ok or click on the 'Unblock' button, depending on which version of windows you are using.
 
