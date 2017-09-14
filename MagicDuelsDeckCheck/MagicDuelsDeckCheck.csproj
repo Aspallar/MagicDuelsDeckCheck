@@ -63,12 +63,17 @@
     <Compile Include="CorrectCardNames.cs" />
     <Compile Include="DeckEntry.cs" />
     <Compile Include="DeckInfo.cs" />
+    <Compile Include="DeckReaderInfo.cs" />
+    <Compile Include="DeckReaders.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="IDeckReader.cs" />
+    <Compile Include="MagicDuelsHelperDeckReader.cs" />
+    <Compile Include="MagicDuelsWikiDeckReader.cs" />
     <Compile Include="NameCorrection.cs" />
     <Compile Include="OptionsForm.cs">
       <SubType>Form</SubType>

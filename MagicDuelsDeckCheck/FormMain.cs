@@ -71,17 +71,12 @@ namespace MagicDuelsDeckCheck
 
         private void FormMain_DragEnter(object sender, DragEventArgs e)
         {
-            if (_cardDataLoaded &&
-                !_working &&
-                e.Data.GetDataPresent("Text") &&
-                e.Data.GetData("Text").ToString().StartsWith("https://www.magicduelshelper.com/decklist/details", StringComparison.InvariantCultureIgnoreCase))
-            {
-                e.Effect = DragDropEffects.Copy;
-            }
-            else
-            {
-                e.Effect = DragDropEffects.None;
-            }
+            bool accept = _cardDataLoaded
+                && !_working
+                && e.Data.GetDataPresent("Text")
+                && DeckReaders.HasReaderFor(e.Data.GetData("Text").ToString());
+
+            e.Effect = accept ? DragDropEffects.Copy : DragDropEffects.None;
         }
 
         private void worker_DoWork(object sender, DoWorkEventArgs e)
@@ -147,7 +142,9 @@ namespace MagicDuelsDeckCheck
 
         private void ShowMissingCards(string pageUrl)
         {
-            DeckInfo deckInfo = GetDeckInfo(pageUrl);
+            string content = GetDeckDocument(pageUrl);
+            _worker.ReportProgress(50);
+            DeckInfo deckInfo = DeckReaders.GetReader(pageUrl).ReadDeck(content);
             GetOwned(deckInfo);
             DisplayMissingPage(deckInfo);
         }
@@ -182,38 +179,6 @@ namespace MagicDuelsDeckCheck
             }
         }
 
-        private DeckInfo GetDeckInfo(string pageUrl)
-        {
-            IHtmlDocument doc = GetDeckDocument(pageUrl);
-            var deckTitle = doc.QuerySelector("h1").TextContent;
-            var deckList = doc.QuerySelectorAll("a[href^='/cards?cardName=']");
-
-            _worker.ReportProgress(50);
-
-            const string titlePrefix = "Magic Duels Deck: ";
-            if (deckTitle.StartsWith(titlePrefix))
-                deckTitle = deckTitle.Substring(titlePrefix.Length);
-
-            DeckInfo deckInfo = new DeckInfo(deckTitle);
-
-            foreach (var entry in deckList)
-            {
-                string cardName = entry.TextContent;
-                if (!MagicDuelsHelper.IsBasicLand(cardName))
-                {
-                    string numberOf = entry.PreviousSibling.TextContent.Trim();
-                    int number = int.Parse(numberOf.Substring(0, numberOf.Length - 1));
-                    deckInfo.Cards.Add(new DeckEntry
-                    {
-                        Required = number,
-                        CardName = cardName,
-                    });
-                }
-            }
-
-            return deckInfo;
-        }
-
         private void Initialize()
         {
             try
@@ -238,14 +203,12 @@ namespace MagicDuelsDeckCheck
             }
         }
 
-        private static IHtmlDocument GetDeckDocument(string pageUrl)
+        private static string GetDeckDocument(string pageUrl)
         {
             string content;
             using (WebClient client = new WebClient())
                 content = client.DownloadString(pageUrl);
-
-            HtmlParser parser = new HtmlParser();
-            return parser.Parse(content);
+            return content;
         }
 
         private void linkLabelMagicDuelsHelper_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
