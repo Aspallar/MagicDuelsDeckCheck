@@ -68,7 +68,7 @@ namespace MagicDuelsDeckCheck
 
         private string MakeUnkownCards(List<string> unkownCards)
         {
-            StringBuilder sb = new StringBuilder("<div class=\"row\"><h3>Deck checker did not recognise the following cards</h3>");
+            StringBuilder sb = new StringBuilder("<div class=\"row\"><h3>Cards not in Magic Duels</h3>");
             foreach (var cardName in unkownCards)
             {
                 sb.Append(cardName);

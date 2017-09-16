@@ -39,6 +39,7 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.linkLabelMagicDuelsHelper = new System.Windows.Forms.LinkLabel();
             this.linkLabelWiki = new System.Windows.Forms.LinkLabel();
+            this.linkLabelTappedOut = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,11 +134,23 @@
             this.linkLabelWiki.Text = "Magic Duels Wiki";
             this.linkLabelWiki.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelWiki_LinkClicked);
             // 
+            // linkLabelTappedOut
+            // 
+            this.linkLabelTappedOut.AutoSize = true;
+            this.linkLabelTappedOut.Location = new System.Drawing.Point(152, 107);
+            this.linkLabelTappedOut.Name = "linkLabelTappedOut";
+            this.linkLabelTappedOut.Size = new System.Drawing.Size(64, 13);
+            this.linkLabelTappedOut.TabIndex = 4;
+            this.linkLabelTappedOut.TabStop = true;
+            this.linkLabelTappedOut.Text = "Tapped Out";
+            this.linkLabelTappedOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelTappedOut_LinkClicked);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(264, 112);
+            this.ClientSize = new System.Drawing.Size(264, 132);
+            this.Controls.Add(this.linkLabelTappedOut);
             this.Controls.Add(this.linkLabelWiki);
             this.Controls.Add(this.linkLabelMagicDuelsHelper);
             this.Controls.Add(this.labelStatus);
@@ -171,6 +184,7 @@
         private System.Windows.Forms.ToolStripMenuItem reloadCradsToolStripMenuItem;
         private System.Windows.Forms.LinkLabel linkLabelMagicDuelsHelper;
         private System.Windows.Forms.LinkLabel linkLabelWiki;
+        private System.Windows.Forms.LinkLabel linkLabelTappedOut;
     }
 }
 

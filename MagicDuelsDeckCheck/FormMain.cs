@@ -219,6 +219,11 @@ namespace MagicDuelsDeckCheck
             Process.Start("http://magicduels.wikia.com/wiki/Decklists");
         }
 
+        private void linkLabelTappedOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://tappedout.net/mtg-decks/search/?q=&format=magic-duels&cards=&general=&price_0=&price_1=&o=-date_updated&submit=Filter+results");
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -265,6 +270,5 @@ namespace MagicDuelsDeckCheck
             Application.Exit();
         }
 
- 
     }
 }
