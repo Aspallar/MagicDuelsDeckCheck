@@ -1,13 +1,13 @@
 # MagicDuelsDeckCheck
-Utility to determine what cards you are missing from decks posted on
-[Magic Duels Helper](https://www.magicduelshelper.com)
-or the
-[Magic Duels Wiki](http://magicduels.wikia.com/wiki/Decklists)
-web sites. The Magic Duels Wiki is supported from version 1.3.0 onward.
+Utility to determine what cards you are missing from Magic Duels decks posted on the following web sites.
+
+* [Magic Duels Helper](https://www.magicduelshelper.com) 
+* [Magic Duels Wiki](http://magicduels.wikia.com/wiki/Decklists)
+* [Tapped Out](http://tappedout.net/mtg-decks/search/?q=&format=magic-duels&cards=&general=&price_0=&price_1=&o=-date_updated&submit=Filter+results)
 
 ## Installation
 
-Download the zip file from [here](https://github.com/Aspallar/MagicDuelsDeckCheck/releases/tag/v1.3.0/MagicDuelsDeckCheck.zip) unblock the zip (see below) and extract its contents to the folder where you want the application installed.
+Download the zip file from [here](https://github.com/Aspallar/MagicDuelsDeckCheck/releases/tag/v1.4.0) unblock the zip (see below) and extract its contents to the folder where you want the application installed.
 
 Run MagicDuelsDeckCheck.exe
 
@@ -16,7 +16,7 @@ to your Magic Duels steam profile (there is some help text in the options dialog
 
 ## Use
 
-To use MagicDuelsDeckHelper just drag a deck link from the [Magic Duels Helper ](https://www.magicduelshelper.com) web site and drop it in the applications window. A page will be displayed in your browser listing the cards that you are missing, if any, and what set they can be found in.
+To use MagicDuelsDeckHelper just drag a deck link from the one of the supported web sites and drop it in the applications window. A page will be displayed in your browser listing the cards that you are missing, if any, and what set they can be found in.
 
 ### Deck links
 
