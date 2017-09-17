@@ -10,6 +10,7 @@ namespace MagicDuelsDeckCheck
             new DeckReaderInfo { UrlStart = "https://www.magicduelshelper.com/decklist/details", ReaderType = typeof(MagicDuelsHelperDeckReader) },
             new DeckReaderInfo { UrlStart = "http://magicduels.wikia.com/wiki/Decks", ReaderType = typeof(MagicDuelsWikiDeckReader) },
             new DeckReaderInfo { UrlStart = "http://tappedout.net/mtg-decks", ReaderType = typeof(TappedOutDeckReader) },
+            new DeckReaderInfo { UrlStart = "https://deckstats.net/decks", ReaderType = typeof(DeckStatsDeckReader) },
         };
 
         public static bool HasReaderFor(string text) 
