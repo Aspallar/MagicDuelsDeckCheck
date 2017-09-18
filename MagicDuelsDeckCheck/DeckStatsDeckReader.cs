@@ -52,7 +52,7 @@ namespace MagicDuelsDeckCheck
             const string jsonStart = "deck_json = ";
             int startPos = deckDefinition.IndexOf(jsonStart);
             if (startPos == -1)
-                throw new Exception("Unable to find start of deck definition");
+                throw new InvalidOperationException("Unable to find start of deck definition.");
             startPos += jsonStart.Length;
 
             const string jsonEnd = "deck_url = ";
@@ -61,7 +61,7 @@ namespace MagicDuelsDeckCheck
             {
                 --endPos;
                 if (endPos <= startPos)
-                    throw new Exception("Unable to find end of deck definition");
+                    throw new InvalidOperationException("Unable to find end of deck definition.");
             }
 
             return deckDefinition.Substring(startPos, endPos - startPos + 1);
