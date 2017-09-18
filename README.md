@@ -4,10 +4,11 @@ Utility to determine what cards you are missing from Magic Duels decks posted on
 * [Magic Duels Helper](https://www.magicduelshelper.com) 
 * [Magic Duels Wiki](http://magicduels.wikia.com/wiki/Decklists)
 * [Tapped Out](http://tappedout.net/mtg-decks/search/?q=&format=magic-duels&cards=&general=&price_0=&price_1=&o=-date_updated&submit=Filter+results)
+* [Deckstats.Net](https://deckstats.net/decks/search/?lng=en&search_title=&search_format=0&search_price_min=&search_price_max=&search_number_cards_main=&search_number_cards_sideboard=&search_cards%5B%5D=&search_tags=Magic+Duels&search_order=updated%2Cdesc)
 
 ## Installation
 
-Download the zip file from [here](https://github.com/Aspallar/MagicDuelsDeckCheck/releases/tag/v1.4.0) unblock the zip (see below) and extract its contents to the folder where you want the application installed.
+Download the zip file from [here](https://github.com/Aspallar/MagicDuelsDeckCheck/releases/tag/v1.5.0) unblock the zip (see below) and extract its contents to the folder where you want the application installed.
 
 Run MagicDuelsDeckCheck.exe
 
