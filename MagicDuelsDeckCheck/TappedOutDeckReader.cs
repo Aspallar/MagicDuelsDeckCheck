@@ -1,12 +1,6 @@
 ﻿using AngleSharp.Dom.Html;
 using AngleSharp.Parser.Html;
 using MagicDuels;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MagicDuelsDeckCheck
 {
