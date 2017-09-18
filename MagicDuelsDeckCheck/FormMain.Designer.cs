@@ -40,6 +40,7 @@
             this.linkLabelMagicDuelsHelper = new System.Windows.Forms.LinkLabel();
             this.linkLabelWiki = new System.Windows.Forms.LinkLabel();
             this.linkLabelTappedOut = new System.Windows.Forms.LinkLabel();
+            this.linkLabelDeckStats = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,11 +146,23 @@
             this.linkLabelTappedOut.Text = "Tapped Out";
             this.linkLabelTappedOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelTappedOut_LinkClicked);
             // 
+            // linkLabelDeckStats
+            // 
+            this.linkLabelDeckStats.AutoSize = true;
+            this.linkLabelDeckStats.Location = new System.Drawing.Point(152, 124);
+            this.linkLabelDeckStats.Name = "linkLabelDeckStats";
+            this.linkLabelDeckStats.Size = new System.Drawing.Size(75, 13);
+            this.linkLabelDeckStats.TabIndex = 5;
+            this.linkLabelDeckStats.TabStop = true;
+            this.linkLabelDeckStats.Text = "Deckstats.Net";
+            this.linkLabelDeckStats.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelDeckStats_LinkClicked);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(264, 132);
+            this.ClientSize = new System.Drawing.Size(264, 142);
+            this.Controls.Add(this.linkLabelDeckStats);
             this.Controls.Add(this.linkLabelTappedOut);
             this.Controls.Add(this.linkLabelWiki);
             this.Controls.Add(this.linkLabelMagicDuelsHelper);
@@ -185,6 +198,7 @@
         private System.Windows.Forms.LinkLabel linkLabelMagicDuelsHelper;
         private System.Windows.Forms.LinkLabel linkLabelWiki;
         private System.Windows.Forms.LinkLabel linkLabelTappedOut;
+        private System.Windows.Forms.LinkLabel linkLabelDeckStats;
     }
 }
 
