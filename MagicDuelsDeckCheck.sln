@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DeckCheckSetup", "DeckCheckSetup\DeckCheckSetup.vdproj", "{0E3AA915-1D0B-47C0-9B90-3F983CD662BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,8 @@ Global
 		{E8CF6803-7848-4E77-9781-A852CEB10C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8CF6803-7848-4E77-9781-A852CEB10C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8CF6803-7848-4E77-9781-A852CEB10C54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E3AA915-1D0B-47C0-9B90-3F983CD662BA}.Debug|Any CPU.ActiveCfg = Debug
+		{0E3AA915-1D0B-47C0-9B90-3F983CD662BA}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
