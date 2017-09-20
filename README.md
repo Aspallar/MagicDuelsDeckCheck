@@ -12,8 +12,15 @@ Download the zip file from [here](https://github.com/Aspallar/MagicDuelsDeckChec
 
 Run MagicDuelsDeckCheck.exe
 
-The first time you run it you will receive an error message saying that the Magic Duels steam profile couldn't be loaded. Go to File->Options in the menu and specify the path
-to your Magic Duels steam profile (there is some help text in the options dialog to help you locate this).
+or...
+
+Download the DeckCheckSetup.msi file and run it. This will install MagicDuelsDeckCheck and add a shorcut to your start menu.
+
+## Steam profile
+
+The first time you run MagicDuelsDeckCheck you will receive an error message saying that the Magic Duels steam profile couldn't be loaded. Go to File->Options in the menu and specify the path
+to your Magic Duels steam profile (there is some help text in the options dialog to help you locate this). The steam profile contains a local copy of what cards you own and is only read and not altered in any way by MagicDuelsDeckCheck.
+
 
 ## Use
 
