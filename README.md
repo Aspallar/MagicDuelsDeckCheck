@@ -8,7 +8,7 @@ Utility to determine what cards you are missing from Magic Duels decks posted on
 
 ## Installation
 
-Download the zip file from [here](https://github.com/Aspallar/MagicDuelsDeckCheck/releases/tag/v1.5.0) unblock the zip (see below) and extract its contents to the folder where you want the application installed.
+Download the zip file from [here](https://github.com/Aspallar/MagicDuelsDeckCheck/releases/tag/v1.6.0) unblock the zip (see below) and extract its contents to the folder where you want the application installed.
 
 Run MagicDuelsDeckCheck.exe
 
