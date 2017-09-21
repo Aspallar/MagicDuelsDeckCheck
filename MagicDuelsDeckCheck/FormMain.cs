@@ -143,7 +143,7 @@ namespace MagicDuelsDeckCheck
             string content = GetDeckDocument(pageUrl);
             _worker.ReportProgress(50);
             DeckInfo deckInfo = DeckReaders.GetReader(pageUrl).ReadDeck(content);
-            GetOwned(deckInfo);
+            deckInfo.GetOwned(_cards, _correctCardNames);
             DisplayMissingPage(deckInfo);
         }
 
@@ -151,30 +151,6 @@ namespace MagicDuelsDeckCheck
         {
             string fileName = _pageGenerator.MakePage(deckInfo);
             Process.Start(fileName);
-        }
-
-        private void GetOwned(DeckInfo deckInfo)
-        {
-            foreach (var entry in deckInfo.Cards)
-            {
-                CardInfo card;
-                entry.Unknown = !_cards.TryGetValue(entry.CardName, out card);
-                if (entry.Unknown)
-                {
-                    string correctName = _correctCardNames.GetCorrectName(entry.CardName);
-                    if (!string.IsNullOrEmpty(correctName))
-                    {
-                        entry.CorrectName = correctName;
-                        entry.Unknown = false;
-                        card = _cards[correctName];
-                    }
-                }
-                if (!entry.Unknown)
-                {
-                    entry.Owned = card.NumberOwned;
-                    entry.Set = card.Set;
-                }
-            }
         }
 
         private void Initialize()
