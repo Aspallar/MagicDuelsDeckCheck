@@ -22,7 +22,7 @@ namespace MagicDuelsDeckCheck
 
             foreach (var entry in deckList)
             {
-                string cardName = entry.GetAttribute("data-name");
+                string cardName = AdjustTwoFacedCardNames(entry.GetAttribute("data-name"));
                 if (!MagicDuelsHelper.IsBasicLand(cardName))
                 {
                     string numberOf = entry.TextContent.Trim();
@@ -35,6 +35,12 @@ namespace MagicDuelsDeckCheck
                 }
             }
             return deckInfo;
+        }
+
+        private string AdjustTwoFacedCardNames(string name)
+        {
+            int pos = name.IndexOf("/");
+            return pos == -1 ? name : name.Substring(0, pos - 1);
         }
     }
 }

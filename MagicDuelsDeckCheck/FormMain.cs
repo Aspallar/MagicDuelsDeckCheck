@@ -47,10 +47,19 @@ namespace MagicDuelsDeckCheck
         {
             try
             {
-                string pageUrl = e.Data.GetData("Text").ToString();
-                labelStatus.Text = "Reading web page...";
+                string deckPath;
+                if (e.Data.GetDataPresent("Text"))
+                {
+                    deckPath = e.Data.GetData("Text").ToString();
+                    labelStatus.Text = "Reading web page...";
+                }
+                else
+                {
+                    deckPath = GetDropFileName(e.Data);
+                    labelStatus.Text = "Reading file...";
+                }
                 _working = true;
-                _worker.RunWorkerAsync(pageUrl);
+                _worker.RunWorkerAsync(deckPath);
             }
             catch (Exception ex)
             {
@@ -69,10 +78,16 @@ namespace MagicDuelsDeckCheck
 
         private void FormMain_DragEnter(object sender, DragEventArgs e)
         {
-            bool accept = _cardDataLoaded
-                && !_working
-                && e.Data.GetDataPresent("Text")
-                && DeckReaders.HasReaderFor(e.Data.GetData("Text").ToString());
+            bool accept = _cardDataLoaded && !_working;
+            if (accept)
+            {
+                if (e.Data.GetDataPresent("Text"))
+                    accept = DeckReaders.HasReaderFor(e.Data.GetData("Text").ToString());
+                else if (e.Data.GetDataPresent("FileName"))
+                    accept = DeckReaders.HasReaderFor(GetDropFileName(e.Data));
+                else
+                    accept = false; 
+            }
 
             e.Effect = accept ? DragDropEffects.Copy : DragDropEffects.None;
         }
@@ -138,11 +153,11 @@ namespace MagicDuelsDeckCheck
                 labelStatus.Text = "Error: No steam profile";
         }
 
-        private void ShowMissingCards(string pageUrl)
+        private void ShowMissingCards(string deckPath)
         {
-            string content = GetDeckDocument(pageUrl);
+            string content = GetDeckDocument(deckPath);
             _worker.ReportProgress(50);
-            DeckInfo deckInfo = DeckReaders.GetReader(pageUrl).ReadDeck(content);
+            DeckInfo deckInfo = DeckReaders.GetReader(deckPath).ReadDeck(content);
             deckInfo.GetOwned(_cards, _correctCardNames);
             DisplayMissingPage(deckInfo);
         }
@@ -177,12 +192,19 @@ namespace MagicDuelsDeckCheck
             }
         }
 
-        private static string GetDeckDocument(string pageUrl)
+        private static string GetDeckDocument(string deckPath)
         {
-            string content;
-            using (WebClient client = new WebClient())
-                content = client.DownloadString(pageUrl);
-            return content;
+            if (deckPath.StartsWith("http", StringComparison.InvariantCultureIgnoreCase))
+            {
+                string content;
+                using (WebClient client = new WebClient())
+                    content = client.DownloadString(deckPath);
+                return content;
+            }
+            else
+            {
+                return File.ReadAllText(deckPath);
+            }
         }
 
         private void linkLabelMagicDuelsHelper_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -250,6 +272,13 @@ namespace MagicDuelsDeckCheck
             ShowError(msg);
             Application.Exit();
         }
+
+        private string GetDropFileName(IDataObject data)
+        {
+            string[] names = (string[])data.GetData("FileName");
+            return names[0];
+        }
+
 
     }
 }
