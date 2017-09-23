@@ -6,15 +6,21 @@ Utility to determine what cards you are missing from Magic Duels decks posted on
 * [Tapped Out](http://tappedout.net/mtg-decks/search/?q=&format=magic-duels&cards=&general=&price_0=&price_1=&o=-date_updated&submit=Filter+results)
 * [Deckstats.Net](https://deckstats.net/decks/search/?lng=en&search_title=&search_format=0&search_price_min=&search_price_max=&search_number_cards_main=&search_number_cards_sideboard=&search_cards%5B%5D=&search_tags=Magic+Duels&search_order=updated%2Cdesc)
 
+MagicDuelsDeckCheck can also check decks defined locally in .dec or .txt files.
+
 ## Installation
 
-Download the zip file from [here](https://github.com/Aspallar/MagicDuelsDeckCheck/releases/tag/v1.6.0) unblock the zip (see below) and extract its contents to the folder where you want the application installed.
+Download the DeckCheckSetup.msi file from [here](https://github.com/Aspallar/MagicDuelsDeckCheck/releases/tag/v1.6.0) and run it. This will install MagicDuelsDeckCheck and add a shortcut to your start menu.
+
+*Or...*
+
+Download the zip file  unblock the zip (see below) and extract its contents to the folder where you want the application installed.
 
 Run MagicDuelsDeckCheck.exe
 
-or...
+*Or...*
 
-Download the DeckCheckSetup.msi file and run it. This will install MagicDuelsDeckCheck and add a shorcut to your start menu.
+Download the source and compile it.
 
 ## Steam profile
 
@@ -36,6 +42,8 @@ If you are on the actual deck page, drag the address bar in your browser.
 
 ![Drag Example Image](https://github.com/Aspallar/MagicDuelsDeckCheck/blob/master/images/dragaddress.png)
 
+You can also check decks defined in local text file (.txt or .dec files) by dragging them from windows explorer into the MagicDuelsDeckCheck window.
+
 ## Browsers
 
 This initial release has only been tested in Chrome, it should work in other browsers though.
@@ -48,3 +56,56 @@ Before extracting the contents of the installation zip file you should unblock t
 
 To unblock the zip right click on it and choose properties, check the 'Unblock' check box and click on ok or click on the 'Unblock' button, depending on which version of windows you are using.
 
+## Text file format
+
+MagicDuelsDeckCheck uses the following rules when reading decks from text files (.dec or .txt).
+
+All lines in the file that do not start with a number are ignored.
+
+Everything that comes after the word 'sideboard' is ignored.
+
+All lines that start with a number are assumed to be cards. They should each be in the format
+
+4x Card Name
+
+The 'x' is optional and may be preceded by spaces. There must be at least one space after the 'x' if it is included. The '4' is the number of cards.
+
+The following is an example the contents of a valid text file deck definition.
+
+```text
+Blue: 15
+(arbitrary comments  like the above and this won't be read
+as the line does not start with a number)
+4x Frost Lynx
+3x Whirler Rogue
+4x Countermand
+1x Disciple of the Ring
+2x Willbreaker
+
+Green: 18
+4 x Fog
+4 x Might of the Masses
+4 x Timberland Guide
+2 x Evolutionary Leap
+3 x Gather the Pack
+1 x Nissa, Vastwood Seer
+
+Multi-Color: 3
+3 x Bounding Krasis
+
+Land: 24
+8 Island
+3 Forest
+2 Hinterland Harbor
+3 Rogue's Passage
+4 Simic Guildgate
+4 Evolving Wilds
+```
+
+Entries like the following are not valid
+
+```
+4Frost Lynx
+3xWhirler Rogue
+```
+as there is no space after the 'x' or the number.
