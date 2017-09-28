@@ -10,6 +10,8 @@ namespace MagicDuelsDeckCheck
 {
     public partial class FormMain : Form
     {
+        private const string pasteContextMenu = "Paste";
+
         private MagicDuelsCards _cards;
         private PageGenerator _pageGenerator;
         private string _profilePath;
@@ -22,6 +24,18 @@ namespace MagicDuelsDeckCheck
         {
             _profilePath = profilePath;
             InitializeComponent();
+            CreateContextMenu();
+        }
+
+        private void CreateContextMenu()
+        {
+            ContextMenuStrip menu = new ContextMenuStrip();
+            ToolStripMenuItem paste = new ToolStripMenuItem(pasteContextMenu);
+            paste.Name = pasteContextMenu;
+            paste.Click += ContextMenu_Paste_Click;
+            menu.Opening += ContextMenu_Opening;
+            menu.Items.Add(paste);
+            this.ContextMenuStrip = menu;
         }
 
         private void FormMain_Load(object sender, EventArgs e)
@@ -47,19 +61,7 @@ namespace MagicDuelsDeckCheck
         {
             try
             {
-                string deckPath;
-                if (e.Data.GetDataPresent("Text"))
-                {
-                    deckPath = e.Data.GetData("Text").ToString();
-                    labelStatus.Text = "Reading web page...";
-                }
-                else
-                {
-                    deckPath = GetDropFileName(e.Data);
-                    labelStatus.Text = "Reading file...";
-                }
-                _working = true;
-                _worker.RunWorkerAsync(deckPath);
+                StartJob(e.Data);
             }
             catch (Exception ex)
             {
@@ -76,20 +78,36 @@ namespace MagicDuelsDeckCheck
             }
         }
 
+        private void ContextMenu_Opening(object sender, CancelEventArgs e)
+        {
+            ((ContextMenuStrip)sender).Items[pasteContextMenu].Enabled = ShouldAccept(Clipboard.GetDataObject());
+        }
+
+        private void ContextMenu_Paste_Click(object sender, EventArgs e)
+        {
+            StartJob(Clipboard.GetDataObject());
+        }
+
+        private void StartJob(IDataObject data)
+        {
+            string deckPath;
+            if (data.GetDataPresent("Text"))
+            {
+                deckPath = data.GetData("Text").ToString();
+                labelStatus.Text = "Reading web page...";
+            }
+            else
+            {
+                deckPath = GetFileName(data);
+                labelStatus.Text = "Reading file...";
+            }
+            _working = true;
+            _worker.RunWorkerAsync(deckPath);
+        }
+
         private void FormMain_DragEnter(object sender, DragEventArgs e)
         {
-            bool accept = _cardDataLoaded && !_working;
-            if (accept)
-            {
-                if (e.Data.GetDataPresent("Text"))
-                    accept = DeckReaders.HasReaderFor(e.Data.GetData("Text").ToString());
-                else if (e.Data.GetDataPresent("FileName"))
-                    accept = DeckReaders.HasReaderFor(GetDropFileName(e.Data));
-                else
-                    accept = false; 
-            }
-
-            e.Effect = accept ? DragDropEffects.Copy : DragDropEffects.None;
+            e.Effect = ShouldAccept(e.Data) ? DragDropEffects.Copy : DragDropEffects.None;
         }
 
         private void worker_DoWork(object sender, DoWorkEventArgs e)
@@ -192,6 +210,21 @@ namespace MagicDuelsDeckCheck
             }
         }
 
+        private bool ShouldAccept(IDataObject data)
+        {
+            bool accept = _cardDataLoaded && !_working;
+            if (accept)
+            {
+                if (data.GetDataPresent("Text"))
+                    accept = DeckReaders.HasReaderFor(data.GetData("Text").ToString());
+                else if (data.GetDataPresent("FileName"))
+                    accept = DeckReaders.HasReaderFor(GetFileName(data));
+                else
+                    accept = false;
+            }
+            return accept;
+        }
+
         private static string GetDeckDocument(string deckPath)
         {
             if (deckPath.StartsWith("http", StringComparison.InvariantCultureIgnoreCase))
@@ -273,7 +306,7 @@ namespace MagicDuelsDeckCheck
             Application.Exit();
         }
 
-        private string GetDropFileName(IDataObject data)
+        private string GetFileName(IDataObject data)
         {
             string[] names = (string[])data.GetData("FileName");
             return names[0];
