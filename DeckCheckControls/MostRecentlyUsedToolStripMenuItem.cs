@@ -23,7 +23,21 @@ namespace DeckCheckControls
             Update();
         }
 
-        private void Update()
+        public void SetEnabled()
+        {
+            Enabled = _mostRecentItems.Count > 0;
+        }
+
+        public MostRecentList RecentItems
+        {
+            set
+            {
+                _mostRecentItems = value;
+                Update();
+            }
+        }
+
+        public void Update()
         {
             DropDownItems.Clear();
             if (_mostRecentItems.Count == 0)
@@ -49,9 +63,7 @@ namespace DeckCheckControls
         }
 
         public event EventHandler<RecentItemClickEventArgs> RecentItemClick;
-        private void OnRecentItemClicked(string path)
-        {
+        private void OnRecentItemClicked(string path) =>
             RecentItemClick?.Invoke(this, new RecentItemClickEventArgs(path));
-        }
     }
 }

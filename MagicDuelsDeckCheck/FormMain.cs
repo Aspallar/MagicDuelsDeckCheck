@@ -12,6 +12,7 @@ namespace MagicDuelsDeckCheck
     public partial class FormMain : Form
     {
         private const string pasteContextMenu = "Paste";
+        private const string recentDecksFileName = "RecentDecks.xml";
 
         private MagicDuelsCards _cards;
         private PageGenerator _pageGenerator;
@@ -20,10 +21,13 @@ namespace MagicDuelsDeckCheck
         private BackgroundWorker _worker;
         private bool _working;
         private CorrectCardNames _correctCardNames;
+        private MostRecentList _recentDecks;
+        private string _appDataFolder;
 
         public FormMain(string profilePath)
         {
             _profilePath = profilePath;
+            _appDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\MagicDuelsDeckCheck\";
             InitializeComponent();
             CreateContextMenu();
         }
@@ -47,6 +51,9 @@ namespace MagicDuelsDeckCheck
             _correctCardNames = new CorrectCardNames();
             CreateWorker();
             Initialize();
+            _recentDecks = MostRecentList.Read(_appDataFolder + recentDecksFileName);
+            mostRecentlyUsed.RecentItems = _recentDecks;
+            mostRecentlyUsed.Enabled = _cardDataLoaded;
         }
 
         private void CreateWorker()
@@ -103,6 +110,7 @@ namespace MagicDuelsDeckCheck
         {
             labelStatus.Text = IsHttpPath(deckPath) ? "Reading web page..." : "Reading file...";
             _working = true;
+            mostRecentlyUsed.Enabled = false;
             _worker.RunWorkerAsync(deckPath);
         }
 
@@ -294,6 +302,7 @@ namespace MagicDuelsDeckCheck
             {
                 _profilePath = dlg.ProfilePath;
                 LoadCardData();
+                mostRecentlyUsed.SetEnabled();
             }
         }
 
@@ -333,5 +342,9 @@ namespace MagicDuelsDeckCheck
             return deckPath.StartsWith("http", StringComparison.InvariantCultureIgnoreCase);
         }
 
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MostRecentList.Save(_appDataFolder + recentDecksFileName, _recentDecks);
+        }
     }
 }

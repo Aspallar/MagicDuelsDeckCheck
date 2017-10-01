@@ -82,28 +82,29 @@
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.optionsToolStripMenuItem.Text = "&Options..";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
             // reloadCradsToolStripMenuItem
             // 
             this.reloadCradsToolStripMenuItem.Name = "reloadCradsToolStripMenuItem";
-            this.reloadCradsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.reloadCradsToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.reloadCradsToolStripMenuItem.Text = "&Reload Cards";
             this.reloadCradsToolStripMenuItem.Click += new System.EventHandler(this.reloadCradsToolStripMenuItem_Click);
             // 
             // mostRecentlyUsed
             // 
+            this.mostRecentlyUsed.Enabled = false;
             this.mostRecentlyUsed.Name = "mostRecentlyUsed";
-            this.mostRecentlyUsed.Size = new System.Drawing.Size(152, 22);
+            this.mostRecentlyUsed.Size = new System.Drawing.Size(144, 22);
             this.mostRecentlyUsed.Text = "Recent Decks";
             this.mostRecentlyUsed.RecentItemClick += new System.EventHandler<DeckCheckControls.RecentItemClickEventArgs>(this.mostRecentlyUsed_RecentItemClick);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -184,6 +185,7 @@
             this.MinimizeBox = false;
             this.Name = "FormMain";
             this.Text = "Magic Duels Deck Check";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.FormMain_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.FormMain_DragEnter);
