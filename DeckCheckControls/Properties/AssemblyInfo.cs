@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MagicDuelsDeckCheck")]
-[assembly: AssemblyDescription("Checks card availability for Magic Duels decks.")]
+[assembly: AssemblyTitle("DeckCheckControls")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MagicDuelsDeckCheck")]
-[assembly: AssemblyCopyright("Copyright © 2017 Aspallar")]
+[assembly: AssemblyProduct("DeckCheckControls")]
+[assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,21 +20,17 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3980b2b6-24e8-4bff-89ac-b2bdfb55f78c")]
+[assembly: Guid("bd3076ea-b9e7-498a-83cd-7b0a4f193131")]
 
-// MS Version information for an assembly consists of the following four values:
+// Version information for an assembly consists of the following four values:
 //
 //      Major Version
 //      Minor Version 
 //      Build Number
 //      Revision
 //
-// This app uses semver
-//
-//      Major
-//      Minor
-//      Patch
-//      Not used
-//      
-[assembly: AssemblyVersion("1.8.0.0")]
-[assembly: AssemblyFileVersion("1.8.0.0")]
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

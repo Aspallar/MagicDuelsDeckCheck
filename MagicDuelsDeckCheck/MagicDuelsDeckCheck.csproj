@@ -125,6 +125,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DeckCheckControls\DeckCheckControls.csproj">
+      <Project>{bd3076ea-b9e7-498a-83cd-7b0a4f193131}</Project>
+      <Name>DeckCheckControls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MagicDuels\MagicDuels.csproj">
       <Project>{e8cf6803-7848-4e77-9781-a852ceb10c54}</Project>
       <Name>MagicDuels</Name>

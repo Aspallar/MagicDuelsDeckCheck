@@ -5,6 +5,7 @@ using System.Net;
 using System.Diagnostics;
 using System.ComponentModel;
 using System.IO;
+using DeckCheckControls;
 
 namespace MagicDuelsDeckCheck
 {
@@ -92,15 +93,15 @@ namespace MagicDuelsDeckCheck
         {
             string deckPath;
             if (data.GetDataPresent("Text"))
-            {
                 deckPath = data.GetData("Text").ToString();
-                labelStatus.Text = "Reading web page...";
-            }
             else
-            {
                 deckPath = GetFileName(data);
-                labelStatus.Text = "Reading file...";
-            }
+            StartJob(deckPath);
+        }
+
+        private void StartJob(string deckPath)
+        {
+            labelStatus.Text = IsHttpPath(deckPath) ? "Reading web page..." : "Reading file...";
             _working = true;
             _worker.RunWorkerAsync(deckPath);
         }
@@ -112,7 +113,12 @@ namespace MagicDuelsDeckCheck
 
         private void worker_DoWork(object sender, DoWorkEventArgs e)
         {
-            ShowMissingCards((string)e.Argument);
+            string deckPath = (string)e.Argument;
+            string deckName = ShowMissingCards(deckPath);
+            if (IsHttpPath(deckPath))
+                e.Result = new MostRecentItem(deckName, deckPath);
+            else
+                e.Result = new MostRecentItem(Path.GetFileName(new FileInfo(deckPath).FullName), deckPath);
         }
 
         private void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -120,7 +126,11 @@ namespace MagicDuelsDeckCheck
             _working = false;
             SetStatus();
             if (e.Error != null)
+            {
                 ShowError("Error processing deck list:\r\n" + e.Error.Message);
+                return;
+            }
+            mostRecentlyUsed.Add((MostRecentItem)e.Result);
         }
 
         private void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -171,13 +181,14 @@ namespace MagicDuelsDeckCheck
                 labelStatus.Text = "Error: No steam profile";
         }
 
-        private void ShowMissingCards(string deckPath)
+        private string ShowMissingCards(string deckPath)
         {
             string content = GetDeckDocument(deckPath);
             _worker.ReportProgress(50);
             DeckInfo deckInfo = DeckReaders.GetReader(deckPath).ReadDeck(content);
             deckInfo.GetOwned(_cards, _correctCardNames);
             DisplayMissingPage(deckInfo);
+            return deckInfo.DeckName;
         }
 
         private void DisplayMissingPage(DeckInfo deckInfo)
@@ -227,7 +238,7 @@ namespace MagicDuelsDeckCheck
 
         private static string GetDeckDocument(string deckPath)
         {
-            if (deckPath.StartsWith("http", StringComparison.InvariantCultureIgnoreCase))
+            if (IsHttpPath(deckPath))
             {
                 string content;
                 using (WebClient client = new WebClient())
@@ -260,11 +271,16 @@ namespace MagicDuelsDeckCheck
             Process.Start("https://deckstats.net/decks/search/?lng=en&search_title=&search_format=0&search_price_min=&search_price_max=&search_number_cards_main=&search_number_cards_sideboard=&search_cards%5B%5D=&search_tags=Magic+Duels&search_order=updated%2Cdesc");
         }
 
+        private void mostRecentlyUsed_RecentItemClick(object sender, RecentItemClickEventArgs e)
+        {
+            StartJob(e.Path);
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutBox dlg = new AboutBox();
@@ -306,12 +322,16 @@ namespace MagicDuelsDeckCheck
             Application.Exit();
         }
 
-        private string GetFileName(IDataObject data)
+        private static string GetFileName(IDataObject data)
         {
             string[] names = (string[])data.GetData("FileName");
             return names[0];
         }
 
+        private static bool IsHttpPath(string deckPath)
+        {
+            return deckPath.StartsWith("http", StringComparison.InvariantCultureIgnoreCase);
+        }
 
     }
 }

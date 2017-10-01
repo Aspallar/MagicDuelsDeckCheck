@@ -34,6 +34,7 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reloadCradsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostRecentlyUsed = new DeckCheckControls.MostRecentlyUsedToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,6 +73,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optionsToolStripMenuItem,
             this.reloadCradsToolStripMenuItem,
+            this.mostRecentlyUsed,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -80,21 +82,28 @@
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.optionsToolStripMenuItem.Text = "&Options..";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
             // reloadCradsToolStripMenuItem
             // 
             this.reloadCradsToolStripMenuItem.Name = "reloadCradsToolStripMenuItem";
-            this.reloadCradsToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.reloadCradsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.reloadCradsToolStripMenuItem.Text = "&Reload Cards";
             this.reloadCradsToolStripMenuItem.Click += new System.EventHandler(this.reloadCradsToolStripMenuItem_Click);
+            // 
+            // mostRecentlyUsed
+            // 
+            this.mostRecentlyUsed.Name = "mostRecentlyUsed";
+            this.mostRecentlyUsed.Size = new System.Drawing.Size(152, 22);
+            this.mostRecentlyUsed.Text = "Recent Decks";
+            this.mostRecentlyUsed.RecentItemClick += new System.EventHandler<DeckCheckControls.RecentItemClickEventArgs>(this.mostRecentlyUsed_RecentItemClick);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -199,6 +208,7 @@
         private System.Windows.Forms.LinkLabel linkLabelWiki;
         private System.Windows.Forms.LinkLabel linkLabelTappedOut;
         private System.Windows.Forms.LinkLabel linkLabelDeckStats;
+        private DeckCheckControls.MostRecentlyUsedToolStripMenuItem mostRecentlyUsed;
     }
 }
 
