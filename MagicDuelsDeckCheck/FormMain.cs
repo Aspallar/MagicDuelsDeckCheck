@@ -37,7 +37,7 @@ namespace MagicDuelsDeckCheck
             ContextMenuStrip menu = new ContextMenuStrip();
             ToolStripMenuItem paste = new ToolStripMenuItem(pasteContextMenu);
             paste.Name = pasteContextMenu;
-            paste.Click += ContextMenu_Paste_Click;
+            paste.Click += PasteClick;
             menu.Opening += ContextMenu_Opening;
             menu.Items.Add(paste);
             this.ContextMenuStrip = menu;
@@ -53,7 +53,8 @@ namespace MagicDuelsDeckCheck
             Initialize();
             _recentDecks = MostRecentList.Read(_appDataFolder + recentDecksFileName);
             mostRecentlyUsed.RecentItems = _recentDecks;
-            mostRecentlyUsed.Enabled = _cardDataLoaded;
+            if (!_cardDataLoaded)
+                mostRecentlyUsed.Enabled = false;
         }
 
         private void CreateWorker()
@@ -91,7 +92,7 @@ namespace MagicDuelsDeckCheck
             ((ContextMenuStrip)sender).Items[pasteContextMenu].Enabled = ShouldAccept(Clipboard.GetDataObject());
         }
 
-        private void ContextMenu_Paste_Click(object sender, EventArgs e)
+        private void PasteClick(object sender, EventArgs e)
         {
             StartJob(Clipboard.GetDataObject());
         }
@@ -302,7 +303,10 @@ namespace MagicDuelsDeckCheck
             {
                 _profilePath = dlg.ProfilePath;
                 LoadCardData();
-                mostRecentlyUsed.SetEnabled();
+                if (_cardDataLoaded)
+                    mostRecentlyUsed.SetEnabled();
+                else
+                    mostRecentlyUsed.Enabled = false;
             }
         }
 
@@ -345,6 +349,17 @@ namespace MagicDuelsDeckCheck
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             MostRecentList.Save(_appDataFolder + recentDecksFileName, _recentDecks);
+        }
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("here");
+        }
+
+        private void editToolStripMenuItem_DropDownOpening(object sender, EventArgs e)
+        {
+            const int pasteIndex = 0;
+            ((ToolStripMenuItem)sender).DropDownItems[pasteIndex].Enabled = ShouldAccept(Clipboard.GetDataObject());
         }
     }
 }

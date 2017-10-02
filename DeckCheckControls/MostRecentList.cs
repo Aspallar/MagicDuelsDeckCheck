@@ -80,7 +80,7 @@ namespace DeckCheckControls
 
         public static void Save(string filePath, MostRecentList mostRecentList)
         {
-            using (Stream stream = File.OpenWrite(filePath))
+            using (Stream stream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
                 Save(stream, mostRecentList);
         }
     }
