@@ -12,11 +12,11 @@ namespace DeckCheckControls
         private List<MostRecentItem> _items = new List<MostRecentItem>();
 
         [DataMember(Name = "MaxSize")]
-        private int _maxSize = 5;
+        private int _maxSize;
 
         public MostRecentList()
         {
-            _maxSize = 5;
+            _maxSize = 12;
         }
 
         public int MaxSize
@@ -27,7 +27,9 @@ namespace DeckCheckControls
             }
             set
             {
-                if (value < _maxSize && _items.Count > value)
+                if (value == 0)
+                    _items.RemoveRange(0, _items.Count);
+                else if (value < _maxSize && _items.Count > value)
                     _items.RemoveRange(value - 1, _items.Count - value);
                 _maxSize = value;
             }

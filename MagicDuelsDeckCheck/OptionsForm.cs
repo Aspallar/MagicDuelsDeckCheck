@@ -1,18 +1,20 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using MagicDuelsDeckCheck.Properties;
 
 namespace MagicDuelsDeckCheck
 {
     public partial class OptionsForm : Form
     {
-        public string ProfilePath { get; internal set; }
+        public string ProfilePath { get; private set; }
+        public int MruSize { get; private set; }
 
         public OptionsForm()
         {
             InitializeComponent();
-            textBoxProfilePath.Text = Properties.Settings.Default.MagicDuelsSteamProfile;
-            labelProfileHelpText.Text = "Your profile will be located in in your steam folder usually 'C:\\Program Files (x86)\\Steam' in the sub-folder\r\n'userdata\\<userid>\\316010\\remote' where <userid> is your steam user id and will have a file name of '<userid>.profile'\r\n\r\ne.g. C:\\Program Files (x86)\\Steam\\userdata\\111849480\\316010\\remote\\111849480.profile";
+            textBoxProfilePath.Text = Settings.Default.MagicDuelsSteamProfile;
+            numericUpDownMruSize.Value = (decimal)Settings.Default.MruSize;
         }
 
         private void buttonBrowse_Click(object sender, EventArgs e)
@@ -51,8 +53,10 @@ namespace MagicDuelsDeckCheck
         {
             DialogResult = DialogResult.OK;
             ProfilePath = textBoxProfilePath.Text;
-            Properties.Settings.Default.MagicDuelsSteamProfile = ProfilePath;
-            Properties.Settings.Default.Save();
+            MruSize = (int)numericUpDownMruSize.Value;
+            Settings.Default.MagicDuelsSteamProfile = ProfilePath;
+            Settings.Default.MruSize = MruSize;
+            Settings.Default.Save();
             Close();
         }
 

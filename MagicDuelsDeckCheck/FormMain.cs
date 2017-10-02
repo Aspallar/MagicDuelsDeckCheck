@@ -23,10 +23,12 @@ namespace MagicDuelsDeckCheck
         private CorrectCardNames _correctCardNames;
         private MostRecentList _recentDecks;
         private string _appDataFolder;
+        private int _maxRecentFiles;
 
-        public FormMain(string profilePath)
+        public FormMain(string profilePath, int maxRecentFiles)
         {
             _profilePath = profilePath;
+            _maxRecentFiles = maxRecentFiles;
             _appDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\MagicDuelsDeckCheck\";
             InitializeComponent();
             CreateContextMenu();
@@ -51,10 +53,10 @@ namespace MagicDuelsDeckCheck
             _correctCardNames = new CorrectCardNames();
             CreateWorker();
             Initialize();
-            _recentDecks = MostRecentList.Read(_appDataFolder + recentDecksFileName);
-            mostRecentlyUsed.RecentItems = _recentDecks;
+            _recentDecks.MaxSize = _maxRecentFiles;
+            recentDecks.RecentItems = _recentDecks;
             if (!_cardDataLoaded)
-                mostRecentlyUsed.Enabled = false;
+                recentDecks.Enabled = false;
         }
 
         private void CreateWorker()
@@ -111,7 +113,7 @@ namespace MagicDuelsDeckCheck
         {
             labelStatus.Text = IsHttpPath(deckPath) ? "Reading web page..." : "Reading file...";
             _working = true;
-            mostRecentlyUsed.Enabled = false;
+            recentDecks.Enabled = false;
             _worker.RunWorkerAsync(deckPath);
         }
 
@@ -139,7 +141,7 @@ namespace MagicDuelsDeckCheck
                 ShowError("Error processing deck list:\r\n" + e.Error.Message);
                 return;
             }
-            mostRecentlyUsed.Add((MostRecentItem)e.Result);
+            recentDecks.Add((MostRecentItem)e.Result);
         }
 
         private void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -147,7 +149,7 @@ namespace MagicDuelsDeckCheck
             labelStatus.Text = "Working...";
         }
 
-        private void LoadCardData()
+        private bool LoadCardData()
         {
             _cardDataLoaded = false;
             try
@@ -173,11 +175,12 @@ namespace MagicDuelsDeckCheck
             {
                 FatalError("IO error while reading steam profile.");
             }
+            return _cardDataLoaded;
         }
 
         private void SteamProfileError(string msg)
         {
-            ShowError(msg + "\r\n\r\nDrag drop of decks is disabled until the correct profile path is set.");
+            ShowError(msg + "\r\n\r\nOpening decks is disabled until the correct profile path is set.");
             _cardDataLoaded = false;
             SetStatus();
         }
@@ -227,6 +230,14 @@ namespace MagicDuelsDeckCheck
             catch (IOException)
             {
                 FatalError($"IO Error reading html templates");
+            }
+            try
+            {
+                _recentDecks = MostRecentList.Read(_appDataFolder + recentDecksFileName);
+            }
+            catch (IOException ex)
+            {
+                ShowError("There error while loading recent decks.\r\n" + ex.Message);
             }
         }
 
@@ -299,22 +310,28 @@ namespace MagicDuelsDeckCheck
         private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OptionsForm dlg = new OptionsForm();
-            if (dlg.ShowDialog(this) == DialogResult.OK && dlg.ProfilePath != _profilePath)
+            if (dlg.ShowDialog(this) == DialogResult.OK)
             {
-                _profilePath = dlg.ProfilePath;
-                LoadCardData();
-                if (_cardDataLoaded)
-                    mostRecentlyUsed.SetEnabled();
-                else
-                    mostRecentlyUsed.Enabled = false;
+                if (dlg.MruSize != _recentDecks.MaxSize)
+                {
+                    _recentDecks.MaxSize = dlg.MruSize;
+                    recentDecks.Update();
+                }
+                if (dlg.ProfilePath != _profilePath)
+                {
+                    _profilePath = dlg.ProfilePath;
+                    if (LoadCardData())
+                        recentDecks.SetEnabled();
+                    else
+                        recentDecks.Enabled = false;
+                }
             }
         }
 
         private void reloadCradsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LoadCardData();
-            if (_cardDataLoaded)
-                ShowMessage("Cards counts have beed reloaded from steam profile.");
+            if (LoadCardData())
+                ShowMessage("Your card counts have beed reloaded from your steam profile.");
         }
 
         private void ShowMessage(string msg)

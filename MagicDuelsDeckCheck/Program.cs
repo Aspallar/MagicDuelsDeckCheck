@@ -18,7 +18,10 @@ namespace MagicDuelsDeckCheck
             //Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
             //Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
             //AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
-            Application.Run(new FormMain(Properties.Settings.Default.MagicDuelsSteamProfile));
+            Application.Run(new FormMain(
+                Properties.Settings.Default.MagicDuelsSteamProfile,
+                Properties.Settings.Default.MruSize
+            ));
         }
 
         //private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)

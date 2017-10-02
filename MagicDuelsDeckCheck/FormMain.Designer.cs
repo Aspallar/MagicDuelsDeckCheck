@@ -34,7 +34,7 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reloadCradsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mostRecentlyUsed = new DeckCheckControls.MostRecentlyUsedToolStripMenuItem();
+            this.recentDecks = new DeckCheckControls.MostRecentlyUsedToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,7 +76,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optionsToolStripMenuItem,
             this.reloadCradsToolStripMenuItem,
-            this.mostRecentlyUsed,
+            this.recentDecks,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -98,11 +98,11 @@
             // 
             // mostRecentlyUsed
             // 
-            this.mostRecentlyUsed.Enabled = false;
-            this.mostRecentlyUsed.Name = "mostRecentlyUsed";
-            this.mostRecentlyUsed.Size = new System.Drawing.Size(144, 22);
-            this.mostRecentlyUsed.Text = "Recent Decks";
-            this.mostRecentlyUsed.RecentItemClick += new System.EventHandler<DeckCheckControls.RecentItemClickEventArgs>(this.mostRecentlyUsed_RecentItemClick);
+            this.recentDecks.Enabled = false;
+            this.recentDecks.Name = "mostRecentlyUsed";
+            this.recentDecks.Size = new System.Drawing.Size(144, 22);
+            this.recentDecks.Text = "Recent Decks";
+            this.recentDecks.RecentItemClick += new System.EventHandler<DeckCheckControls.RecentItemClickEventArgs>(this.mostRecentlyUsed_RecentItemClick);
             // 
             // exitToolStripMenuItem
             // 
@@ -229,7 +229,7 @@
         private System.Windows.Forms.LinkLabel linkLabelWiki;
         private System.Windows.Forms.LinkLabel linkLabelTappedOut;
         private System.Windows.Forms.LinkLabel linkLabelDeckStats;
-        private DeckCheckControls.MostRecentlyUsedToolStripMenuItem mostRecentlyUsed;
+        private DeckCheckControls.MostRecentlyUsedToolStripMenuItem recentDecks;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
     }

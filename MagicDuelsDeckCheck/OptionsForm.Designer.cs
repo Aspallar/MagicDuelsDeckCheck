@@ -35,6 +35,10 @@
             this.buttonOk = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.labelProfileHelpText = new System.Windows.Forms.Label();
+            this.labelSeparator = new System.Windows.Forms.Label();
+            this.numericUpDownMruSize = new System.Windows.Forms.NumericUpDown();
+            this.labelMruSize = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMruSize)).BeginInit();
             this.SuspendLayout();
             // 
             // labelProfilePath
@@ -65,7 +69,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(526, 129);
+            this.buttonOk.Location = new System.Drawing.Point(532, 174);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 3;
@@ -75,7 +79,7 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(445, 129);
+            this.buttonCancel.Location = new System.Drawing.Point(451, 174);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 4;
@@ -85,18 +89,44 @@
             // 
             // labelProfileHelpText
             // 
-            this.labelProfileHelpText.AutoSize = true;
             this.labelProfileHelpText.Location = new System.Drawing.Point(16, 57);
             this.labelProfileHelpText.Name = "labelProfileHelpText";
-            this.labelProfileHelpText.Size = new System.Drawing.Size(101, 13);
+            this.labelProfileHelpText.Size = new System.Drawing.Size(591, 62);
             this.labelProfileHelpText.TabIndex = 5;
-            this.labelProfileHelpText.Text = "labelProfileHelpText";
+            this.labelProfileHelpText.Text = resources.GetString("labelProfileHelpText.Text");
+            // 
+            // labelSeparator
+            // 
+            this.labelSeparator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelSeparator.Location = new System.Drawing.Point(16, 119);
+            this.labelSeparator.Name = "labelSeparator";
+            this.labelSeparator.Size = new System.Drawing.Size(568, 2);
+            this.labelSeparator.TabIndex = 6;
+            // 
+            // numericUpDownMruSize
+            // 
+            this.numericUpDownMruSize.Location = new System.Drawing.Point(16, 134);
+            this.numericUpDownMruSize.Name = "numericUpDownMruSize";
+            this.numericUpDownMruSize.Size = new System.Drawing.Size(38, 20);
+            this.numericUpDownMruSize.TabIndex = 7;
+            // 
+            // labelMruSize
+            // 
+            this.labelMruSize.AutoSize = true;
+            this.labelMruSize.Location = new System.Drawing.Point(60, 136);
+            this.labelMruSize.Name = "labelMruSize";
+            this.labelMruSize.Size = new System.Drawing.Size(263, 13);
+            this.labelMruSize.TabIndex = 8;
+            this.labelMruSize.Text = "Maximum number of decks to show in \'Recent Decks\'.";
             // 
             // OptionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 164);
+            this.ClientSize = new System.Drawing.Size(613, 211);
+            this.Controls.Add(this.labelMruSize);
+            this.Controls.Add(this.numericUpDownMruSize);
+            this.Controls.Add(this.labelSeparator);
             this.Controls.Add(this.labelProfileHelpText);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
@@ -109,6 +139,7 @@
             this.MinimizeBox = false;
             this.Name = "OptionsForm";
             this.Text = "MagicDuelsDeckCheck Options";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMruSize)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,5 +153,8 @@
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label labelProfileHelpText;
+        private System.Windows.Forms.Label labelSeparator;
+        private System.Windows.Forms.NumericUpDown numericUpDownMruSize;
+        private System.Windows.Forms.Label labelMruSize;
     }
 }

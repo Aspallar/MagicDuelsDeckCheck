@@ -5,5 +5,8 @@
     <Setting Name="MagicDuelsSteamProfile" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Program Files (x86)\Steam\userdata\111111111\316010\remote\111111111.profile</Value>
     </Setting>
+    <Setting Name="MruSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
