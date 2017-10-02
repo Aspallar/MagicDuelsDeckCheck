@@ -33,6 +33,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_A6245B820BFB4B7C116E2E9FFACE6232"
+        "OwnerKey" = "8:_B2870C76D26C4AFA97710E66A4287AD3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_B2870C76D26C4AFA97710E66A4287AD3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -76,6 +82,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A6245B820BFB4B7C116E2E9FFACE6232"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_C141B9712518E21FBD937D093417EBDC"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -104,6 +116,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
         "Release"
@@ -128,6 +148,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
     }
@@ -150,7 +178,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:.NETFramework,Version=v4.5"
+                "FrameworkVersion" = "8:.NETFramework,Version=v4.5.2"
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=395269"
                 }
@@ -234,6 +262,37 @@
                     }
                 }
             "SourcePath" = "8:MagicDuels.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_6E73434EEDA346C3B0F10F99982DE76B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A6245B820BFB4B7C116E2E9FFACE6232"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:DeckCheckControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_A6245B820BFB4B7C116E2E9FFACE6232"
+                    {
+                    "Name" = "8:DeckCheckControls.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:DeckCheckControls.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6E73434EEDA346C3B0F10F99982DE76B"
@@ -359,7 +418,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:MagicDuelsDeckCheck"
         "ProductCode" = "8:{926214DE-D822-413F-AD20-6CB1A475AAF7}"
-        "PackageCode" = "8:{81E852B4-102B-4FB5-8EEC-7646690BF78D}"
+        "PackageCode" = "8:{F506C384-CB46-42BA-BBF9-0312C49FE5C2}"
         "UpgradeCode" = "8:{D02E4B73-6BB7-4ECF-B395-839A5B3AC44E}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
