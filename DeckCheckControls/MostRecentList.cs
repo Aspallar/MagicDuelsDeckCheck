@@ -2,6 +2,7 @@
 using System.IO;
 using System.Runtime.Serialization;
 using System.Xml;
+using System.Linq;
 
 namespace DeckCheckControls
 {
@@ -55,6 +56,14 @@ namespace DeckCheckControls
                 if (_items[k].Path == path)
                     return k;
             return -1;
+        }
+
+        public MostRecentList Except(List<MostRecentItem> exceptItems)
+        {
+            MostRecentList list = new MostRecentList();
+            list.MaxSize = MaxSize;
+            list._items = _items.Where(x => !exceptItems.Any(y => y.Path == x.Path)).ToList();
+            return list;
         }
 
         public static MostRecentList Read(Stream stream)

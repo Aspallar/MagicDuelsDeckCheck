@@ -12,7 +12,6 @@ namespace MagicDuelsDeckCheck
     public partial class FormMain : Form
     {
         private const string pasteContextMenu = "Paste";
-        private const string recentDecksFileName = "RecentDecks.xml";
 
         private MagicDuelsCards _cards;
         private PageGenerator _pageGenerator;
@@ -22,14 +21,13 @@ namespace MagicDuelsDeckCheck
         private bool _working;
         private CorrectCardNames _correctCardNames;
         private MostRecentList _recentDecks;
-        private string _appDataFolder;
+        private FavouritesList _favourites;
         private int _maxRecentFiles;
 
         public FormMain(string profilePath, int maxRecentFiles)
         {
             _profilePath = profilePath;
             _maxRecentFiles = maxRecentFiles;
-            _appDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\MagicDuelsDeckCheck\";
             InitializeComponent();
             CreateContextMenu();
         }
@@ -55,8 +53,8 @@ namespace MagicDuelsDeckCheck
             Initialize();
             _recentDecks.MaxSize = _maxRecentFiles;
             recentDecks.RecentItems = _recentDecks;
-            if (!_cardDataLoaded)
-                recentDecks.Enabled = false;
+            favouritesMenuItem.Favorites = _favourites;
+            UpdateUiState();
         }
 
         private void CreateWorker()
@@ -113,7 +111,7 @@ namespace MagicDuelsDeckCheck
         {
             labelStatus.Text = IsHttpPath(deckPath) ? "Reading web page..." : "Reading file...";
             _working = true;
-            recentDecks.Enabled = false;
+            UpdateUiState();
             _worker.RunWorkerAsync(deckPath);
         }
 
@@ -142,6 +140,7 @@ namespace MagicDuelsDeckCheck
                 return;
             }
             recentDecks.Add((MostRecentItem)e.Result);
+            UpdateUiState();
         }
 
         private void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -233,11 +232,21 @@ namespace MagicDuelsDeckCheck
             }
             try
             {
-                _recentDecks = MostRecentList.Read(_appDataFolder + recentDecksFileName);
+                _recentDecks = MostRecentList.Read(AppPaths.RecentDecksFilePath);
             }
             catch (IOException ex)
             {
-                ShowError("There error while loading recent decks.\r\n" + ex.Message);
+                _recentDecks = new MostRecentList();
+                ShowError("There was an error while loading recent decks.\r\n" + ex.Message);
+            }
+            try
+            {
+                _favourites = FavouritesList.Read(AppPaths.FavouritessFilePath);
+            }
+            catch (IOException ex)
+            {
+                _favourites = new FavouritesList();
+                ShowError("There was an error while loading favourite decks.\r\n" + ex.Message);
             }
         }
 
@@ -271,6 +280,13 @@ namespace MagicDuelsDeckCheck
             }
         }
 
+        private void UpdateUiState()
+        {
+            bool enabled = !_working && _cardDataLoaded;
+            favouritesMenuItem.FavouritesEnabled = enabled;
+            recentDecks.Enabled = enabled;
+        }
+
         private void linkLabelMagicDuelsHelper_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("https://www.magicduelshelper.com/decklist/alldecks");
@@ -291,9 +307,9 @@ namespace MagicDuelsDeckCheck
             Process.Start("https://deckstats.net/decks/search/?lng=en&search_title=&search_format=0&search_price_min=&search_price_max=&search_number_cards_main=&search_number_cards_sideboard=&search_cards%5B%5D=&search_tags=Magic+Duels&search_order=updated%2Cdesc");
         }
 
-        private void mostRecentlyUsed_RecentItemClick(object sender, RecentItemClickEventArgs e)
+        private void Deck_Click(object sender, RecentItemClickEventArgs e)
         {
-            StartJob(e.Path);
+            StartJob(e.Item.Path);
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -320,10 +336,8 @@ namespace MagicDuelsDeckCheck
                 if (dlg.ProfilePath != _profilePath)
                 {
                     _profilePath = dlg.ProfilePath;
-                    if (LoadCardData())
-                        recentDecks.SetEnabled();
-                    else
-                        recentDecks.Enabled = false;
+                    LoadCardData();
+                    UpdateUiState();
                 }
             }
         }
@@ -365,18 +379,24 @@ namespace MagicDuelsDeckCheck
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            MostRecentList.Save(_appDataFolder + recentDecksFileName, _recentDecks);
-        }
-
-        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("here");
+            MostRecentList.Save(AppPaths.RecentDecksFilePath, _recentDecks);
+            FavouritesList.Save(AppPaths.FavouritessFilePath, _favourites);
         }
 
         private void editToolStripMenuItem_DropDownOpening(object sender, EventArgs e)
         {
             const int pasteIndex = 0;
             ((ToolStripMenuItem)sender).DropDownItems[pasteIndex].Enabled = ShouldAccept(Clipboard.GetDataObject());
+        }
+
+        private void favouritesMenuItem_DropDownOpening(object sender, EventArgs e)
+        {
+            favouritesMenuItem.SetAddableDecks(_recentDecks);
+        }
+
+        private void favouritesMenuItem_ManageClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Work under progress.\r\n\r\nThis feature is not yet implemented.");
         }
     }
 }

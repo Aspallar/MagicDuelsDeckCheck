@@ -43,6 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FavouritesList.cs" />
+    <Compile Include="FavouritesToolStripMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FavouritesToolStripMenuItem.Designer.cs">
+      <DependentUpon>FavouritesToolStripMenuItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="MostRecentItem.cs" />
     <Compile Include="MostRecentList.cs" />
     <Compile Include="MostRecentlyUsedToolStripMenuItem.cs">

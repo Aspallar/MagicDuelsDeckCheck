@@ -23,17 +23,24 @@ namespace DeckCheckControls
             Update();
         }
 
-        public void SetEnabled()
-        {
-            Enabled = _mostRecentItems.Count > 0;
-        }
-
         public MostRecentList RecentItems
         {
             set
             {
                 _mostRecentItems = value;
                 Update();
+            }
+        }
+
+        public override bool Enabled
+        {
+            get
+            {
+                return base.Enabled;
+            }
+            set
+            {
+                base.Enabled = value && _mostRecentItems.Count > 0;
             }
         }
 
@@ -59,11 +66,11 @@ namespace DeckCheckControls
         private void MenuItem_Click(object sender, EventArgs e)
         {
             MostRecentItem item = (MostRecentItem)((ToolStripMenuItem)sender).Tag;
-            OnRecentItemClicked(item.Path);
+            OnRecentItemClicked(item);
         }
 
         public event EventHandler<RecentItemClickEventArgs> RecentItemClick;
-        private void OnRecentItemClicked(string path) =>
-            RecentItemClick?.Invoke(this, new RecentItemClickEventArgs(path));
+        private void OnRecentItemClicked(MostRecentItem item) =>
+            RecentItemClick?.Invoke(this, new RecentItemClickEventArgs(item));
     }
 }

@@ -64,6 +64,7 @@
     <Compile Include="AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppPaths.cs" />
     <Compile Include="CorrectCardNames.cs" />
     <Compile Include="DeckEntry.cs" />
     <Compile Include="DeckInfo.cs" />

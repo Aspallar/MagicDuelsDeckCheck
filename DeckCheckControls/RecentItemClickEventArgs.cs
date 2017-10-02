@@ -4,11 +4,11 @@ namespace DeckCheckControls
 {
     public class RecentItemClickEventArgs : EventArgs
     {
-        public string Path { get; private set; }
+        public MostRecentItem Item { get; private set; }
 
-        public RecentItemClickEventArgs(string path)
+        public RecentItemClickEventArgs(MostRecentItem item)
         {
-            Path = path;
+            Item = item;
         }
     }
 }
