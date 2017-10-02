@@ -396,7 +396,13 @@ namespace MagicDuelsDeckCheck
 
         private void favouritesMenuItem_ManageClick(object sender, EventArgs e)
         {
-            MessageBox.Show("Work under progress.\r\n\r\nThis feature is not yet implemented.");
+            ManageFavouritesForm dlg = new ManageFavouritesForm(_favourites);
+            if (dlg.ShowDialog(this) == DialogResult.OK)
+            {
+                _favourites = dlg.Favourites;
+                favouritesMenuItem.Favorites = _favourites;
+                UpdateUiState();
+            }
         }
     }
 }

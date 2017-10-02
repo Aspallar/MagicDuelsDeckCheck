@@ -61,6 +61,8 @@ namespace DeckCheckControls
 
         private void Update()
         {
+            for (int k = DropDownItems.Count - 1; k >= favouritesStartIndex; k--)
+                DropDownItems.RemoveAt(k);
             foreach (MostRecentItem item in _favourites)
                 DropDownItems.Add(CreateFavouriteItem(item));
         }

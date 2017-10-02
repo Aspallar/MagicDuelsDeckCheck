@@ -79,6 +79,12 @@
     <Compile Include="IDeckReader.cs" />
     <Compile Include="MagicDuelsHelperDeckReader.cs" />
     <Compile Include="MagicDuelsWikiDeckReader.cs" />
+    <Compile Include="ManageFavouritesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageFavouritesForm.Designer.cs">
+      <DependentUpon>ManageFavouritesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NameCorrection.cs" />
     <Compile Include="DeckStatsDeckReader.cs" />
     <Compile Include="OptionsForm.cs">
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageFavouritesForm.resx">
+      <DependentUpon>ManageFavouritesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsForm.resx">
       <DependentUpon>OptionsForm.cs</DependentUpon>

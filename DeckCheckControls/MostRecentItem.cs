@@ -21,5 +21,10 @@ namespace DeckCheckControls
             DisplayName = displayName;
             Path = path;
         }
+
+        public override string ToString()
+        {
+            return DisplayName;
+        }
     }
 }
