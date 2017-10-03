@@ -198,13 +198,13 @@ namespace MagicDuelsDeckCheck
             _worker.ReportProgress(50);
             DeckInfo deckInfo = DeckReaders.GetReader(deckPath).ReadDeck(content);
             deckInfo.GetOwned(_cards, _correctCardNames);
-            DisplayMissingPage(deckInfo);
+            DisplayMissingPage(deckInfo, deckPath);
             return deckInfo.DeckName;
         }
 
-        private void DisplayMissingPage(DeckInfo deckInfo)
+        private void DisplayMissingPage(DeckInfo deckInfo, string deckPath)
         {
-            string fileName = _pageGenerator.MakePage(deckInfo);
+            string fileName = _pageGenerator.MakePage(deckInfo, deckPath);
             Process.Start(fileName);
         }
 
