@@ -109,7 +109,7 @@ namespace MagicDuelsDeckCheck
 
         private void StartJob(string deckPath)
         {
-            labelStatus.Text = IsHttpPath(deckPath) ? "Reading web page..." : "Reading file...";
+            labelStatus.Text = Utils.IsHttpPath(deckPath) ? "Reading web page..." : "Reading file...";
             _working = true;
             UpdateUiState();
             _worker.RunWorkerAsync(deckPath);
@@ -124,7 +124,7 @@ namespace MagicDuelsDeckCheck
         {
             string deckPath = (string)e.Argument;
             string deckName = ShowMissingCards(deckPath);
-            if (IsHttpPath(deckPath))
+            if (Utils.IsHttpPath(deckPath))
                 e.Result = new MostRecentItem(deckName, deckPath);
             else
                 e.Result = new MostRecentItem(Path.GetFileName(new FileInfo(deckPath).FullName), deckPath);
@@ -267,7 +267,7 @@ namespace MagicDuelsDeckCheck
 
         private static string GetDeckDocument(string deckPath)
         {
-            if (IsHttpPath(deckPath))
+            if (Utils.IsHttpPath(deckPath))
             {
                 string content;
                 using (WebClient client = new WebClient())
@@ -370,11 +370,6 @@ namespace MagicDuelsDeckCheck
         {
             string[] names = (string[])data.GetData("FileName");
             return names[0];
-        }
-
-        private static bool IsHttpPath(string deckPath)
-        {
-            return deckPath.StartsWith("http", StringComparison.InvariantCultureIgnoreCase);
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)

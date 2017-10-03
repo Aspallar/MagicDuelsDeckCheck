@@ -35,6 +35,7 @@
             this.buttonOk = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonSort = new System.Windows.Forms.Button();
+            this.buttonWebsite = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxFavourites
@@ -106,11 +107,22 @@
             this.buttonSort.UseVisualStyleBackColor = true;
             this.buttonSort.Click += new System.EventHandler(this.buttonSort_Click);
             // 
+            // buttonWebsite
+            // 
+            this.buttonWebsite.Location = new System.Drawing.Point(261, 132);
+            this.buttonWebsite.Name = "buttonWebsite";
+            this.buttonWebsite.Size = new System.Drawing.Size(75, 23);
+            this.buttonWebsite.TabIndex = 7;
+            this.buttonWebsite.Text = "Website";
+            this.buttonWebsite.UseVisualStyleBackColor = true;
+            this.buttonWebsite.Click += new System.EventHandler(this.buttonWebsite_Click);
+            // 
             // ManageFavouritesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 262);
+            this.Controls.Add(this.buttonWebsite);
             this.Controls.Add(this.buttonSort);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
@@ -136,5 +148,6 @@
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonSort;
+        private System.Windows.Forms.Button buttonWebsite;
     }
 }

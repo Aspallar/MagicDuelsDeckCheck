@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -75,6 +76,13 @@ namespace MagicDuelsDeckCheck
             _isDirty = true;
         }
 
+        private void buttonWebsite_Click(object sender, EventArgs e)
+        {
+            MostRecentItem item = (MostRecentItem)listBoxFavourites.SelectedItem;
+            if (item != null && Utils.IsHttpPath(item.Path))
+                Process.Start(item.Path);
+        }
+
         private void buttonOk_Click(object sender, EventArgs e)
         {
             if (!_isDirty)
@@ -108,7 +116,15 @@ namespace MagicDuelsDeckCheck
             buttonDelete.Enabled = index != -1;
             buttonMoveUp.Enabled = index > 0;
             buttonMoveDown.Enabled = index != -1 && index != listBoxFavourites.Items.Count - 1;
+            if (index != -1)
+            {
+                MostRecentItem item = (MostRecentItem)listBoxFavourites.Items[index];
+                buttonWebsite.Enabled = Utils.IsHttpPath(item.Path);
+            }
+            else
+            {
+                buttonWebsite.Enabled = false;
+            }
         }
-
     }
 }
