@@ -135,11 +135,9 @@ namespace MagicDuelsDeckCheck
             _working = false;
             SetStatus();
             if (e.Error != null)
-            {
                 ShowError("Error processing deck list:\r\n" + e.Error.Message);
-                return;
-            }
-            recentDecks.Add((MostRecentItem)e.Result);
+            else
+                recentDecks.Add((MostRecentItem)e.Result);
             UpdateUiState();
         }
 
