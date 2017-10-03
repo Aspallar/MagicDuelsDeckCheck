@@ -69,7 +69,6 @@ namespace DeckCheckControls
                 Enabled = _favouritesEnabled,
             };
             favourite.Click += Favourite_Click;
-
             return favourite;
         }
 

@@ -66,33 +66,14 @@ namespace DeckCheckControls
             return list;
         }
 
-        public static MostRecentList Read(Stream stream)
-        {
-            DataContractSerializer serializer = new DataContractSerializer(typeof(MostRecentList));
-            using (XmlReader reader = XmlReader.Create(stream))
-                return (MostRecentList)serializer.ReadObject(reader);
-        }
-
-
         public static MostRecentList Read(string filePath)
         {
-            if (!File.Exists(filePath))
-                return new MostRecentList();
-            using (Stream stream = File.OpenRead(filePath))
-                return Read(stream);
-        }
-
-        public static void Save(Stream stream, MostRecentList mostRecentList)
-        {
-            DataContractSerializer serializer = new DataContractSerializer(typeof(MostRecentList));
-            using (XmlWriter writer = XmlWriter.Create(stream))
-                serializer.WriteObject(writer, mostRecentList);
+            return Serialization.Read<MostRecentList>(filePath);
         }
 
         public static void Save(string filePath, MostRecentList mostRecentList)
         {
-            using (Stream stream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
-                Save(stream, mostRecentList);
+            Serialization.Save(filePath, mostRecentList);
         }
     }
 }
