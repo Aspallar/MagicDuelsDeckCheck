@@ -339,6 +339,7 @@ namespace MagicDuelsDeckCheck
                     LoadCardData();
                     UpdateUiState();
                 }
+                _userAgent = dlg.UserAgent;
             }
         }
 
