@@ -46,5 +46,18 @@ namespace MagicDuelsDeckCheck.Properties {
                 this["MruSize"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) C" +
+            "hrome/61.0.3135.4 Safari/537.36")]
+        public string UserAgent {
+            get {
+                return ((string)(this["UserAgent"]));
+            }
+            set {
+                this["UserAgent"] = value;
+            }
+        }
     }
 }

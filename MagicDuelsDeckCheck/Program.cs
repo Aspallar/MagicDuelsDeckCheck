@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Security.Permissions;
 using System.Windows.Forms;
+using MagicDuelsDeckCheck.Properties;
 
 namespace MagicDuelsDeckCheck
 {
@@ -19,8 +20,9 @@ namespace MagicDuelsDeckCheck
             //Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
             //AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
             Application.Run(new FormMain(
-                Properties.Settings.Default.MagicDuelsSteamProfile,
-                Properties.Settings.Default.MruSize
+                Settings.Default.MagicDuelsSteamProfile,
+                Settings.Default.MruSize,
+                Settings.Default.UserAgent
             ));
         }
 

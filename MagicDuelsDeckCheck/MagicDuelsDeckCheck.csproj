@@ -98,6 +98,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TappedOutDeckReader.cs" />
     <Compile Include="TextDeckReader.cs" />
+    <Compile Include="UserAgentWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Utils.cs" />
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>

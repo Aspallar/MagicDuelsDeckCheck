@@ -23,11 +23,13 @@ namespace MagicDuelsDeckCheck
         private MostRecentList _recentDecks;
         private FavouritesList _favourites;
         private int _maxRecentFiles;
+        private string _userAgent;
 
-        public FormMain(string profilePath, int maxRecentFiles)
+        public FormMain(string profilePath, int maxRecentFiles, string userAgent)
         {
             _profilePath = profilePath;
             _maxRecentFiles = maxRecentFiles;
+            _userAgent = userAgent;
             InitializeComponent();
             CreateContextMenu();
         }
@@ -263,12 +265,12 @@ namespace MagicDuelsDeckCheck
             return accept;
         }
 
-        private static string GetDeckDocument(string deckPath)
+        private string GetDeckDocument(string deckPath)
         {
             if (Utils.IsHttpPath(deckPath))
             {
                 string content;
-                using (WebClient client = new WebClient())
+                using (UserAgentWebClient client = new UserAgentWebClient(_userAgent))
                     content = client.DownloadString(deckPath);
                 return content;
             }
