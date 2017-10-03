@@ -1,12 +1,8 @@
 ﻿using DeckCheckControls;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MagicDuelsDeckCheck
@@ -28,11 +24,6 @@ namespace MagicDuelsDeckCheck
 
 
         public FavouritesList Favourites { get; private set; }
-
-        private void PopulateFavourites(FavouritesList favourites)
-        {
-            PopulateFavourites((List<MostRecentItem>)favourites);
-        }
 
         private void PopulateFavourites(List<MostRecentItem> favourites)
         {
