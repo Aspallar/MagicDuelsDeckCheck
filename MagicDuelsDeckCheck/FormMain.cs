@@ -22,16 +22,22 @@ namespace MagicDuelsDeckCheck
         private CorrectCardNames _correctCardNames;
         private MostRecentList _recentDecks;
         private FavouritesList _favourites;
-        private int _maxRecentFiles;
         private string _userAgent;
 
-        public FormMain(string profilePath, int maxRecentFiles, string userAgent)
+        public FormMain(string profilePath, int maxRecentDecks, string userAgent)
         {
             _profilePath = profilePath;
-            _maxRecentFiles = maxRecentFiles;
             _userAgent = userAgent;
             InitializeComponent();
             CreateContextMenu();
+            LoadCardData();
+            _pageGenerator = new PageGenerator();
+            _correctCardNames = new CorrectCardNames();
+            CreateWorker();
+            Initialize();
+            _recentDecks.MaxSize = maxRecentDecks;
+            recentDecks.RecentItems = _recentDecks;
+            favouritesMenuItem.Favorites = _favourites;
         }
 
         private void CreateContextMenu()
@@ -48,14 +54,6 @@ namespace MagicDuelsDeckCheck
         private void FormMain_Load(object sender, EventArgs e)
         {
             AllowDrop = true;
-            LoadCardData();
-            _pageGenerator = new PageGenerator();
-            _correctCardNames = new CorrectCardNames();
-            CreateWorker();
-            Initialize();
-            _recentDecks.MaxSize = _maxRecentFiles;
-            recentDecks.RecentItems = _recentDecks;
-            favouritesMenuItem.Favorites = _favourites;
             UpdateUiState();
         }
 
