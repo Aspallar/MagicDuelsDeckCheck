@@ -38,7 +38,6 @@
             this.labelSeparator = new System.Windows.Forms.Label();
             this.numericUpDownMruSize = new System.Windows.Forms.NumericUpDown();
             this.labelMruSize = new System.Windows.Forms.Label();
-            this.labelSeparator1 = new System.Windows.Forms.Label();
             this.labelUserAgent = new System.Windows.Forms.Label();
             this.textBoxUserAgent = new System.Windows.Forms.TextBox();
             this.labelUserAgentText = new System.Windows.Forms.Label();
@@ -134,14 +133,6 @@
             this.labelMruSize.TabIndex = 8;
             this.labelMruSize.Text = "Maximum number of decks to show in \'Recent Decks\'.";
             // 
-            // labelSeparator1
-            // 
-            this.labelSeparator1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelSeparator1.Location = new System.Drawing.Point(16, 167);
-            this.labelSeparator1.Name = "labelSeparator1";
-            this.labelSeparator1.Size = new System.Drawing.Size(568, 2);
-            this.labelSeparator1.TabIndex = 9;
-            // 
             // labelUserAgent
             // 
             this.labelUserAgent.AutoSize = true;
@@ -164,7 +155,9 @@
             this.labelUserAgentText.Name = "labelUserAgentText";
             this.labelUserAgentText.Size = new System.Drawing.Size(565, 34);
             this.labelUserAgentText.TabIndex = 12;
-            this.labelUserAgentText.Text = resources.GetString("labelUserAgentText.Text");
+            this.labelUserAgentText.Text = "This is the user agent used in http requests to web sites. It  is recommended tha" +
+    "t you leave it at the default. You can  reset it back to the default with the \'D" +
+    "efault\' button.";
             // 
             // buttonDefaultUserAgent
             // 
@@ -185,7 +178,6 @@
             this.Controls.Add(this.labelUserAgentText);
             this.Controls.Add(this.textBoxUserAgent);
             this.Controls.Add(this.labelUserAgent);
-            this.Controls.Add(this.labelSeparator1);
             this.Controls.Add(this.labelMruSize);
             this.Controls.Add(this.numericUpDownMruSize);
             this.Controls.Add(this.labelSeparator);
@@ -218,7 +210,6 @@
         private System.Windows.Forms.Label labelSeparator;
         private System.Windows.Forms.NumericUpDown numericUpDownMruSize;
         private System.Windows.Forms.Label labelMruSize;
-        private System.Windows.Forms.Label labelSeparator1;
         private System.Windows.Forms.Label labelUserAgent;
         private System.Windows.Forms.TextBox textBoxUserAgent;
         private System.Windows.Forms.Label labelUserAgentText;

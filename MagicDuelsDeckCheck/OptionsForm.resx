@@ -123,9 +123,6 @@
 
 e.g. C:\Program Files (x86)\Steam\userdata\111849480\316010\remote\111849480.profile</value>
   </data>
-  <data name="labelUserAgentText.Text" xml:space="preserve">
-    <value>This is the user agent used in http requests to web sites. It  is recommended that you leave it at the default unless told to change it. If you have changed it you an reset it back to the default with the 'Default' button.</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
