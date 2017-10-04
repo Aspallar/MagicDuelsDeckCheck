@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
 
@@ -55,13 +49,13 @@ namespace DeckCheckControls
 
         private void SetFavouritesEnabled(bool enabled)
         {
-            for (int k = favouritesStartIndex; k < DropDownItems.Count; k++)
+            for (int k = _favouritesStartIndex; k < DropDownItems.Count; k++)
                 DropDownItems[k].Enabled = enabled;
         }
 
         private void Update()
         {
-            for (int k = DropDownItems.Count - 1; k >= favouritesStartIndex; k--)
+            for (int k = DropDownItems.Count - 1; k >= _favouritesStartIndex; k--)
                 DropDownItems.RemoveAt(k);
             foreach (MostRecentItem item in _favourites)
                 DropDownItems.Add(CreateFavouriteItem(item));
@@ -75,11 +69,10 @@ namespace DeckCheckControls
                 Enabled = _favouritesEnabled,
             };
             favourite.Click += Favourite_Click;
-
             return favourite;
         }
 
-        const int favouritesStartIndex = 3;
+        private int _favouritesStartIndex;
         private void AddFixedMenuItems()
         {
             _add = new MostRecentlyUsedToolStripMenuItem
@@ -94,6 +87,8 @@ namespace DeckCheckControls
             DropDownItems.Add(_add);
             DropDownItems.Add(manage);
             DropDownItems.Add(new ToolStripSeparator());
+
+            _favouritesStartIndex = DropDownItems.Count;
         }
 
 
@@ -105,7 +100,7 @@ namespace DeckCheckControls
         private void InsertNewItem(MostRecentItem item)
         {
             _favourites.Insert(0, item);
-            DropDownItems.Insert(favouritesStartIndex, CreateFavouriteItem(item));
+            DropDownItems.Insert(_favouritesStartIndex, CreateFavouriteItem(item));
         }
 
         private void Favourite_Click(object sender, EventArgs e)

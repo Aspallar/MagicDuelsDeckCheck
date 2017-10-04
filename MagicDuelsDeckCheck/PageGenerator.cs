@@ -15,7 +15,7 @@ namespace MagicDuelsDeckCheck
             _itemTemplate = File.ReadAllText("ItemTemplate.html");
         }
 
-        public string MakePage(DeckInfo deck)
+        public string MakePage(DeckInfo deck, string deckPath)
         {
             StringBuilder items = new StringBuilder();
             List<string> unkownCards = new List<string>();
@@ -48,6 +48,12 @@ namespace MagicDuelsDeckCheck
 
             StringBuilder page = new StringBuilder(_pageTemplate);
             page.Replace("[deckname]", deck.DeckName);
+
+            if (Utils.IsHttpPath(deckPath))
+                page.Replace("[decklink]", $"<a href=\"{deckPath}\" target=\"_blank\">View deck definition</a>");
+            else
+                page.Replace("[decklink]", "");
+
             page.Replace("[cardtotal]", total.ToString());
             page.Replace("[cardlist]", items.ToString());
 

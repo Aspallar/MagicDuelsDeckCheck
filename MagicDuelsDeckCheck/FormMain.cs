@@ -22,14 +22,22 @@ namespace MagicDuelsDeckCheck
         private CorrectCardNames _correctCardNames;
         private MostRecentList _recentDecks;
         private FavouritesList _favourites;
-        private int _maxRecentFiles;
+        private string _userAgent;
 
-        public FormMain(string profilePath, int maxRecentFiles)
+        public FormMain(string profilePath, int maxRecentDecks, string userAgent)
         {
             _profilePath = profilePath;
-            _maxRecentFiles = maxRecentFiles;
+            _userAgent = userAgent;
             InitializeComponent();
             CreateContextMenu();
+            LoadCardData();
+            _pageGenerator = new PageGenerator();
+            _correctCardNames = new CorrectCardNames();
+            CreateWorker();
+            Initialize();
+            _recentDecks.MaxSize = maxRecentDecks;
+            recentDecks.RecentItems = _recentDecks;
+            favouritesMenuItem.Favorites = _favourites;
         }
 
         private void CreateContextMenu()
@@ -46,14 +54,6 @@ namespace MagicDuelsDeckCheck
         private void FormMain_Load(object sender, EventArgs e)
         {
             AllowDrop = true;
-            LoadCardData();
-            _pageGenerator = new PageGenerator();
-            _correctCardNames = new CorrectCardNames();
-            CreateWorker();
-            Initialize();
-            _recentDecks.MaxSize = _maxRecentFiles;
-            recentDecks.RecentItems = _recentDecks;
-            favouritesMenuItem.Favorites = _favourites;
             UpdateUiState();
         }
 
@@ -109,7 +109,7 @@ namespace MagicDuelsDeckCheck
 
         private void StartJob(string deckPath)
         {
-            labelStatus.Text = IsHttpPath(deckPath) ? "Reading web page..." : "Reading file...";
+            labelStatus.Text = Utils.IsHttpPath(deckPath) ? "Reading web page..." : "Reading file...";
             _working = true;
             UpdateUiState();
             _worker.RunWorkerAsync(deckPath);
@@ -124,7 +124,7 @@ namespace MagicDuelsDeckCheck
         {
             string deckPath = (string)e.Argument;
             string deckName = ShowMissingCards(deckPath);
-            if (IsHttpPath(deckPath))
+            if (Utils.IsHttpPath(deckPath))
                 e.Result = new MostRecentItem(deckName, deckPath);
             else
                 e.Result = new MostRecentItem(Path.GetFileName(new FileInfo(deckPath).FullName), deckPath);
@@ -135,11 +135,9 @@ namespace MagicDuelsDeckCheck
             _working = false;
             SetStatus();
             if (e.Error != null)
-            {
                 ShowError("Error processing deck list:\r\n" + e.Error.Message);
-                return;
-            }
-            recentDecks.Add((MostRecentItem)e.Result);
+            else
+                recentDecks.Add((MostRecentItem)e.Result);
             UpdateUiState();
         }
 
@@ -198,13 +196,13 @@ namespace MagicDuelsDeckCheck
             _worker.ReportProgress(50);
             DeckInfo deckInfo = DeckReaders.GetReader(deckPath).ReadDeck(content);
             deckInfo.GetOwned(_cards, _correctCardNames);
-            DisplayMissingPage(deckInfo);
+            DisplayMissingPage(deckInfo, deckPath);
             return deckInfo.DeckName;
         }
 
-        private void DisplayMissingPage(DeckInfo deckInfo)
+        private void DisplayMissingPage(DeckInfo deckInfo, string deckPath)
         {
-            string fileName = _pageGenerator.MakePage(deckInfo);
+            string fileName = _pageGenerator.MakePage(deckInfo, deckPath);
             Process.Start(fileName);
         }
 
@@ -265,12 +263,12 @@ namespace MagicDuelsDeckCheck
             return accept;
         }
 
-        private static string GetDeckDocument(string deckPath)
+        private string GetDeckDocument(string deckPath)
         {
-            if (IsHttpPath(deckPath))
+            if (Utils.IsHttpPath(deckPath))
             {
                 string content;
-                using (WebClient client = new WebClient())
+                using (UserAgentWebClient client = new UserAgentWebClient(_userAgent))
                     content = client.DownloadString(deckPath);
                 return content;
             }
@@ -339,6 +337,7 @@ namespace MagicDuelsDeckCheck
                     LoadCardData();
                     UpdateUiState();
                 }
+                _userAgent = dlg.UserAgent;
             }
         }
 
@@ -370,11 +369,6 @@ namespace MagicDuelsDeckCheck
         {
             string[] names = (string[])data.GetData("FileName");
             return names[0];
-        }
-
-        private static bool IsHttpPath(string deckPath)
-        {
-            return deckPath.StartsWith("http", StringComparison.InvariantCultureIgnoreCase);
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
