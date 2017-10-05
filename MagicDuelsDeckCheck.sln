@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrapeWizardDecks", "Scrape
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckCheckControls", "DeckCheckControls\DeckCheckControls.csproj", "{BD3076EA-B9E7-498A-83CD-7B0A4F193131}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WikiCardCheck", "WikiCardCheck\WikiCardCheck.csproj", "{5D91666B-AD43-49D7-963C-82EE2FF8EF24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{BD3076EA-B9E7-498A-83CD-7B0A4F193131}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD3076EA-B9E7-498A-83CD-7B0A4F193131}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD3076EA-B9E7-498A-83CD-7B0A4F193131}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D91666B-AD43-49D7-963C-82EE2FF8EF24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D91666B-AD43-49D7-963C-82EE2FF8EF24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D91666B-AD43-49D7-963C-82EE2FF8EF24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D91666B-AD43-49D7-963C-82EE2FF8EF24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
