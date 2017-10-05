@@ -398,5 +398,10 @@ namespace MagicDuelsDeckCheck
                 UpdateUiState();
             }
         }
+
+        private void alwaysOnTopToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        {
+            TopMost = ((ToolStripMenuItem)sender).Checked;
+        }
     }
 }
