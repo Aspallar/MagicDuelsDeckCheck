@@ -31,6 +31,7 @@ namespace MagicDuelsDeckCheck
                         item.Replace("[shortfall]", card.Shortfall.ToString());
                         item.Replace("[cardname]", card.CardName);
                         item.Replace("[urlcardname]", card.CardName.Replace(" ", "%20"));
+                        item.Replace("[wikicardname]", GetWikiCardName(card.CardName));
                         item.Replace("[set]", card.Set);
                         if (!string.IsNullOrEmpty(card.CorrectName))
                             item.Replace("[correctname]", "Correct name: " + card.CorrectName);
@@ -70,6 +71,13 @@ namespace MagicDuelsDeckCheck
         private string GetFilename()
         {
             return Path.GetTempPath() + "DeckCheckMissingCards.html";
+        }
+
+        private static string GetWikiCardName(string displayName)
+        {
+            string name = displayName.Replace(' ', '_');
+            name = name.Replace("'", "%27");
+            return name;
         }
 
         private string MakeUnkownCards(List<string> unkownCards)
