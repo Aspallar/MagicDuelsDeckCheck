@@ -222,7 +222,7 @@ namespace MagicDuelsDeckCheck
             }
             try
             {
-                _pageGenerator.Initialize();
+                _pageGenerator.Initialize(false);
             }
             catch (IOException)
             {
