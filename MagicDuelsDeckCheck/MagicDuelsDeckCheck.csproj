@@ -99,6 +99,12 @@
     <Compile Include="PageTemplate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectTemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectTemplateForm.Designer.cs">
+      <DependentUpon>SelectTemplateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TappedOutDeckReader.cs" />
     <Compile Include="SectionTemplate.cs" />
     <Compile Include="TemplateFields.cs" />
@@ -129,6 +135,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SelectTemplateForm.resx">
+      <DependentUpon>SelectTemplateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -171,6 +180,27 @@
     <Content Include="PossessedCards.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Templates\Panels - Cerulean\bootstrap-cerulean.min.css" />
+    <Content Include="Templates\Panels - Cerulean\DeckLink.html" />
+    <Content Include="Templates\Panels - Cerulean\ItemTemplate.html" />
+    <Content Include="Templates\Panels - Cerulean\Page.html" />
+    <Content Include="Templates\Panels - Cerulean\PossessedCards.html" />
+    <Content Include="Templates\Panels - Cerulean\UnknownCards.html" />
+    <Content Include="Templates\Panels - Cerulean\UnknownItem.html" />
+    <Content Include="Templates\Panels - Cyborg\bootstrap-cyborg.min.css" />
+    <Content Include="Templates\Panels - Cyborg\DeckLink.html" />
+    <Content Include="Templates\Panels - Cyborg\ItemTemplate.html" />
+    <Content Include="Templates\Panels - Cyborg\Page.html" />
+    <Content Include="Templates\Panels - Cyborg\PossessedCards.html" />
+    <Content Include="Templates\Panels - Cyborg\UnknownCards.html" />
+    <Content Include="Templates\Panels - Cyborg\UnknownItem.html" />
+    <Content Include="Templates\Panels - Slate\bootstrap-slate.min.css" />
+    <Content Include="Templates\Panels - Slate\DeckLink.html" />
+    <Content Include="Templates\Panels - Slate\ItemTemplate.html" />
+    <Content Include="Templates\Panels - Slate\Page.html" />
+    <Content Include="Templates\Panels - Slate\PossessedCards.html" />
+    <Content Include="Templates\Panels - Slate\UnknownCards.html" />
+    <Content Include="Templates\Panels - Slate\UnknownItem.html" />
     <Content Include="Templates\Panels\DeckLink.html" />
     <Content Include="Templates\Panels\ItemTemplate.html" />
     <Content Include="Templates\Panels\Page.html" />

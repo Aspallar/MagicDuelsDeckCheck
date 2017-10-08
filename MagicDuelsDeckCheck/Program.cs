@@ -36,6 +36,8 @@ namespace MagicDuelsDeckCheck
             string templatePath = Application.StartupPath + "\\Templates";
             var source = new DirectoryInfo(templatePath);
             source.CopyTo(AppPaths.UserTemplatesFolder, true);
+            Settings.Default.TemplatePath = AppPaths.UserTemplatesFolder + "\\Panels";
+            Settings.Default.Save();
         }
 
         //private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)

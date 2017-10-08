@@ -17,6 +17,7 @@
         public const string PossessedCards = "[possessedcards]";
         public const string UnknownCards = "[unknowncards]";
         public const string PossessedCardTotal = "[possessedcardtotal]";
+        public const string Path = "[path]";
     }
 
     internal static class ItemTemplateFields

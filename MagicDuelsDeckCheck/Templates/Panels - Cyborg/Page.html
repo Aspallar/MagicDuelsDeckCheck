@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Missing Cards</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="file:///[path]\bootstrap-cyborg.min.css">
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .body-content {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .hover_img a {
+            position: relative;
+        }
+
+            .hover_img a span {
+                position: absolute;
+                display: none;
+                z-index: 99;
+            }
+
+            .hover_img a:hover span {
+                display: block;
+            }
+
+        .set {
+            font-size: small;
+            font-style: italic;
+        }
+
+        .correctname {
+            font-style: italic;
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="container body-content">
+        <div class="row">
+            <div class="jumbotron">
+                <h2>[deckname]</h2>
+                <p>[decklinksection]</p>
+            </div>
+        </div>
+        [unknowncardssection]
+        <div class="row equal-height">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Missing Cards</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>You are missing the following cards from this deck.</p>
+                        [cards]
+                        <b>[cardtotal] cards in total.</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Possessed Cards</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>You already have these cards from this deck.</p>
+                        [possessedcards]
+                        <b>[possessedcardtotal] cards in total.</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--[cardtotal] cards in total.
+        [possessedcardssection]
+        [unknowncardssection]-->
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

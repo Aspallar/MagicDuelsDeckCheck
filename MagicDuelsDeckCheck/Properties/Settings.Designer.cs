@@ -59,5 +59,17 @@ namespace MagicDuelsDeckCheck.Properties {
                 this["UserAgent"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string TemplatePath {
+            get {
+                return ((string)(this["TemplatePath"]));
+            }
+            set {
+                this["TemplatePath"] = value;
+            }
+        }
     }
 }

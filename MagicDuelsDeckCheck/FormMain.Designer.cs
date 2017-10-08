@@ -35,8 +35,11 @@
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reloadCradsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recentDecks = new DeckCheckControls.MostRecentlyUsedToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.templatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.selectTemplateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reloadTemplateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.favouritesMenuItem = new DeckCheckControls.FavouritesToolStripMenuItem();
@@ -80,6 +83,7 @@
             this.optionsToolStripMenuItem,
             this.reloadCradsToolStripMenuItem,
             this.recentDecks,
+            this.templatesToolStripMenuItem,
             this.alwaysOnTopToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -108,13 +112,6 @@
             this.recentDecks.Text = "Recent Decks";
             this.recentDecks.RecentItemClick += new System.EventHandler<DeckCheckControls.RecentItemClickEventArgs>(this.Deck_Click);
             // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exitToolStripMenuItem.Text = "E&xit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
             // alwaysOnTopToolStripMenuItem
             // 
             this.alwaysOnTopToolStripMenuItem.CheckOnClick = true;
@@ -122,6 +119,36 @@
             this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.alwaysOnTopToolStripMenuItem.Text = "Always on Top";
             this.alwaysOnTopToolStripMenuItem.CheckedChanged += new System.EventHandler(this.alwaysOnTopToolStripMenuItem_CheckedChanged);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // templatesToolStripMenuItem
+            // 
+            this.templatesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.selectTemplateToolStripMenuItem,
+            this.reloadTemplateToolStripMenuItem});
+            this.templatesToolStripMenuItem.Name = "templatesToolStripMenuItem";
+            this.templatesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.templatesToolStripMenuItem.Text = "Templates";
+            // 
+            // selectTemplateToolStripMenuItem
+            // 
+            this.selectTemplateToolStripMenuItem.Name = "selectTemplateToolStripMenuItem";
+            this.selectTemplateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.selectTemplateToolStripMenuItem.Text = "Select...";
+            this.selectTemplateToolStripMenuItem.Click += new System.EventHandler(this.selectTemplateToolStripMenuItem_Click);
+            // 
+            // reloadTemplateToolStripMenuItem
+            // 
+            this.reloadTemplateToolStripMenuItem.Name = "reloadTemplateToolStripMenuItem";
+            this.reloadTemplateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.reloadTemplateToolStripMenuItem.Text = "Reload";
+            this.reloadTemplateToolStripMenuItem.Click += new System.EventHandler(this.reloadTemplateToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -256,6 +283,9 @@
         private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
         private DeckCheckControls.FavouritesToolStripMenuItem favouritesMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alwaysOnTopToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem templatesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem selectTemplateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reloadTemplateToolStripMenuItem;
     }
 }
 

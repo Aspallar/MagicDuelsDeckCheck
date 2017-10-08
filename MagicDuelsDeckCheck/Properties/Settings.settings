@@ -11,5 +11,8 @@
     <Setting Name="UserAgent" Type="System.String" Scope="User">
       <Value Profile="(Default)">Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3135.4 Safari/537.36</Value>
     </Setting>
+    <Setting Name="TemplatePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

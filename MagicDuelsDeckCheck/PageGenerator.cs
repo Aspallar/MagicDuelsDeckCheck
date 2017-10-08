@@ -11,6 +11,8 @@ namespace MagicDuelsDeckCheck
     {
         private const string possesedItemTemplateName = "PossesedItem.html";
 
+        private string _templatePath;
+
         private PageTemplate _pageTemplate;
         private SectionTemplate _possessedSectionTemplate;
         private SectionTemplate _deckLinkSectionTemplate;
@@ -22,6 +24,8 @@ namespace MagicDuelsDeckCheck
 
         public void Initialize(string templateFolder)
         {
+            _templatePath = templateFolder;
+
             if (!string.IsNullOrEmpty(templateFolder) && !templateFolder.EndsWith(@"\"))
                 templateFolder += @"\";
 
@@ -52,13 +56,13 @@ namespace MagicDuelsDeckCheck
             string unknownMarkup = MakeCardItemsMarkup(unknownCards, _UnknownItemTemplate);
             string possessedMarkup = MakeCardItemsMarkup(possessedCards, _possessedItemTemplate);
 
-            StringBuilder page = _pageTemplate.GetSectionMarkup(deck, neededMarkup, totalNeeded, unknownMarkup, possessedMarkup, totalPossessed, deckPath);
+            StringBuilder page = _pageTemplate.GetSectionMarkup(deck, neededMarkup, totalNeeded, unknownMarkup, possessedMarkup, totalPossessed, deckPath, _templatePath);
 
             if (_pageTemplate.ContainsDeckLinkSection)
             {
                 if (Utils.IsHttpPath(deckPath))
                 {
-                    string deckLinkSection = _deckLinkSectionTemplate.GetSectionMarkup(deck, neededMarkup, totalNeeded, unknownMarkup, possessedMarkup, totalPossessed, deckPath).ToString();
+                    string deckLinkSection = _deckLinkSectionTemplate.GetSectionMarkup(deck, neededMarkup, totalNeeded, unknownMarkup, possessedMarkup, totalPossessed, deckPath, _templatePath).ToString();
                     page.Replace(PageTemplateFields.DeckLinkSection, deckLinkSection);
                 }
                 else
@@ -71,7 +75,7 @@ namespace MagicDuelsDeckCheck
             {
                 if (possessedCards.Any())
                 {
-                    string possessedCardsSection = _possessedSectionTemplate.GetSectionMarkup(deck, neededMarkup, totalNeeded, unknownMarkup, possessedMarkup, totalPossessed, deckPath).ToString();
+                    string possessedCardsSection = _possessedSectionTemplate.GetSectionMarkup(deck, neededMarkup, totalNeeded, unknownMarkup, possessedMarkup, totalPossessed, deckPath, _templatePath).ToString();
                     page.Replace(PageTemplateFields.PossesedCardsSection, possessedCardsSection);
                 }
                 else
@@ -84,7 +88,7 @@ namespace MagicDuelsDeckCheck
             {
                 if (unknownCards.Any())
                 {
-                    string unknownCardsSection = _unknownSectionTemplate.GetSectionMarkup(deck, neededMarkup, totalNeeded, unknownMarkup, possessedMarkup, totalPossessed, deckPath).ToString();
+                    string unknownCardsSection = _unknownSectionTemplate.GetSectionMarkup(deck, neededMarkup, totalNeeded, unknownMarkup, possessedMarkup, totalPossessed, deckPath, _templatePath).ToString();
                     page.Replace(PageTemplateFields.UnknownCardsSection, unknownCardsSection);
                 }
                 else

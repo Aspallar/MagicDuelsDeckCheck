@@ -23,11 +23,13 @@ namespace MagicDuelsDeckCheck
         private MostRecentList _recentDecks;
         private FavouritesList _favourites;
         private string _userAgent;
+        private string _templatePath;
 
         public FormMain(string profilePath, int maxRecentDecks, string userAgent)
         {
             _profilePath = profilePath;
             _userAgent = userAgent;
+            _templatePath = Properties.Settings.Default.TemplatePath;
             InitializeComponent();
             CreateContextMenu();
             LoadCardData();
@@ -220,14 +222,7 @@ namespace MagicDuelsDeckCheck
             {
                 FatalError($"{CorrectCardNames.FileName} contains invalid entries.");
             }
-            try
-            {
-                _pageGenerator.Initialize("");
-            }
-            catch (IOException)
-            {
-                FatalError($"IO Error reading html templates");
-            }
+            InitializeTemplate();
             try
             {
                 _recentDecks = MostRecentList.Read(AppPaths.RecentDecksFilePath);
@@ -245,6 +240,18 @@ namespace MagicDuelsDeckCheck
             {
                 _favourites = new FavouritesList();
                 ShowError("There was an error while loading favourite decks.\r\n" + ex.Message);
+            }
+        }
+
+        private void InitializeTemplate()
+        {
+            try
+            {
+                _pageGenerator.Initialize(_templatePath);
+            }
+            catch (IOException)
+            {
+                FatalError($"IO Error reading html templates");
             }
         }
 
@@ -402,6 +409,23 @@ namespace MagicDuelsDeckCheck
         private void alwaysOnTopToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
         {
             TopMost = ((ToolStripMenuItem)sender).Checked;
+        }
+
+        private void selectTemplateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SelectTemplateForm dlg = new SelectTemplateForm(_templatePath);
+            if (dlg.ShowDialog(this) == DialogResult.OK && dlg.TemplatePath != _templatePath)
+            {
+                _templatePath = dlg.TemplatePath;
+                InitializeTemplate();
+                Properties.Settings.Default.TemplatePath = _templatePath;
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        private void reloadTemplateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InitializeTemplate();
         }
     }
 }
