@@ -9,7 +9,7 @@ namespace MagicDuelsDeckCheck
 {
     internal class PageGenerator
     {
-        private const string possesedItemTemplateName = "PossesedItemTemplate.html";
+        private const string possesedItemTemplateName = "PossesedItem.html";
 
         private PageTemplate _pageTemplate;
         private SectionTemplate _possessedSectionTemplate;
@@ -20,22 +20,22 @@ namespace MagicDuelsDeckCheck
         private ItemTemplate _possessedItemTemplate;
         private ItemTemplate _UnknownItemTemplate;
 
-        public void Initialize(bool showPosessedCards)
+        public void Initialize(string templateFolder)
         {
-            _pageTemplate = new PageTemplate("Page.html");
-            //_possessedSectionTemplate = new SectionTemplate("PossesedCards.html");
-            //_deckLinkSectionTemplate = new SectionTemplate("DeckLink.html");
-            //_unknownSectionTemplate = new SectionTemplate("UnknownCards.html");
+            if (!string.IsNullOrEmpty(templateFolder) && !templateFolder.EndsWith(@"\"))
+                templateFolder += @"\";
 
-            _itemTemplate = new ItemTemplate("ItemTemplate.html");
+            _pageTemplate = new PageTemplate(templateFolder + "Page.html");
+            _possessedSectionTemplate = new SectionTemplate(templateFolder + "PossessedCards.html");
+            _deckLinkSectionTemplate = new SectionTemplate(templateFolder + "DeckLink.html");
+            _unknownSectionTemplate = new SectionTemplate(templateFolder + "UnknownCards.html");
+
+            _itemTemplate = new ItemTemplate(templateFolder + "ItemTemplate.html");
             _possessedItemTemplate = _itemTemplate;
-            _UnknownItemTemplate = _itemTemplate;
-            //_possessedItemTemplate = new ItemTemplate("PossessedItems.html");
-            //_UnknownItemTemplate = new ItemTemplate("UnknownItems.html");
-
-
-            //_possessedItemTemplate = new ItemTemplate("PossessedItems.html");
-            //_UnknownItemTemplate = new ItemTemplate("UnknownItems.html");
+            string possessedPath = templateFolder + possesedItemTemplateName;
+            if (File.Exists(possessedPath))
+                _possessedItemTemplate = new ItemTemplate(possessedPath);
+            _UnknownItemTemplate = new ItemTemplate(templateFolder + "UnknownItem.html");
         }
 
         public bool ShowPossessedCards { get; set; }
@@ -43,24 +43,55 @@ namespace MagicDuelsDeckCheck
         public string MakePage(DeckInfo deck, string deckPath)
         {
             int totalNeeded = deck.Cards.Sum(x => !x.Unknown && x.Shortfall > 0 ? x.Shortfall : 0);
+            int totalPossessed = deck.Cards.Sum(x => x.Possessed);
             IEnumerable<DeckEntry> neededCards = deck.Cards.Where(x => !x.Unknown && x.Shortfall > 0);
             IEnumerable<DeckEntry> unknownCards = deck.Cards.Where(x => x.Unknown);
-            IEnumerable<DeckEntry> possessedCards = deck.Cards.Where(x => !x.Unknown && x.Shortfall <= 0);
+            IEnumerable<DeckEntry> possessedCards = deck.Cards.Where(x => !x.Unknown && x.Owned > 0);
 
             string neededMarkup = MakeCardItemsMarkup(neededCards, _itemTemplate);
             string unknownMarkup = MakeCardItemsMarkup(unknownCards, _UnknownItemTemplate);
             string possessedMarkup = MakeCardItemsMarkup(possessedCards, _possessedItemTemplate);
 
-            StringBuilder page = _pageTemplate.GetSectionMarkup(deck, neededMarkup, totalNeeded, unknownMarkup, possessedMarkup, deckPath);
+            StringBuilder page = _pageTemplate.GetSectionMarkup(deck, neededMarkup, totalNeeded, unknownMarkup, possessedMarkup, totalPossessed, deckPath);
 
-            //page.Replace(SectionTemplateFields.DeckName, deck.DeckName);
-            //page.Replace(SectionTemplateFields.CardTotal, totalNeeded.ToString());
-            //page.Replace(SectionTemplateFields.Cards, MakeCardItemsMarkup(neededCards, _itemTemplate));
+            if (_pageTemplate.ContainsDeckLinkSection)
+            {
+                if (Utils.IsHttpPath(deckPath))
+                {
+                    string deckLinkSection = _deckLinkSectionTemplate.GetSectionMarkup(deck, neededMarkup, totalNeeded, unknownMarkup, possessedMarkup, totalPossessed, deckPath).ToString();
+                    page.Replace(PageTemplateFields.DeckLinkSection, deckLinkSection);
+                }
+                else
+                {
+                    page.Replace(PageTemplateFields.DeckLinkSection, "");
+                }
+            }
 
-            //if (unknownCards.Any())
-            //    page.Replace(SectionTemplateFields.UnknownCards, MakeUnkownCards(unknownCards));
-            //else
-            //    page.Replace(SectionTemplateFields.UnknownCards, "");
+            if (_pageTemplate.ContainsPossesedCardsSection)
+            {
+                if (possessedCards.Any())
+                {
+                    string possessedCardsSection = _possessedSectionTemplate.GetSectionMarkup(deck, neededMarkup, totalNeeded, unknownMarkup, possessedMarkup, totalPossessed, deckPath).ToString();
+                    page.Replace(PageTemplateFields.PossesedCardsSection, possessedCardsSection);
+                }
+                else
+                {
+                    page.Replace(PageTemplateFields.PossesedCardsSection, "");
+                }
+            }
+
+            if (_pageTemplate.ContainsUnknownCardsSection)
+            {
+                if (unknownCards.Any())
+                {
+                    string unknownCardsSection = _unknownSectionTemplate.GetSectionMarkup(deck, neededMarkup, totalNeeded, unknownMarkup, possessedMarkup, totalPossessed, deckPath).ToString();
+                    page.Replace(PageTemplateFields.UnknownCardsSection, unknownCardsSection);
+                }
+                else
+                {
+                    page.Replace(PageTemplateFields.UnknownCardsSection, "");
+                }
+            }
 
             string fileName = GetFilename();
             File.WriteAllText(fileName, page.ToString());
@@ -71,7 +102,7 @@ namespace MagicDuelsDeckCheck
         {
             StringBuilder cardItems = new StringBuilder();
             foreach (var card in cards)
-                cardItems.Append(template.GetItemHtml(card));
+                cardItems.Append(template.GetItemMarkup(card));
             return cardItems.ToString();
         }
 
@@ -80,18 +111,5 @@ namespace MagicDuelsDeckCheck
             return Path.GetTempPath() + "DeckCheckMissingCards.html";
         }
 
-
-
-        private string MakeUnkownCards(IEnumerable<DeckEntry> unkownCards)
-        {
-            StringBuilder sb = new StringBuilder("<div class=\"row\"><h3>Cards not in Magic Duels</h3>");
-            foreach (var card in unkownCards)
-            {
-                sb.Append(card.CardName);
-                sb.Append("<br />");
-            }
-            sb.Append("</div>");
-            return sb.ToString();
-        }
     }
 }

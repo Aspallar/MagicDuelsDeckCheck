@@ -4,8 +4,8 @@
     {
         public const string CardsSection = "[cardsection]";
         public const string DeckLinkSection = "[decklinksection]";
-        public const string UnknownCardsSection = "[unknowncardssectiom]";
-        public const string PossesedCardsSection = "[possesedcardssection]";
+        public const string UnknownCardsSection = "[unknowncardssection]";
+        public const string PossesedCardsSection = "[possessedcardssection]";
     }
 
     internal static class SectionTemplateFields
@@ -16,6 +16,7 @@
         public const string Cards = "[cards]";
         public const string PossessedCards = "[possessedcards]";
         public const string UnknownCards = "[unknowncards]";
+        public const string PossessedCardTotal = "[possessedcardtotal]";
     }
 
     internal static class ItemTemplateFields
@@ -27,5 +28,6 @@
         public const string TappedOutCardName = "[tappedoutcardname]";
         public const string Set = "[set]";
         public const string CorrectName = "[correctname]";
+        public const string ApostophieCardName = "[apostrophiecardname]";
     }
 }

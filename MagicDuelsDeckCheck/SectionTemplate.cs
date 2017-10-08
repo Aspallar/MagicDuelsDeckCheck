@@ -15,6 +15,7 @@ namespace MagicDuelsDeckCheck
         public bool ContainsCards { get; private set; }
         public bool ContainsPossessedCards { get; private set; }
         public bool ContainsUnknownCards { get; private set; }
+        public bool ContainsPossessedCardTotal { get; private set; }
 
         public SectionTemplate(string templateFileName)
         {
@@ -26,9 +27,10 @@ namespace MagicDuelsDeckCheck
             ContainsCards = Template.IndexOf(SectionTemplateFields.Cards) != -1;
             ContainsPossessedCards = Template.IndexOf(SectionTemplateFields.PossessedCards) != -1;
             ContainsUnknownCards = Template.IndexOf(SectionTemplateFields.UnknownCards) != -1;
+            ContainsPossessedCardTotal = Template.IndexOf(SectionTemplateFields.PossessedCardTotal) != -1;
         }
 
-        public StringBuilder GetSectionMarkup(DeckInfo deck, string neededMarkup, int totalNeeded, string unknownMarkup, string possessedMarkup, string deckPath)
+        public StringBuilder GetSectionMarkup(DeckInfo deck, string neededMarkup, int totalNeeded, string unknownMarkup, string possessedMarkup, int totalPossessed, string deckPath)
         {
             StringBuilder section = new StringBuilder(Template);
 
@@ -38,10 +40,20 @@ namespace MagicDuelsDeckCheck
             if (ContainsCardTotal)
                 section.Replace(SectionTemplateFields.CardTotal, totalNeeded.ToString());
 
+            if (ContainsPossessedCardTotal)
+                section.Replace(SectionTemplateFields.PossessedCardTotal, totalPossessed.ToString());
+
             if (ContainsCards)
                 section.Replace(SectionTemplateFields.Cards, neededMarkup);
 
+            if (ContainsUnknownCards)
+                section.Replace(SectionTemplateFields.UnknownCards, unknownMarkup);
 
+            if (ContainsDeckUrl)
+                section.Replace(SectionTemplateFields.DeckUrl, deckPath);
+
+            if (ContainsPossessedCards)
+                section.Replace(SectionTemplateFields.PossessedCards, possessedMarkup);
 
             return section;
         }

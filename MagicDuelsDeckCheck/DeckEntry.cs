@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Web;
 
 namespace MagicDuelsDeckCheck
@@ -12,14 +13,11 @@ namespace MagicDuelsDeckCheck
         public string Set { get; set; }
         public string CorrectName { get; set; }
         public int Shortfall => Required - Owned;
+        public int Possessed => Math.Min(Required, Owned);
 
-        public string UrlEncodedCardName
-        {
-            get
-            {
-                return HttpUtility.UrlEncode(CardName);
-            }
-        }
+        public string UrlEncodedCardName => HttpUtility.UrlEncode(CardName);
+
+        public string EncodedApostropheCardName => CardName.Replace(" ", "%20");
 
         public string WikiCardName
         {
@@ -42,9 +40,7 @@ namespace MagicDuelsDeckCheck
         }
 
         private static string RemovePunctuation(string cardName)
-        {
-            return new string(cardName.Where(c => !char.IsPunctuation(c)).ToArray());
-        }
+            => new string(cardName.Where(c => !char.IsPunctuation(c)).ToArray());
 
     }
 }

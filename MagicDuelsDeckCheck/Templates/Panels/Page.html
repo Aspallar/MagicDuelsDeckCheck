@@ -36,15 +36,43 @@
 </head>
 <body>
     <div class="container body-content">
-        <h1>[deckname]</h1>
-        [decklinksection]
-        <p>You are missing the following cards for this deck.</p>
         <div class="row">
-            [cards]
-        </div>
-        [cardtotal] cards in total.
-        [possessedcardssection]
+            <div class="jumbotron">
+                <h2>[deckname]</h2>
+                <p>[decklinksection]</p>
+            </div>
+        </div>    
         [unknowncardssection]
+        <div class="row equal-height">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Missing Cards</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>You are missing the following cards from this deck.</p>
+                        [cards]
+                        <b>[cardtotal] cards in total.</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Possessed Cards</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>You already have these cards from this deck.</p>
+                        [possessedcards]
+                        <b>[possessedcardtotal] cards in total.</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--[cardtotal] cards in total.
+        [possessedcardssection]
+        [unknowncardssection]-->
     </div>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>

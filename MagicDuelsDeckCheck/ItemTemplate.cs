@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text;
 
 namespace MagicDuelsDeckCheck
@@ -14,6 +15,7 @@ namespace MagicDuelsDeckCheck
         public bool ContainsTappedOutCardName { get; private set; }
         public bool ContainsSet { get; private set; }
         public bool ContainsCorrectName { get; private set; }
+        public bool ContainsApostophieCardName { get; private set; }
 
         public ItemTemplate(string templateFileName)
         {
@@ -27,13 +29,14 @@ namespace MagicDuelsDeckCheck
             ContainsTappedOutCardName = Template.IndexOf(ItemTemplateFields.TappedOutCardName) != -1;
             ContainsSet = Template.IndexOf(ItemTemplateFields.Set) != -1;
             ContainsCorrectName = Template.IndexOf(ItemTemplateFields.CorrectName) != -1;
+            ContainsApostophieCardName = Template.IndexOf(ItemTemplateFields.ApostophieCardName) != -1;
         }
 
-        public StringBuilder GetItemHtml(DeckEntry card)
+        public StringBuilder GetItemMarkup(DeckEntry card)
         {
             StringBuilder item = new StringBuilder(Template);
 
-            item.Replace(ItemTemplateFields.Count, card.Shortfall > 0 ? card.Shortfall.ToString() : card.Required.ToString());
+            item.Replace(ItemTemplateFields.Count, card.Shortfall > 0 ? card.Shortfall.ToString() : card.Possessed.ToString());
             item.Replace(ItemTemplateFields.CardName, card.CardName);
 
             if (ContainsUrlCardName)
@@ -44,6 +47,9 @@ namespace MagicDuelsDeckCheck
 
             if (ContainsTappedOutCardName)
                 item.Replace(ItemTemplateFields.TappedOutCardName, card.TappedOutCardName);
+
+            if (ContainsApostophieCardName)
+                item.Replace(ItemTemplateFields.ApostophieCardName, card.EncodedApostropheCardName);
 
             if (ContainsSet)
                 item.Replace(ItemTemplateFields.Set, card.Set);
