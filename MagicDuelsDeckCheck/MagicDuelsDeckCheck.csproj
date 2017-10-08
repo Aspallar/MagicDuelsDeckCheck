@@ -70,6 +70,7 @@
     <Compile Include="DeckInfo.cs" />
     <Compile Include="DeckReaderInfo.cs" />
     <Compile Include="DeckReaders.cs" />
+    <Compile Include="DirectoryInfoExtensions.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +188,10 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(ProjectDir)Templates $(TargetDir)Templates\ /s /y
+</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

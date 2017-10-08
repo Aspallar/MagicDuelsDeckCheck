@@ -2,6 +2,7 @@
 using System.Security.Permissions;
 using System.Windows.Forms;
 using MagicDuelsDeckCheck.Properties;
+using System.IO;
 
 namespace MagicDuelsDeckCheck
 {
@@ -19,11 +20,22 @@ namespace MagicDuelsDeckCheck
             //Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
             //Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
             //AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
+            CreateTemplatesFolder();
             Application.Run(new FormMain(
                 Settings.Default.MagicDuelsSteamProfile,
                 Settings.Default.MruSize,
                 Settings.Default.UserAgent
             ));
+        }
+
+        private static void CreateTemplatesFolder()
+        {
+            if (Directory.Exists(AppPaths.UserTemplatesFolder))
+                return;
+
+            string templatePath = Application.StartupPath + "\\Templates";
+            var source = new DirectoryInfo(templatePath);
+            source.CopyTo(AppPaths.UserTemplatesFolder, true);
         }
 
         //private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
