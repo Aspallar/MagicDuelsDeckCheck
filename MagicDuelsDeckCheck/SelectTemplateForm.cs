@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace MagicDuelsDeckCheck
@@ -40,7 +41,9 @@ namespace MagicDuelsDeckCheck
 
         private void GetTemplates()
         {
-            _templates = Directory.GetDirectories(AppPaths.UserTemplatesFolder);
+            _templates = Directory.GetDirectories(AppPaths.UserTemplatesFolder)
+                .Where(x => Path.GetFileNameWithoutExtension(x)[0] != '-')
+                .ToArray();
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
