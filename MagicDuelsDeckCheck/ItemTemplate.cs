@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
@@ -61,5 +62,14 @@ namespace MagicDuelsDeckCheck
 
             return item;
         }
+
+        public string GetAllItemsMarkup(IEnumerable<DeckEntry> cards)
+        {
+            StringBuilder cardItems = new StringBuilder();
+            foreach (var card in cards)
+                cardItems.Append(GetItemMarkup(card));
+            return cardItems.ToString();
+        }
+
     }
 }

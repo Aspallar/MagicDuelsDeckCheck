@@ -99,6 +99,7 @@
     <Compile Include="PageTemplate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SectionData.cs" />
     <Compile Include="SelectTemplateForm.cs">
       <SubType>Form</SubType>
     </Compile>

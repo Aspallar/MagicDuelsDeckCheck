@@ -18,6 +18,11 @@ namespace MagicDuelsDeckCheck
         public bool ContainsPossessedCardTotal { get; private set; }
         public bool ContainsPath { get; private set; }
 
+        public SectionTemplate()
+        {
+            Template = "";
+        }
+
         public SectionTemplate(string templateFileName)
         {
             Template = File.ReadAllText(templateFileName);
@@ -32,33 +37,33 @@ namespace MagicDuelsDeckCheck
             ContainsPath = Template.IndexOf(SectionTemplateFields.Path) != -1;
         }
 
-        public StringBuilder GetSectionMarkup(DeckInfo deck, string neededMarkup, int totalNeeded, string unknownMarkup, string possessedMarkup, int totalPossessed, string deckPath, string templatePath)
+        public StringBuilder GetSectionMarkup(SectionData data)
         {
             StringBuilder section = new StringBuilder(Template);
 
             if (ContainsDeckName)
-                section.Replace(SectionTemplateFields.DeckName, deck.DeckName);
+                section.Replace(SectionTemplateFields.DeckName, data.Deck.DeckName);
 
             if (ContainsPath)
-                section.Replace(SectionTemplateFields.Path, templatePath);
+                section.Replace(SectionTemplateFields.Path, data.TemplatePath);
 
             if (ContainsCardTotal)
-                section.Replace(SectionTemplateFields.CardTotal, totalNeeded.ToString());
+                section.Replace(SectionTemplateFields.CardTotal, data.TotalNeeded.ToString());
 
             if (ContainsPossessedCardTotal)
-                section.Replace(SectionTemplateFields.PossessedCardTotal, totalPossessed.ToString());
+                section.Replace(SectionTemplateFields.PossessedCardTotal, data.TotalPossessed.ToString());
 
             if (ContainsCards)
-                section.Replace(SectionTemplateFields.Cards, neededMarkup);
+                section.Replace(SectionTemplateFields.Cards, data.NeededMarkup);
 
             if (ContainsUnknownCards)
-                section.Replace(SectionTemplateFields.UnknownCards, unknownMarkup);
+                section.Replace(SectionTemplateFields.UnknownCards, data.UnknownMarkup);
 
             if (ContainsDeckUrl)
-                section.Replace(SectionTemplateFields.DeckUrl, deckPath);
+                section.Replace(SectionTemplateFields.DeckUrl, data.DeckPath);
 
             if (ContainsPossessedCards)
-                section.Replace(SectionTemplateFields.PossessedCards, possessedMarkup);
+                section.Replace(SectionTemplateFields.PossessedCards, data.PossessedMarkup);
 
             return section;
         }
