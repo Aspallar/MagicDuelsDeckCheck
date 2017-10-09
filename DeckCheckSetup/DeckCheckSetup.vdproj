@@ -64,19 +64,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5624DE8BE9465FDEE42B28358F94D8B3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_223D42E4B88BE301E284DE723CA98FA7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7AD4301511C3556D0BF0F163789A3F98"
+        "OwnerKey" = "8:_C141B9712518E21FBD937D093417EBDC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -88,7 +76,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C141B9712518E21FBD937D093417EBDC"
+        "OwnerKey" = "8:_7AD4301511C3556D0BF0F163789A3F98"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_223D42E4B88BE301E284DE723CA98FA7"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5624DE8BE9465FDEE42B28358F94D8B3"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -193,11 +193,6 @@
             "AssemblyAsmDisplayName" = "8:AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_223D42E4B88BE301E284DE723CA98FA7"
-                    {
-                    "Name" = "8:AngleSharp.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:AngleSharp.dll"
             "TargetName" = "8:"
@@ -224,11 +219,6 @@
             "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_5624DE8BE9465FDEE42B28358F94D8B3"
-                    {
-                    "Name" = "8:Newtonsoft.Json.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Newtonsoft.Json.dll"
             "TargetName" = "8:"
@@ -255,11 +245,6 @@
             "AssemblyAsmDisplayName" = "8:MagicDuels, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_7AD4301511C3556D0BF0F163789A3F98"
-                    {
-                    "Name" = "8:MagicDuels.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:MagicDuels.dll"
             "TargetName" = "8:"
@@ -283,14 +268,9 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DeckCheckControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:DeckCheckControls, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_A6245B820BFB4B7C116E2E9FFACE6232"
-                    {
-                    "Name" = "8:DeckCheckControls.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:DeckCheckControls.dll"
             "TargetName" = "8:"
@@ -317,11 +297,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_C141B9712518E21FBD937D093417EBDC"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -418,7 +393,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:MagicDuelsDeckCheck"
         "ProductCode" = "8:{926214DE-D822-413F-AD20-6CB1A475AAF7}"
-        "PackageCode" = "8:{F506C384-CB46-42BA-BBF9-0312C49FE5C2}"
+        "PackageCode" = "8:{767916AB-6C8F-4998-8694-B383F763D637}"
         "UpgradeCode" = "8:{D02E4B73-6BB7-4ECF-B395-839A5B3AC44E}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -977,8 +952,8 @@
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
                 {
+                "ExcludeFilter" = "8:MTG Blue.png"
                 "ExcludeFilter" = "8:*.ico"
-                "ExcludeFilter" = "8:*.png"
                 }
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_90FD7F18FA174FBEB91EA7D2EABC6A01"
