@@ -435,5 +435,10 @@ namespace MagicDuelsDeckCheck
             else
                 ShowMessage("The templates folder does not exist.");
         }
+
+        private void onlineHelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/Aspallar/MagicDuelsDeckCheck/wiki");
+        }
     }
 }
