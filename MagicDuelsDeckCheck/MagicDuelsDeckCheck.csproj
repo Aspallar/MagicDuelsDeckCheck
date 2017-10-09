@@ -181,6 +181,11 @@
     <Content Include="PossessedCards.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Templates\Full Card Images\DeckLink.html" />
+    <Content Include="Templates\Full Card Images\ItemTemplate.html" />
+    <Content Include="Templates\Full Card Images\Page.html" />
+    <Content Include="Templates\Full Card Images\UnknownCards.html" />
+    <Content Include="Templates\Full Card Images\UnknownItem.html" />
     <Content Include="Templates\Panels - Cerulean\bootstrap-cerulean.min.css" />
     <Content Include="Templates\Panels - Cerulean\DeckLink.html" />
     <Content Include="Templates\Panels - Cerulean\ItemTemplate.html" />

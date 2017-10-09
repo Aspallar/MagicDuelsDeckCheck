@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Missing Cards</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .body-content {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .hover_img a {
+            position: relative;
+        }
+
+        .hover_img a span {
+            position: absolute;
+            display: none;
+            z-index: 99;
+        }
+
+        .hover_img a:hover span {
+            display: block;
+        }
+
+        .set {
+            font-size: small;
+            font-style: italic;
+        }
+
+        .correctname {
+            font-style: italic;
+            color: darkred;
+        }
+
+        div.card {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        div.card span {
+            position: absolute;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+            font-size: 5em;
+            color: red;
+            text-shadow:
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000;        
+        }
+
+        div.card span:before {
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+            content: '';
+        }
+    </style>
+</head>
+<body>
+    <div class="container body-content">
+        <div class="row">
+            <div class="jumbotron">
+                <h2>[deckname]</h2>
+                <p>[decklinksection]</p>
+            </div>
+        </div>
+        [unknowncardssection]
+        <p>You are missing [cardtotal] cards from this deck.</p>
+        [cards]
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
