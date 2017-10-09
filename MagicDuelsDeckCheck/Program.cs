@@ -36,7 +36,7 @@ namespace MagicDuelsDeckCheck
             string templatePath = Application.StartupPath + "\\Templates";
             var source = new DirectoryInfo(templatePath);
             source.CopyTo(AppPaths.UserTemplatesFolder, true);
-            Settings.Default.TemplatePath = AppPaths.UserTemplatesFolder + "\\Panels";
+            Settings.Default.TemplatePath = AppPaths.UserTemplatesFolder + "\\Panels - Cyborg";
             Settings.Default.Save();
         }
 

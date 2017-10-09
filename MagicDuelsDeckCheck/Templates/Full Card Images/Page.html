@@ -4,34 +4,8 @@
     <meta charset="utf-8" />
     <title>Missing Cards</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="file:///[path]\..\-common\common.css">
     <style>
-        body {
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
-        .body-content {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        .hover_img a {
-            position: relative;
-        }
-        .hover_img a span {
-            position: absolute;
-            display: none;
-            z-index: 99;
-        }
-        .hover_img a:hover span {
-            display: block;
-        }
-        .set {
-            font-size: small;
-            font-style: italic;
-        }
-        .correctname {
-            font-style: italic;
-            color: darkred;
-        }
         div.card {
             position: relative;
             display: inline-block;
@@ -56,16 +30,13 @@
             height: 100%;
             content: '';
         }
-        #banner {
-            padding-top: 5px;
-        }
     </style>
 </head>
 <body>
     <div class="container body-content">
         <div class="row">
             <div class="jumbotron" id="banner">
-                <img src="file:///[path]\..\-common\MDDC_logo_v2.png" class="img-responsive" height="80%"/>
+                <img src="file:///[path]\..\-common\MDDC_logo_v2.png" class="img-responsive" />
                 <h2>[deckname]</h2>
                 <p>[decklinksection]</p>
             </div>
