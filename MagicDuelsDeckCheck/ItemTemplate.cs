@@ -33,11 +33,11 @@ namespace MagicDuelsDeckCheck
             ContainsApostophieCardName = Template.IndexOf(ItemTemplateFields.ApostophieCardName) != -1;
         }
 
-        public StringBuilder GetItemMarkup(DeckEntry card)
+        public StringBuilder GetItemMarkup(DeckEntry card, bool useShortfallForCount)
         {
             StringBuilder item = new StringBuilder(Template);
 
-            item.Replace(ItemTemplateFields.Count, card.Shortfall > 0 ? card.Shortfall.ToString() : card.Possessed.ToString());
+            item.Replace(ItemTemplateFields.Count, useShortfallForCount ? card.Shortfall.ToString() : card.Possessed.ToString());
             item.Replace(ItemTemplateFields.CardName, card.CardName);
 
             if (ContainsUrlCardName)
@@ -63,11 +63,11 @@ namespace MagicDuelsDeckCheck
             return item;
         }
 
-        public string GetAllItemsMarkup(IEnumerable<DeckEntry> cards)
+        public string GetAllItemsMarkup(IEnumerable<DeckEntry> cards, bool useShortfallForCount)
         {
             StringBuilder cardItems = new StringBuilder();
             foreach (var card in cards)
-                cardItems.Append(GetItemMarkup(card));
+                cardItems.Append(GetItemMarkup(card, useShortfallForCount));
             return cardItems.ToString();
         }
 

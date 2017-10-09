@@ -67,9 +67,9 @@ namespace MagicDuelsDeckCheck
             {
                 TotalNeeded = neededCards.Sum(x => x.Shortfall),
                 TotalPossessed = possessedCards.Sum(x => x.Possessed),
-                NeededMarkup = _itemTemplate.GetAllItemsMarkup(neededCards),
-                UnknownMarkup = _unknownItemTemplate.GetAllItemsMarkup(unknownCards),
-                PossessedMarkup = _possessedItemTemplate.GetAllItemsMarkup(possessedCards),
+                NeededMarkup = _itemTemplate.GetAllItemsMarkup(neededCards, true),
+                UnknownMarkup = _unknownItemTemplate.GetAllItemsMarkup(unknownCards, false),
+                PossessedMarkup = _possessedItemTemplate.GetAllItemsMarkup(possessedCards, false),
                 TemplatePath = _templatePath,
                 Deck = deck,
                 DeckPath = deckPath,
