@@ -65,8 +65,8 @@ namespace MagicDuelsDeckCheck
 
             SectionData sectionData = new SectionData
             {
-                TotalNeeded = deck.Cards.Sum(x => !x.Unknown && x.Shortfall > 0 ? x.Shortfall : 0),
-                TotalPossessed = deck.Cards.Sum(x => x.Possessed),
+                TotalNeeded = neededCards.Sum(x => x.Shortfall),
+                TotalPossessed = possessedCards.Sum(x => x.Possessed),
                 NeededMarkup = _itemTemplate.GetAllItemsMarkup(neededCards),
                 UnknownMarkup = _unknownItemTemplate.GetAllItemsMarkup(unknownCards),
                 PossessedMarkup = _possessedItemTemplate.GetAllItemsMarkup(possessedCards),
