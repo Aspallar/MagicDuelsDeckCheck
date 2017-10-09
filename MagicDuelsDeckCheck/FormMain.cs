@@ -427,5 +427,13 @@ namespace MagicDuelsDeckCheck
         {
             InitializeTemplate();
         }
+
+        private void browseTemplateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Directory.Exists(AppPaths.UserTemplatesFolder))
+                Process.Start(AppPaths.UserTemplatesFolder + "\\");
+            else
+                ShowMessage("The templates folder does not exist.");
+        }
     }
 }
