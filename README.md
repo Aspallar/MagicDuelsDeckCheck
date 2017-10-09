@@ -10,7 +10,7 @@ MagicDuelsDeckCheck can also check decks defined locally in .dec or .txt files.
 
 ## Installation
 
-Download the DeckCheckSetup.msi file from [here](https://github.com/Aspallar/MagicDuelsDeckCheck/releases/tag/v1.10.0) and run it. This will install MagicDuelsDeckCheck and add a shortcut to your start menu.
+Download the DeckCheckSetup.msi file from [here](https://github.com/Aspallar/MagicDuelsDeckCheck/releases/tag/v1.9.0) and run it. This will install MagicDuelsDeckCheck and add a shortcut to your start menu.
 
 *Or...*
 
