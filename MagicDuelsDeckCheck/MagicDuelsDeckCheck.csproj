@@ -181,6 +181,7 @@
     <Content Include="PossessedCards.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\MddcLogo.png" />
     <Content Include="Templates\-common\bootstrap-cerulean.min.css" />
     <Content Include="Templates\-common\bootstrap-cyborg.min.css" />
     <Content Include="Templates\-common\bootstrap-slate.min.css" />
@@ -217,8 +218,6 @@
     <Content Include="UnknownItem.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\MTGBlue.png" />
-    <None Include="Resources\MTGBlue.bmp" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

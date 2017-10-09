@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -16,7 +17,6 @@ namespace MagicDuelsDeckCheck
         {
             Assembly assembly = Assembly.GetExecutingAssembly();
             Text = "About " + GetTitle(assembly);
-            labelProductName.Text = GetProduct(assembly);
             labelVersion.Text = "Version " + GetVersion(assembly);
             labelCopyright.Text = GetCopyright(assembly);
         }
@@ -49,12 +49,14 @@ namespace MagicDuelsDeckCheck
             return System.IO.Path.GetFileNameWithoutExtension(assembly.CodeBase);
         }
 
-        private string GetProduct(Assembly assembly)
+        private void linkLabelWebsite_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            object[] attributes = assembly.GetCustomAttributes(typeof(AssemblyProductAttribute), false);
-            if (attributes.Length == 0)
-                return "";
-            return ((AssemblyProductAttribute)attributes[0]).Product;
+            Process.Start("https://github.com/Aspallar/MagicDuelsDeckCheck");
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://magicduels.wikia.com/wiki/User:HolyCrap_WOTF");
         }
     }
 }
