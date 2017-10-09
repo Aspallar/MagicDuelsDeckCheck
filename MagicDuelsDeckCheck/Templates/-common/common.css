@@ -1,0 +1,31 @@
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.hover_img a {
+    position: relative;
+}
+.hover_img a span {
+    position: absolute;
+    margin-left: 50px;
+    display: none;
+    z-index: 99;
+}
+.hover_img a:hover span {
+    display: block;
+}
+.set {
+    font-size: small;
+    font-style: italic;
+}
+.correctname {
+    font-style: italic;
+    color: darkred;
+}
+#banner {
+    padding-top: 5px;
+}
