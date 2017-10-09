@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.PictureBox pictureBox1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.labelStatus = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -45,20 +46,22 @@
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.favouritesMenuItem = new DeckCheckControls.FavouritesToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.onlineHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.linkLabelMagicDuelsHelper = new System.Windows.Forms.LinkLabel();
             this.linkLabelWiki = new System.Windows.Forms.LinkLabel();
             this.linkLabelTappedOut = new System.Windows.Forms.LinkLabel();
             this.linkLabelDeckStats = new System.Windows.Forms.LinkLabel();
-            this.onlineHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelStatus
             // 
             this.labelStatus.AutoSize = true;
             this.labelStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatus.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelStatus.ForeColor = System.Drawing.Color.LightGray;
             this.labelStatus.Location = new System.Drawing.Point(37, 37);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(173, 24);
@@ -195,17 +198,25 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
+            // onlineHelpToolStripMenuItem
+            // 
+            this.onlineHelpToolStripMenuItem.Name = "onlineHelpToolStripMenuItem";
+            this.onlineHelpToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.onlineHelpToolStripMenuItem.Text = "Online Help";
+            this.onlineHelpToolStripMenuItem.Click += new System.EventHandler(this.onlineHelpToolStripMenuItem_Click);
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // linkLabelMagicDuelsHelper
             // 
             this.linkLabelMagicDuelsHelper.AutoSize = true;
-            this.linkLabelMagicDuelsHelper.Location = new System.Drawing.Point(152, 90);
+            this.linkLabelMagicDuelsHelper.LinkColor = System.Drawing.Color.White;
+            this.linkLabelMagicDuelsHelper.Location = new System.Drawing.Point(170, 87);
             this.linkLabelMagicDuelsHelper.Name = "linkLabelMagicDuelsHelper";
             this.linkLabelMagicDuelsHelper.Size = new System.Drawing.Size(100, 13);
             this.linkLabelMagicDuelsHelper.TabIndex = 2;
@@ -216,7 +227,8 @@
             // linkLabelWiki
             // 
             this.linkLabelWiki.AutoSize = true;
-            this.linkLabelWiki.Location = new System.Drawing.Point(152, 73);
+            this.linkLabelWiki.LinkColor = System.Drawing.Color.White;
+            this.linkLabelWiki.Location = new System.Drawing.Point(170, 70);
             this.linkLabelWiki.Name = "linkLabelWiki";
             this.linkLabelWiki.Size = new System.Drawing.Size(90, 13);
             this.linkLabelWiki.TabIndex = 3;
@@ -227,7 +239,8 @@
             // linkLabelTappedOut
             // 
             this.linkLabelTappedOut.AutoSize = true;
-            this.linkLabelTappedOut.Location = new System.Drawing.Point(152, 107);
+            this.linkLabelTappedOut.LinkColor = System.Drawing.Color.White;
+            this.linkLabelTappedOut.Location = new System.Drawing.Point(170, 104);
             this.linkLabelTappedOut.Name = "linkLabelTappedOut";
             this.linkLabelTappedOut.Size = new System.Drawing.Size(64, 13);
             this.linkLabelTappedOut.TabIndex = 4;
@@ -238,7 +251,8 @@
             // linkLabelDeckStats
             // 
             this.linkLabelDeckStats.AutoSize = true;
-            this.linkLabelDeckStats.Location = new System.Drawing.Point(152, 124);
+            this.linkLabelDeckStats.LinkColor = System.Drawing.Color.White;
+            this.linkLabelDeckStats.Location = new System.Drawing.Point(170, 121);
             this.linkLabelDeckStats.Name = "linkLabelDeckStats";
             this.linkLabelDeckStats.Size = new System.Drawing.Size(75, 13);
             this.linkLabelDeckStats.TabIndex = 5;
@@ -246,18 +260,23 @@
             this.linkLabelDeckStats.Text = "Deckstats.Net";
             this.linkLabelDeckStats.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelDeckStats_LinkClicked);
             // 
-            // onlineHelpToolStripMenuItem
+            // pictureBox1
             // 
-            this.onlineHelpToolStripMenuItem.Name = "onlineHelpToolStripMenuItem";
-            this.onlineHelpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.onlineHelpToolStripMenuItem.Text = "Online Help";
-            this.onlineHelpToolStripMenuItem.Click += new System.EventHandler(this.onlineHelpToolStripMenuItem_Click);
+            pictureBox1.Image = global::MagicDuelsDeckCheck.Properties.Resources.MddcLogo;
+            pictureBox1.Location = new System.Drawing.Point(0, 92);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(116, 47);
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(282, 142);
+            this.Controls.Add(pictureBox1);
             this.Controls.Add(this.linkLabelDeckStats);
             this.Controls.Add(this.linkLabelTappedOut);
             this.Controls.Add(this.linkLabelWiki);
@@ -277,6 +296,7 @@
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.FormMain_DragEnter);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
