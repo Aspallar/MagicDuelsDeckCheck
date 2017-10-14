@@ -12,6 +12,7 @@ body {
 .hover_img a span {
     position: absolute;
     margin-left: 50px;
+    margin-top: -300px;
     display: none;
     z-index: 99;
 }
