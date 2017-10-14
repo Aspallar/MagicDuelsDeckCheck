@@ -1,6 +1,7 @@
 ﻿using AngleSharp.Dom.Html;
 using AngleSharp.Parser.Html;
 using MagicDuels;
+using System.Net;
 
 namespace MagicDuelsDeckCheck
 {
@@ -12,7 +13,9 @@ namespace MagicDuelsDeckCheck
             IHtmlDocument doc = parser.Parse(deckDefinition);
 
             var deckTitle = doc.QuerySelector("h1").TextContent;
-            var deckList = doc.QuerySelectorAll("a[href^='/cards?cardName=']");
+            var deckList = doc.QuerySelector("#deckList");
+            var cards = deckList.QuerySelectorAll("img[data-cardName]");
+            var amounts = deckList.QuerySelectorAll("label[data-cardCount=count]");
 
             const string titlePrefix = "Magic Duels Deck: ";
             if (deckTitle.StartsWith(titlePrefix))
@@ -20,13 +23,12 @@ namespace MagicDuelsDeckCheck
 
             DeckInfo deckInfo = new DeckInfo(deckTitle);
 
-            foreach (var entry in deckList)
+            for (int k = 0; k < cards.Length; k++)
             {
-                string cardName = entry.TextContent;
+                string cardName = WebUtility.HtmlDecode(cards[k].GetAttribute("data-cardName"));
                 if (!MagicDuelsHelper.IsBasicLand(cardName))
                 {
-                    string numberOf = entry.PreviousSibling.TextContent.Trim();
-                    int number = int.Parse(numberOf.Substring(0, numberOf.Length - 1));
+                    int number = int.Parse(amounts[k].TextContent);
                     deckInfo.Cards.Add(new DeckEntry
                     {
                         Required = number,
