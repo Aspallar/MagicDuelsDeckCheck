@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using MagicDuels;
 
@@ -16,6 +17,7 @@ namespace MagicDuelsDeckCheck
 
         public void GetOwned(MagicDuelsCards _cards, CorrectCardNames _correctCardNames)
         {
+            MergeDuplicateCards();
             foreach (var entry in Cards)
             {
                 CardInfo card;
@@ -35,6 +37,24 @@ namespace MagicDuelsDeckCheck
                     entry.Owned = card.NumberOwned;
                     entry.Set = card.Set;
                 }
+            }
+        }
+
+        private void MergeDuplicateCards()
+        {
+            // preserves card order
+
+            var occursMoreThanOnce = Cards
+                .GroupBy(x => x.CardName)
+                .Where(g => g.Count() > 1)
+                .Select(g => new { CardName = g.Key, RequiredSum = g.Sum(x => x.Required) });
+
+            foreach (var duplicateCard in occursMoreThanOnce)
+            {
+                var theseCards = Cards.Where(x => x.CardName == duplicateCard.CardName).ToArray();
+                theseCards[0].Required = duplicateCard.RequiredSum;
+                for (int k = 1; k < theseCards.Length; k++)
+                    Cards.Remove(theseCards[k]);
             }
         }
     }
