@@ -19,6 +19,8 @@ namespace MagicDuelsDeckCheck
 
         public string EncodedApostropheCardName => CardName.Replace(" ", "%20");
 
+        public string WikiImageUrl { get; set; }
+
         public string WikiCardName
         {
             get

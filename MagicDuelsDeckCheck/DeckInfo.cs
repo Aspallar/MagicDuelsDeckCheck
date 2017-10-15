@@ -36,6 +36,7 @@ namespace MagicDuelsDeckCheck
                 {
                     entry.Owned = card.NumberOwned;
                     entry.Set = card.Set;
+                    entry.WikiImageUrl = card.WikiImageUrl;
                 }
             }
         }

@@ -30,5 +30,6 @@
         public const string Set = "[set]";
         public const string CorrectName = "[correctname]";
         public const string ApostophieCardName = "[apostrophiecardname]";
+        public const string WikiImageUrl = "[wikiimageurl]";
     }
 }

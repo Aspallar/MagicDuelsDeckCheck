@@ -20,6 +20,9 @@ namespace MagicDuels
         [XmlAttribute(AttributeName = "set")]
         public string Set { get; set; }
 
+        [XmlAttribute(AttributeName = "wikiImageUrl")]
+        public string WikiImageUrl { get; set; }
+
         [XmlIgnore]
         public int NumberOwned { get; set; }
     }

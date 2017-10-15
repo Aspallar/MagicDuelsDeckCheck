@@ -17,6 +17,7 @@ namespace MagicDuelsDeckCheck
         public bool ContainsSet { get; private set; }
         public bool ContainsCorrectName { get; private set; }
         public bool ContainsApostophieCardName { get; private set; }
+        public bool ContainsWikiImageUrl { get; private set; }
 
         public ItemTemplate(string templateFileName)
         {
@@ -31,6 +32,7 @@ namespace MagicDuelsDeckCheck
             ContainsSet = Template.IndexOf(ItemTemplateFields.Set) != -1;
             ContainsCorrectName = Template.IndexOf(ItemTemplateFields.CorrectName) != -1;
             ContainsApostophieCardName = Template.IndexOf(ItemTemplateFields.ApostophieCardName) != -1;
+            ContainsWikiImageUrl = Template.IndexOf(ItemTemplateFields.WikiImageUrl) != -1;
         }
 
         public StringBuilder GetItemMarkup(DeckEntry card, bool useShortfallForCount)
@@ -48,6 +50,9 @@ namespace MagicDuelsDeckCheck
 
             if (ContainsTappedOutCardName)
                 item.Replace(ItemTemplateFields.TappedOutCardName, card.TappedOutCardName);
+
+            if (ContainsWikiImageUrl)
+                item.Replace(ItemTemplateFields.WikiImageUrl, "https://vignette.wikia.nocookie.net/magicduels/images/" + card.WikiImageUrl);
 
             if (ContainsApostophieCardName)
                 item.Replace(ItemTemplateFields.ApostophieCardName, card.EncodedApostropheCardName);
